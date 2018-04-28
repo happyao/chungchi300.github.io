@@ -260,7 +260,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/rest-empty-field.html" data-id="cjgj5jq6p0023lapv6eip9oaw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/rest-empty-field.html" data-id="cjgjdb22x0024cvpvg8h8108q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -329,137 +329,6 @@ ga('send', 'pageview');
             
     
         <a href="http://jeff-chung.com/2018/04/28/program-design/rest-empty-field.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/rest-empty-field.html">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-program-design/spa-development-methodology" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/program-design/spa-development-methodology.html">SPA Development methodology</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/program-design/spa-development-methodology.html">
-            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/程序设计/">程序设计</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="User-Requirement"><a href="#User-Requirement" class="headerlink" title="User Requirement"></a>User Requirement</h1><h1 id="Wireframe-amp-Interaction-model-amp-api-design"><a href="#Wireframe-amp-Interaction-model-amp-api-design" class="headerlink" title="Wireframe &amp; Interaction model&amp; api design"></a>Wireframe &amp; Interaction model&amp; api design</h1><h1 id="Visible-item-implementation-amp-api-implementation-on-server"><a href="#Visible-item-implementation-amp-api-implementation-on-server" class="headerlink" title="Visible item implementation &amp; api implementation on server"></a>Visible item implementation &amp; api implementation on server</h1><h1 id="integration"><a href="#integration" class="headerlink" title="integration"></a>integration</h1><h1 id="testing"><a href="#testing" class="headerlink" title="testing"></a>testing</h1><p>Adv.</p>
-<ol>
-<li>Seperate the view(visible item) part.</li>
-<li>Allow user early interaction.</li>
-</ol>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/spa-development-methodology.html" data-id="cjgj5jq6r0026lapvcdw7aqgh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://jeff-chung.com/2018/04/28/program-design/spa-development-methodology.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/spa-development-methodology.html">评论</a>
     
 
         </footer>
@@ -539,7 +408,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html" data-id="cjgj5jq6s0027lapv43sge3nm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html" data-id="cjgjdb22y0027cvpvf71g97hx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -608,6 +477,137 @@ ga('send', 'pageview');
             
     
         <a href="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-program-design/spa-development-methodology" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/program-design/spa-development-methodology.html">SPA Development methodology</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/program-design/spa-development-methodology.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/程序设计/">程序设计</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="User-Requirement"><a href="#User-Requirement" class="headerlink" title="User Requirement"></a>User Requirement</h1><h1 id="Wireframe-amp-Interaction-model-amp-api-design"><a href="#Wireframe-amp-Interaction-model-amp-api-design" class="headerlink" title="Wireframe &amp; Interaction model&amp; api design"></a>Wireframe &amp; Interaction model&amp; api design</h1><h1 id="Visible-item-implementation-amp-api-implementation-on-server"><a href="#Visible-item-implementation-amp-api-implementation-on-server" class="headerlink" title="Visible item implementation &amp; api implementation on server"></a>Visible item implementation &amp; api implementation on server</h1><h1 id="integration"><a href="#integration" class="headerlink" title="integration"></a>integration</h1><h1 id="testing"><a href="#testing" class="headerlink" title="testing"></a>testing</h1><p>Adv.</p>
+<ol>
+<li>Seperate the view(visible item) part.</li>
+<li>Allow user early interaction.</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/spa-development-methodology.html" data-id="cjgjdb22z0028cvpvv5k6a0b6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://jeff-chung.com/2018/04/28/program-design/spa-development-methodology.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/spa-development-methodology.html">评论</a>
     
 
         </footer>
@@ -693,7 +693,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/Tools I wish I had known about when I started use React & Redux to develop SPA.html" data-id="cjgj5jq6u002alapvx6qcrqgn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/Tools I wish I had known about when I started use React & Redux to develop SPA.html" data-id="cjgjdb230002bcvpvhxy31vg4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -825,7 +825,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/admin-on-rest-reference-field-mapping-relationship.html" data-id="cjgj5jq6u002blapvqd2v7gwd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/admin-on-rest-reference-field-mapping-relationship.html" data-id="cjgjdb231002ccvpvi5hzfauc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -969,7 +969,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/all-redux-analogy-in-one-page.html" data-id="cjgj5jq6v002dlapvi7ap5h6o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/all-redux-analogy-in-one-page.html" data-id="cjgjdb232002ecvpv7aj24ly9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1128,7 +1128,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/avoid-automated-generate-email-being-mark-as-spam-by-google.html" data-id="cjgj5jq6x002flapvb8o7de7j" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/avoid-automated-generate-email-being-mark-as-spam-by-google.html" data-id="cjgjdb233002gcvpvmwlcnhct" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1305,7 +1305,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/graphical-designer-quickly-involve-design-implement.html" data-id="cjgj5jq6y002glapvi1mw4pxb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/graphical-designer-quickly-involve-design-implement.html" data-id="cjgjdb234002hcvpv6qlqigzr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1481,7 +1481,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html" data-id="cjgj5jq6z002jlapvbu50253j" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html" data-id="cjgjdb235002kcvpvjmp8930l" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1627,7 +1627,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/minutes-decide-device-min-resolution.html" data-id="cjgj5jq71002klapvtgsnneek" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/minutes-decide-device-min-resolution.html" data-id="cjgjdb236002lcvpvi2inl853" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

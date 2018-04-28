@@ -198,7 +198,7 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-communication/increase-deliver-information-ability-for-programmer-and-tester" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/general-review" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -206,7 +206,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">Increase delivery information ability for software engineer(Read for 10 minutes)</a>
+            <a class="article-title" href="/2018/04/28/code-review/general-review.html">我的代码审查实践(25分钟看完系列)</a>
         </h1>
     
 
@@ -215,7 +215,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">
+        <a href="/2018/04/28/code-review/general-review.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -224,7 +224,7 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/沟通基本功/">沟通基本功</a>
+        <a class="article-category-link" href="/categories/代码审查/">代码审查</a>
     </div>
 
                         
@@ -239,31 +239,42 @@ ga('send', 'pageview');
             <h2 id="阅读前"><a href="#阅读前" class="headerlink" title="阅读前"></a>阅读前</h2><ol>
 <li>阅读这篇文章后你能学到什么?</li>
 </ol>
-<ul>
-<li>Speak with purpose</li>
-<li>Triangle principle</li>
-<li>Fact,Action principle,Reason come last</li>
-<li>Without filler words</li>
-<li>Reason come last</li>
-<li>Ask listener to repeat</li>
-<li>Supplement</li>
-</ul>
+<p>我的代码审查实践</p>
 <ol start="2">
-<li>你将用多少时间来阅读这篇文章?<br>15 minutes</li>
+<li>你将用多少时间来阅读这篇文章?</li>
 </ol>
-<h2 id="Speak-with-purpose"><a href="#Speak-with-purpose" class="headerlink" title="Speak with purpose"></a>Speak with purpose</h2><p><strong>Write done the information on paper you want to deliver before speaking</strong>.It help you get prepared and enter the speaking mode.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p>Purpose:<br>There is a bug for search API on query field of shopping cart</p>
-<p>Extra information to deliver information:</p>
-<p>query “nike” return product of “Addidas” and “Nike”</p>
-<h2 id="Triangle-principle"><a href="#Triangle-principle" class="headerlink" title="Triangle principle"></a>Triangle principle</h2><p><strong>Keep information number below 3.</strong></p>
-<p>The efficient of deliver information is greatly reduced when information number is bigger then 3 due to human focus ability.</p>
-<h2 id="Fact-and-action-first-reason-come-last"><a href="#Fact-and-action-first-reason-come-last" class="headerlink" title="Fact and action first,reason come last"></a>Fact and action first,reason come last</h2><p>When the information is about telling some fact/action,<strong>express the fact/action first and then follow the reason</strong>.Because people will be more focus at first and the reason make the fact/action more rational</p>
-<h2 id="Without-filler-words"><a href="#Without-filler-words" class="headerlink" title="Without filler words"></a>Without filler words</h2><p><strong>Don’t speak with filler words like (this,there,like,aa),just keep silent when you are thinking during speaking</strong> .</p>
-<p>It greatly reduce noise in communication process and make you looks very smart.</p>
-<h2 id="Ask-listener-to-repeat"><a href="#Ask-listener-to-repeat" class="headerlink" title="Ask listener to repeat"></a>Ask listener to repeat</h2><p><strong>Ask listener to repeat what you said can let you know the percentage that listener accept your information</strong> . And reverse you can apply the same skill to let them know.</p>
-<h2 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h2><p>Why we not good at,just a practice and switching the mind.</p>
-<p>Those sales also sucks at calculation &amp; data analysis,the same principle</p>
-<p>Shannon Communication Model</p>
+<p>25 分钟</p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li><strong>分享知识</strong></li>
+<li><strong>提高代码的可读性</strong></li>
+</ul>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="一般错误"><a href="#一般错误" class="headerlink" title="一般错误"></a>一般错误</h3><h4 id="不必要的额外的逻辑层"><a href="#不必要的额外的逻辑层" class="headerlink" title="不必要的额外的逻辑层"></a>不必要的额外的逻辑层</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line"> if(Auth.isLogin())&#123;</span><br><span class="line">   return Auth::user();</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">   throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
+<ul>
+<li>程序员需要额外的一层才能知道程序会抛出异常<strong>如果用户不满意</strong>。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line">if(!Auth.isLogin())&#123;</span><br><span class="line">  throw Error(&apos;get user when user is not authorized&apos;)    </span><br><span class="line">&#125;</span><br><span class="line">  return Auth::user();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong></p>
+<ul>
+<li>程序员知道调用者必须确保用户<strong>需要确保用户需要登录</strong>才能正确地调用**这个功能</li>
+</ul>
+<h4 id="Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys"><a href="#Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys" class="headerlink" title="Retrieve array of items from indexed data object when already have indexed keys"></a>Retrieve array of items from indexed data object when already have indexed keys</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return _.filter(usersById, user =&gt;</span><br><span class="line">    targetUserIds.includes(</span><br><span class="line">      user.id</span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
+<ul>
+<li>low performance and readability</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return targetUserIds.map(targetUserId=&gt;usersById[targetUserId])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong></p>
+<ul>
+<li>better performance and readability</li>
+</ul>
+<h4 id="Unnecessary-extra-logic-layer-when-processing-overloading-function"><a href="#Unnecessary-extra-logic-layer-when-processing-overloading-function" class="headerlink" title="Unnecessary extra logic layer when processing overloading function"></a>Unnecessary extra logic layer when processing overloading function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;user.id==idOrIds);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
+<ul>
+<li>Should seperation the type conversion and only have one process logic</li>
+</ul>
+<p><strong>改进</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(!Array.isArray(idOrIds))&#123;</span><br><span class="line">     idOrIds = [idOrIds];</span><br><span class="line">   &#125;</span><br><span class="line">  //One processing logic only</span><br><span class="line">   let results =   predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line"></span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">    return results;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return results[0];</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         
         </div>
@@ -274,7 +285,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html" data-id="cjgj5jq3e0002lapvlze79dma" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general-review.html" data-id="cjgjdb21g0003cvpvkfenbmu5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -342,7 +353,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/general-review.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/general-review.html">评论</a>
     
 
         </footer>
@@ -395,7 +406,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/demo.html" data-id="cjgj5jq1r0001lapvfi40e4kh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/demo.html" data-id="cjgjdb1zw0000cvpvmn0xrgvt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -560,7 +571,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-error-api-design.html" data-id="cjgj5jq6e001nlapvhcsqrx37" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-error-api-design.html" data-id="cjgjdb22p001ocvpv0qta41ko" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -693,7 +704,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-post-css-selection.html" data-id="cjgj5jq6h001qlapvnrae1ml2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-post-css-selection.html" data-id="cjgjdb22q001rcvpv861jhsz4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -906,7 +917,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-programming-design.html" data-id="cjgj5jq6i001rlapvwp9or74q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-programming-design.html" data-id="cjgjdb22r001scvpvmj6ge52t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -984,7 +995,7 @@ E.g sign up
 
 
 
-    <article id="post-code-review/general-review" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-communication/increase-deliver-information-ability-for-programmer-and-tester" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -992,7 +1003,7 @@ E.g sign up
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/general-review.html">我的代码审查实践(25分钟看完系列)</a>
+            <a class="article-title" href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">Increase delivery information ability for software engineer(Read for 10 minutes)</a>
         </h1>
     
 
@@ -1001,7 +1012,7 @@ E.g sign up
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/general-review.html">
+        <a href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -1010,7 +1021,7 @@ E.g sign up
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/代码审查/">代码审查</a>
+        <a class="article-category-link" href="/categories/沟通基本功/">沟通基本功</a>
     </div>
 
                         
@@ -1025,42 +1036,31 @@ E.g sign up
             <h2 id="阅读前"><a href="#阅读前" class="headerlink" title="阅读前"></a>阅读前</h2><ol>
 <li>阅读这篇文章后你能学到什么?</li>
 </ol>
-<p>我的代码审查实践</p>
+<ul>
+<li>Speak with purpose</li>
+<li>Triangle principle</li>
+<li>Fact,Action principle,Reason come last</li>
+<li>Without filler words</li>
+<li>Reason come last</li>
+<li>Ask listener to repeat</li>
+<li>Supplement</li>
+</ul>
 <ol start="2">
-<li>你将用多少时间来阅读这篇文章?</li>
+<li>你将用多少时间来阅读这篇文章?<br>15 minutes</li>
 </ol>
-<p>25 分钟</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li><strong>分享知识</strong></li>
-<li><strong>提高代码的可读性</strong></li>
-</ul>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="一般错误"><a href="#一般错误" class="headerlink" title="一般错误"></a>一般错误</h3><h4 id="不必要的额外的逻辑层"><a href="#不必要的额外的逻辑层" class="headerlink" title="不必要的额外的逻辑层"></a>不必要的额外的逻辑层</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line"> if(Auth.isLogin())&#123;</span><br><span class="line">   return Auth::user();</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">   throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>错误</strong></p>
-<ul>
-<li>程序员需要额外的一层才能知道程序会抛出异常<strong>如果用户不满意</strong>。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line">if(!Auth.isLogin())&#123;</span><br><span class="line">  throw Error(&apos;get user when user is not authorized&apos;)    </span><br><span class="line">&#125;</span><br><span class="line">  return Auth::user();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>改进</strong></p>
-<ul>
-<li>程序员知道调用者必须确保用户<strong>需要确保用户需要登录</strong>才能正确地调用**这个功能</li>
-</ul>
-<h4 id="Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys"><a href="#Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys" class="headerlink" title="Retrieve array of items from indexed data object when already have indexed keys"></a>Retrieve array of items from indexed data object when already have indexed keys</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return _.filter(usersById, user =&gt;</span><br><span class="line">    targetUserIds.includes(</span><br><span class="line">      user.id</span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>错误</strong></p>
-<ul>
-<li>low performance and readability</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return targetUserIds.map(targetUserId=&gt;usersById[targetUserId])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>改进</strong></p>
-<ul>
-<li>better performance and readability</li>
-</ul>
-<h4 id="Unnecessary-extra-logic-layer-when-processing-overloading-function"><a href="#Unnecessary-extra-logic-layer-when-processing-overloading-function" class="headerlink" title="Unnecessary extra logic layer when processing overloading function"></a>Unnecessary extra logic layer when processing overloading function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;user.id==idOrIds);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>错误</strong></p>
-<ul>
-<li>Should seperation the type conversion and only have one process logic</li>
-</ul>
-<p><strong>改进</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(!Array.isArray(idOrIds))&#123;</span><br><span class="line">     idOrIds = [idOrIds];</span><br><span class="line">   &#125;</span><br><span class="line">  //One processing logic only</span><br><span class="line">   let results =   predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line"></span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">    return results;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return results[0];</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Speak-with-purpose"><a href="#Speak-with-purpose" class="headerlink" title="Speak with purpose"></a>Speak with purpose</h2><p><strong>Write done the information on paper you want to deliver before speaking</strong>.It help you get prepared and enter the speaking mode.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p>Purpose:<br>There is a bug for search API on query field of shopping cart</p>
+<p>Extra information to deliver information:</p>
+<p>query “nike” return product of “Addidas” and “Nike”</p>
+<h2 id="Triangle-principle"><a href="#Triangle-principle" class="headerlink" title="Triangle principle"></a>Triangle principle</h2><p><strong>Keep information number below 3.</strong></p>
+<p>The efficient of deliver information is greatly reduced when information number is bigger then 3 due to human focus ability.</p>
+<h2 id="Fact-and-action-first-reason-come-last"><a href="#Fact-and-action-first-reason-come-last" class="headerlink" title="Fact and action first,reason come last"></a>Fact and action first,reason come last</h2><p>When the information is about telling some fact/action,<strong>express the fact/action first and then follow the reason</strong>.Because people will be more focus at first and the reason make the fact/action more rational</p>
+<h2 id="Without-filler-words"><a href="#Without-filler-words" class="headerlink" title="Without filler words"></a>Without filler words</h2><p><strong>Don’t speak with filler words like (this,there,like,aa),just keep silent when you are thinking during speaking</strong> .</p>
+<p>It greatly reduce noise in communication process and make you looks very smart.</p>
+<h2 id="Ask-listener-to-repeat"><a href="#Ask-listener-to-repeat" class="headerlink" title="Ask listener to repeat"></a>Ask listener to repeat</h2><p><strong>Ask listener to repeat what you said can let you know the percentage that listener accept your information</strong> . And reverse you can apply the same skill to let them know.</p>
+<h2 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h2><p>Why we not good at,just a practice and switching the mind.</p>
+<p>Those sales also sucks at calculation &amp; data analysis,the same principle</p>
+<p>Shannon Communication Model</p>
 
         
         </div>
@@ -1071,7 +1071,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general-review.html" data-id="cjgj5jq3g0003lapvr4tsug1l" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html" data-id="cjgjdb21h0004cvpvqsx99911" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1139,190 +1139,7 @@ E.g sign up
 
             
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/general-review.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/general-review.html">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-program-design/how-critical-thinking-help-me-make-more-good-program-decision" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html">how-critical-thinking-help-me-make-more-good-program-decision</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html">
-            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/程序设计/">程序设计</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><img src="https://i.ytimg.com/vi/rJYaJ6_UcDM/maxresdefault.jpg" alt=""></p>
-<h1 id="Before-Reading-Before-Reading"><a href="#Before-Reading-Before-Reading" class="headerlink" title="Before Reading(Before Reading)"></a>Before Reading(Before Reading)</h1><ol>
-<li>What you can learn after reading this article?</li>
-</ol>
-<ul>
-<li>What is critical thinking</li>
-<li>what is the advantage&amp;disadvantage of it</li>
-<li>Implementation in real life(discussion with my colleague about REST-API, proper HTTP status code for invalid DELETE)</li>
-</ul>
-<ol start="2">
-<li>How much time you will use for reading this article?</li>
-</ol>
-<p>25 minutes</p>
-<h1 id="What-is-Critical-Thinking"><a href="#What-is-Critical-Thinking" class="headerlink" title="What is Critical Thinking"></a>What is Critical Thinking</h1><p>Critical thinking is a <strong>skill</strong> that we use to <strong>find the fact or make decision</strong> in the <strong>best we can(Or based on information we known)</strong>.</p>
-<h2 id="Ability-layer"><a href="#Ability-layer" class="headerlink" title="Ability layer"></a>Ability layer</h2><ol>
-<li>The ability to ask right related and critical question</li>
-<li>Ask Question systematically(In a efficient order)</li>
-<li>Ask question actively.</li>
-</ol>
-<h2 id="Altitude-layer"><a href="#Altitude-layer" class="headerlink" title="Altitude layer"></a>Altitude layer</h2><ol>
-<li>Keep the conversation going to allow more question in order to get more information(so <strong>be polite instead of being rude</strong>)</li>
-<li>Evidence first</li>
-<li>Judge everything.Instead of having your opinion and conclusion first and then find evidence(<strong>We are not politician,we are Software Engineer</strong> ).</li>
-</ol>
-<h1 id="What-is-the-advantage-amp-disadvantage-of-it"><a href="#What-is-the-advantage-amp-disadvantage-of-it" class="headerlink" title="What is the advantage&amp;disadvantage of it"></a>What is the advantage&amp;disadvantage of it</h1><h2 id="Advantage"><a href="#Advantage" class="headerlink" title="Advantage"></a>Advantage</h2><ol>
-<li>Allow you to use your best to <strong>find the fact or make decision</strong>.</li>
-<li>Allow you see and review the <strong>structure and content of your argument</strong>.</li>
-</ol>
-<h2 id="Disadvantage"><a href="#Disadvantage" class="headerlink" title="Disadvantage"></a>Disadvantage</h2><ol>
-<li>Energy and time consuming.</li>
-<li>Take time to train</li>
-<li>It use your best ability only.</li>
-</ol>
-<h2 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h2><p>In a new area we don’t know much we absorb knowledge and decision like <strong>spongy</strong> to <strong>absorb basic knowledge</strong>.When thing become critical and in a hard area.We utilize our <strong>critical thinking skill</strong></p>
-<h1 id="Implementation-in-real-life-discussion-with-my-colleague-about-REST-API"><a href="#Implementation-in-real-life-discussion-with-my-colleague-about-REST-API" class="headerlink" title="Implementation in real life(discussion with my colleague about REST-API)"></a>Implementation in real life(discussion with my colleague about REST-API)</h1><h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Tester said that my program have a bug that handle delete a resource incorrectly.It show forbidden but the user is the creator of that resource.</p>
-<p>I check and realize the program allow user to delete a resource that is not existed anymore(a cached problem).I think is this a server respond bug that I think it should return 404 instead 403(Not authorized).Then I communicate with backend developer(We named he Miller).He confirmed that it do return 403 but it is the case he never think about before.And we have a further discussion about that,and the discussion like that.</p>
-<h2 id="Conversation"><a href="#Conversation" class="headerlink" title="Conversation"></a>Conversation</h2><p>Miller:I think it has some point to return 403,if it return 404,it hints a hacker or unauthorized user know that <strong>resource existed and deleted,that is a information leak</strong>(Evidence).<br>Me:I see,it surely is a good point that I never think before.Is it our application need so high security that leaking a information about <strong>resource existed and deleted</strong> that make us sacrifice the <strong>Discoverability and Maintainability</strong> of the program.Let me think and research.</p>
-<h2 id="Critical-thinking-Content-and-Architecture"><a href="#Critical-thinking-Content-and-Architecture" class="headerlink" title="Critical thinking(Content and Architecture)"></a>Critical thinking(Content and Architecture)</h2><h3 id="What-is-our-question-topic"><a href="#What-is-our-question-topic" class="headerlink" title="What is our question/topic?"></a>What is our question/topic?</h3><p>Proper HTTP status code for invalid DELETE(When resource not existed) in Restful api when leaking a <strong>information about resource existed and deleted</strong> is <strong>not the critical failure of the program.</strong></p>
-<h3 id="Category-of-topic"><a href="#Category-of-topic" class="headerlink" title="Category of topic"></a>Category of topic</h3><p>It is a prescriptive topic instead of descriptive topic when it come to <strong>program design decision</strong>.Our preference in this topic are</p>
-<ul>
-<li>Security</li>
-<li>Discoverability</li>
-<li>Maintainability</li>
-</ul>
-<h3 id="Supporting"><a href="#Supporting" class="headerlink" title="Supporting"></a>Supporting</h3><h4 id="Evidence"><a href="#Evidence" class="headerlink" title="Evidence"></a>Evidence</h4><ul>
-<li>404 do allow people to realize the resource not existed anymore.</li>
-<li>404 do expose a information that resource existed and deleted.</li>
-<li>403 said request is valid but the user don’t have the permission.(it basically said resource existed but you don’t have the right to do so )</li>
-<li>401 said the user is not simply unauthorized and not mention whether the existence of resource.</li>
-</ul>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>For proper HTTP status code for invalid DELETE(When resource not existed)</p>
-<p>404 is good when <strong>information about resource existed and deleted</strong> is <strong>not the critical failure of the program.</strong><br>401 is good when <strong>information about resource existed and deleted</strong> is <strong>the critical failure of the program.</strong><br>403 is misleading when <strong>information about resource existed and deleted</strong> is <strong>not the critical failure of the program.</strong></p>
-<h3 id="Book-and-reference"><a href="#Book-and-reference" class="headerlink" title="Book and reference"></a>Book and reference</h3><ul>
-<li><a href="https://www.amazon.com/Asking-Right-Questions-11th-Browne/dp/0321907957" target="_blank" rel="noopener">asking the right questions a guide to critical thinking</a></li>
-<li><a href="https://stackoverflow.com/questions/23486992/rest-api-proper-http-status-code-for-invalid-delete" target="_blank" rel="noopener">https://stackoverflow.com/questions/23486992/rest-api-proper-http-status-code-for-invalid-delete</a></li>
-<li><a href="https://stackoverflow.com/questions/3547474/correct-http-status-code-when-resource-is-available-but-not-accessible-because-o" target="_blank" rel="noopener">https://stackoverflow.com/questions/3547474/correct-http-status-code-when-resource-is-available-but-not-accessible-because-o</a></li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html" data-id="cjgj5jq6k001vlapvsk8g2sqs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">评论</a>
     
 
         </footer>
@@ -1466,7 +1283,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/general-agile-design-process.html" data-id="cjgj5jq6l001ylapv31qyd03i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/general-agile-design-process.html" data-id="cjgjdb22t001wcvpv4qd17ylp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1535,6 +1352,189 @@ E.g sign up
             
     
         <a href="http://jeff-chung.com/2018/04/28/program-design/general-agile-design-process.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/general-agile-design-process.html">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-program-design/how-critical-thinking-help-me-make-more-good-program-decision" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html">how-critical-thinking-help-me-make-more-good-program-decision</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/程序设计/">程序设计</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p><img src="https://i.ytimg.com/vi/rJYaJ6_UcDM/maxresdefault.jpg" alt=""></p>
+<h1 id="Before-Reading-Before-Reading"><a href="#Before-Reading-Before-Reading" class="headerlink" title="Before Reading(Before Reading)"></a>Before Reading(Before Reading)</h1><ol>
+<li>What you can learn after reading this article?</li>
+</ol>
+<ul>
+<li>What is critical thinking</li>
+<li>what is the advantage&amp;disadvantage of it</li>
+<li>Implementation in real life(discussion with my colleague about REST-API, proper HTTP status code for invalid DELETE)</li>
+</ul>
+<ol start="2">
+<li>How much time you will use for reading this article?</li>
+</ol>
+<p>25 minutes</p>
+<h1 id="What-is-Critical-Thinking"><a href="#What-is-Critical-Thinking" class="headerlink" title="What is Critical Thinking"></a>What is Critical Thinking</h1><p>Critical thinking is a <strong>skill</strong> that we use to <strong>find the fact or make decision</strong> in the <strong>best we can(Or based on information we known)</strong>.</p>
+<h2 id="Ability-layer"><a href="#Ability-layer" class="headerlink" title="Ability layer"></a>Ability layer</h2><ol>
+<li>The ability to ask right related and critical question</li>
+<li>Ask Question systematically(In a efficient order)</li>
+<li>Ask question actively.</li>
+</ol>
+<h2 id="Altitude-layer"><a href="#Altitude-layer" class="headerlink" title="Altitude layer"></a>Altitude layer</h2><ol>
+<li>Keep the conversation going to allow more question in order to get more information(so <strong>be polite instead of being rude</strong>)</li>
+<li>Evidence first</li>
+<li>Judge everything.Instead of having your opinion and conclusion first and then find evidence(<strong>We are not politician,we are Software Engineer</strong> ).</li>
+</ol>
+<h1 id="What-is-the-advantage-amp-disadvantage-of-it"><a href="#What-is-the-advantage-amp-disadvantage-of-it" class="headerlink" title="What is the advantage&amp;disadvantage of it"></a>What is the advantage&amp;disadvantage of it</h1><h2 id="Advantage"><a href="#Advantage" class="headerlink" title="Advantage"></a>Advantage</h2><ol>
+<li>Allow you to use your best to <strong>find the fact or make decision</strong>.</li>
+<li>Allow you see and review the <strong>structure and content of your argument</strong>.</li>
+</ol>
+<h2 id="Disadvantage"><a href="#Disadvantage" class="headerlink" title="Disadvantage"></a>Disadvantage</h2><ol>
+<li>Energy and time consuming.</li>
+<li>Take time to train</li>
+<li>It use your best ability only.</li>
+</ol>
+<h2 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h2><p>In a new area we don’t know much we absorb knowledge and decision like <strong>spongy</strong> to <strong>absorb basic knowledge</strong>.When thing become critical and in a hard area.We utilize our <strong>critical thinking skill</strong></p>
+<h1 id="Implementation-in-real-life-discussion-with-my-colleague-about-REST-API"><a href="#Implementation-in-real-life-discussion-with-my-colleague-about-REST-API" class="headerlink" title="Implementation in real life(discussion with my colleague about REST-API)"></a>Implementation in real life(discussion with my colleague about REST-API)</h1><h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Tester said that my program have a bug that handle delete a resource incorrectly.It show forbidden but the user is the creator of that resource.</p>
+<p>I check and realize the program allow user to delete a resource that is not existed anymore(a cached problem).I think is this a server respond bug that I think it should return 404 instead 403(Not authorized).Then I communicate with backend developer(We named he Miller).He confirmed that it do return 403 but it is the case he never think about before.And we have a further discussion about that,and the discussion like that.</p>
+<h2 id="Conversation"><a href="#Conversation" class="headerlink" title="Conversation"></a>Conversation</h2><p>Miller:I think it has some point to return 403,if it return 404,it hints a hacker or unauthorized user know that <strong>resource existed and deleted,that is a information leak</strong>(Evidence).<br>Me:I see,it surely is a good point that I never think before.Is it our application need so high security that leaking a information about <strong>resource existed and deleted</strong> that make us sacrifice the <strong>Discoverability and Maintainability</strong> of the program.Let me think and research.</p>
+<h2 id="Critical-thinking-Content-and-Architecture"><a href="#Critical-thinking-Content-and-Architecture" class="headerlink" title="Critical thinking(Content and Architecture)"></a>Critical thinking(Content and Architecture)</h2><h3 id="What-is-our-question-topic"><a href="#What-is-our-question-topic" class="headerlink" title="What is our question/topic?"></a>What is our question/topic?</h3><p>Proper HTTP status code for invalid DELETE(When resource not existed) in Restful api when leaking a <strong>information about resource existed and deleted</strong> is <strong>not the critical failure of the program.</strong></p>
+<h3 id="Category-of-topic"><a href="#Category-of-topic" class="headerlink" title="Category of topic"></a>Category of topic</h3><p>It is a prescriptive topic instead of descriptive topic when it come to <strong>program design decision</strong>.Our preference in this topic are</p>
+<ul>
+<li>Security</li>
+<li>Discoverability</li>
+<li>Maintainability</li>
+</ul>
+<h3 id="Supporting"><a href="#Supporting" class="headerlink" title="Supporting"></a>Supporting</h3><h4 id="Evidence"><a href="#Evidence" class="headerlink" title="Evidence"></a>Evidence</h4><ul>
+<li>404 do allow people to realize the resource not existed anymore.</li>
+<li>404 do expose a information that resource existed and deleted.</li>
+<li>403 said request is valid but the user don’t have the permission.(it basically said resource existed but you don’t have the right to do so )</li>
+<li>401 said the user is not simply unauthorized and not mention whether the existence of resource.</li>
+</ul>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>For proper HTTP status code for invalid DELETE(When resource not existed)</p>
+<p>404 is good when <strong>information about resource existed and deleted</strong> is <strong>not the critical failure of the program.</strong><br>401 is good when <strong>information about resource existed and deleted</strong> is <strong>the critical failure of the program.</strong><br>403 is misleading when <strong>information about resource existed and deleted</strong> is <strong>not the critical failure of the program.</strong></p>
+<h3 id="Book-and-reference"><a href="#Book-and-reference" class="headerlink" title="Book and reference"></a>Book and reference</h3><ul>
+<li><a href="https://www.amazon.com/Asking-Right-Questions-11th-Browne/dp/0321907957" target="_blank" rel="noopener">asking the right questions a guide to critical thinking</a></li>
+<li><a href="https://stackoverflow.com/questions/23486992/rest-api-proper-http-status-code-for-invalid-delete" target="_blank" rel="noopener">https://stackoverflow.com/questions/23486992/rest-api-proper-http-status-code-for-invalid-delete</a></li>
+<li><a href="https://stackoverflow.com/questions/3547474/correct-http-status-code-when-resource-is-available-but-not-accessible-because-o" target="_blank" rel="noopener">https://stackoverflow.com/questions/3547474/correct-http-status-code-when-resource-is-available-but-not-accessible-because-o</a></li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html" data-id="cjgjdb22u001zcvpvt5dk4oqz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html">评论</a>
     
 
         </footer>
@@ -1614,7 +1614,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-to-select-proper-cloud-platform-for-java-or-php-application.html" data-id="cjgj5jq6m001zlapvnlmcczw1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-to-select-proper-cloud-platform-for-java-or-php-application.html" data-id="cjgjdb22v0020cvpvsrx52ecs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1804,7 +1804,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/rest-api-101.html" data-id="cjgj5jq6o0022lapv4uzvtpgc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/rest-api-101.html" data-id="cjgjdb22w0023cvpvfu84sod8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
