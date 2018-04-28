@@ -5,20 +5,20 @@
     
     <title>Same Origin policy and CORS | Jeff Chung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Before Reading What you can learn after reading this article?  Same Origin strategy  CORS jsonp(http://jeff-chung.com/2015/10/07/jsonp-tutorial.html)  How much time you will use for reading this artic">
+    <meta name="description" content="Before Reading What you can learn after reading this article?  Same Origin strategy  CORS jsonp(&amp;lt;/2015/10/07/jsonp-tutorial.html&amp;gt;)  How much time you will use for reading this article? 30 minute">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Same Origin policy and CORS">
 <meta property="og:url" content="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html">
 <meta property="og:site_name" content="Jeff Chung">
-<meta property="og:description" content="Before Reading What you can learn after reading this article?  Same Origin strategy  CORS jsonp(http://jeff-chung.com/2015/10/07/jsonp-tutorial.html)  How much time you will use for reading this artic">
+<meta property="og:description" content="Before Reading What you can learn after reading this article?  Same Origin strategy  CORS jsonp(&amp;lt;/2015/10/07/jsonp-tutorial.html&amp;gt;)  How much time you will use for reading this article? 30 minute">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/same-origin.png">
 <meta property="og:image" content="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/read-request-cors.png">
 <meta property="og:image" content="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/cud-request-cors.png">
-<meta property="og:updated_time" content="2018-04-28T08:52:49.548Z">
+<meta property="og:updated_time" content="2018-04-28T12:40:44.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Same Origin policy and CORS">
-<meta name="twitter:description" content="Before Reading What you can learn after reading this article?  Same Origin strategy  CORS jsonp(http://jeff-chung.com/2015/10/07/jsonp-tutorial.html)  How much time you will use for reading this artic">
+<meta name="twitter:description" content="Before Reading What you can learn after reading this article?  Same Origin strategy  CORS jsonp(&amp;lt;/2015/10/07/jsonp-tutorial.html&amp;gt;)  How much time you will use for reading this article? 30 minute">
 <meta name="twitter:image" content="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/same-origin.png">
     
 
@@ -249,14 +249,14 @@ ga('send', 'pageview');
 <li><p>Same Origin strategy</p>
 </li>
 <li>CORS</li>
-<li><p>jsonp(<a href="http://jeff-chung.com/2015/10/07/jsonp-tutorial.html">http://jeff-chung.com/2015/10/07/jsonp-tutorial.html</a>)</p>
+<li><p>jsonp(&lt;/2015/10/07/jsonp-tutorial.html&gt;)</p>
 </li>
 <li><p>How much time you will use for reading this article? 30 minutes</p>
 </li>
 </ol>
-<h1 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h1><h2 id="Same-origin-strategy"><a href="#Same-origin-strategy" class="headerlink" title="Same origin strategy"></a>Same origin strategy</h2><p><img src="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/same-origin.png" alt=" "> Browser is OS js and origin is application</p>
-<h2 id="Read-From-CORS"><a href="#Read-From-CORS" class="headerlink" title="Read From CORS"></a>Read From CORS</h2><p><img src="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/read-request-cors.png" alt=" "> The requested resource is called once and actually returned to OS even if CORS not permitted.But the Browser will not pass data to <strong>JS1</strong>.</p>
-<h2 id="CUD-From-CORS"><a href="#CUD-From-CORS" class="headerlink" title="CUD From CORS"></a>CUD From CORS</h2><p><img src="http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/cud-request-cors.png" alt=" "> The requested operation will not be called because the browser <strong>read and check the response of preflight request</strong></p>
+<h1 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h1><h2 id="Same-origin-strategy"><a href="#Same-origin-strategy" class="headerlink" title="Same origin strategy"></a>Same origin strategy</h2><p><img src="/blog_accessary/blog_images/same-origin-and-cors/same-origin.png" alt=" "> Browser is OS js and origin is application</p>
+<h2 id="Read-From-CORS"><a href="#Read-From-CORS" class="headerlink" title="Read From CORS"></a>Read From CORS</h2><p><img src="/blog_accessary/blog_images/same-origin-and-cors/read-request-cors.png" alt=" "> The requested resource is called once and actually returned to OS even if CORS not permitted.But the Browser will not pass data to <strong>JS1</strong>.</p>
+<h2 id="CUD-From-CORS"><a href="#CUD-From-CORS" class="headerlink" title="CUD From CORS"></a>CUD From CORS</h2><p><img src="/blog_accessary/blog_images/same-origin-and-cors/cud-request-cors.png" alt=" "> The requested operation will not be called because the browser <strong>read and check the response of preflight request</strong></p>
 <p><strong>preflight request hints</strong> Both preflight request and actual CUD request need to return same cors response.E.g</p>
 <p>Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS Access-Control-Allow-Origin:<a href="http://rdv.dpms.com:9966" target="_blank" rel="noopener">http://rdv.dpms.com:9966</a></p>
 <h1 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h1><h2 id="Http-Response-header-for-CORS"><a href="#Http-Response-header-for-CORS" class="headerlink" title="Http Response header for CORS"></a>Http Response header for CORS</h2><p>Allow Origin:<a href="http://abc.com" target="_blank" rel="noopener">http://abc.com</a> Allow methods :PUT,GET,POST,OPTIONS(Preflight request)</p>
@@ -275,7 +275,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html" data-id="cjgjdb22y0027cvpvf71g97hx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/same-origin-and-cors.html" data-id="cjgjdkld400272upv0pxo8qmc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
