@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Jsonp in 5 minute | Jeff Chung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Before Reading What you can learn after reading this article?   Determine whether you should use jsonp Understand what is JSONP Understand how to make cross domain request using JSONP Extra of jsonp r">
+<meta name="keywords" content="JsonP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jsonp in 5 minute">
+<meta property="og:url" content="http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html">
+<meta property="og:site_name" content="Jeff Chung">
+<meta property="og:description" content="Before Reading What you can learn after reading this article?   Determine whether you should use jsonp Understand what is JSONP Understand how to make cross domain request using JSONP Extra of jsonp r">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jeff-chung.com/blog_accessary/writing_common_accessary/decision.jpg">
+<meta property="og:image" content="http://jeff-chung.com/blog_accessary/blog_images/jsonp/1.png">
+<meta property="og:updated_time" content="2018-04-28T08:52:49.549Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jsonp in 5 minute">
+<meta name="twitter:description" content="Before Reading What you can learn after reading this article?   Determine whether you should use jsonp Understand what is JSONP Understand how to make cross domain request using JSONP Extra of jsonp r">
+<meta name="twitter:image" content="http://jeff-chung.com/blog_accessary/writing_common_accessary/decision.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-69191655-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Jeff Chung</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">主页</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/2018/04/28/me/to-recruiter.html">关于我</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">主页</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/2018/04/28/me/to-recruiter.html">关于我</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">Jeff Chung</h2>
+            <h3 id="title">有影响力的软件工程师</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>深圳，香港</span>
+            <!-- <a id="follow" target="_blank" href="">关注我</a> -->
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                61
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                15
+                <span>分类</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/chungchi300/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="mailto:chungchi300@hotmail.com" target="_blank" title="send" class=tooltip>
+                            <i class="fa fa-send"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.linkedin.com/in/jeff-chung-52a89956/" target="_blank" title="linkedin" class=tooltip>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-web-frontend/jsonp-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Jsonp in 5 minute
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/web-frontend/jsonp-tutorial.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Web前端/">Web前端</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="Before-Reading"><a href="#Before-Reading" class="headerlink" title="Before Reading"></a>Before Reading</h2><ol>
+<li>What you can learn after reading this article?</li>
+</ol>
+<ul>
+<li>Determine whether you should use jsonp</li>
+<li>Understand what is JSONP</li>
+<li>Understand how to make cross domain request using JSONP</li>
+<li>Extra of jsonp related issues</li>
+</ul>
+<ol start="2">
+<li>How much time you will use for reading this article?<br>40 minutes for reading and 1 hour for practice.</li>
+</ol>
+<h2 id="Jeff-is-creating-a-online-phone-book"><a href="#Jeff-is-creating-a-online-phone-book" class="headerlink" title="Jeff is creating a online phone book"></a>Jeff is creating a online phone book</h2><p>Jeff is a software engineer who loves his community,he notice that so many new immigrates don’t know how to contact proper social worker or organization to get help.<br>Therefore,he intend to create a online phone book which contains such phone number via api.He is evaluating his requirement and technology to do this.</p>
+<h2 id="Whether-I-should-use-jsonp"><a href="#Whether-I-should-use-jsonp" class="headerlink" title="Whether I should use jsonp?"></a>Whether I should use jsonp?</h2><p><div class="minipic-container"><br><img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/decision.jpg"></div></p>
+<p><div class="minitext-container"></div></p>
+<p><div class="minipic-title">Communication technique decision</div><br></p>
+<p><div class="minipic-content">Cross domain request in client side need jsonp</div><br><br><br>The AJAX(XMLHttpRequest) don’t allow cross domain request(same origin policy).Therefore,we use jsonp to undergo cross domain request(allow cross domain request)<br>For example,the contact numbers which comes from different domain from different organization so jsonp need to be used.<br>And Jeff knows that he is going to use jsonp but he need to know what is jsonp in order to implement it correctly.</p>
+<h2 id="What-is-jsonp"><a href="#What-is-jsonp" class="headerlink" title="What is jsonp?"></a>What is jsonp?</h2><h3 id="JSONP-mechanism"><a href="#JSONP-mechanism" class="headerlink" title="JSONP mechanism"></a>JSONP mechanism</h3><p>For the</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;url&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>The browser will download the javascript file based on url <strong>no matter the url is same domain or cross domain</strong>.Then the browser will evaluate(run) the javascript file.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://jeff-chung.com/blog_accessary/jsonp/basic/remote.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://jeff-chung.com/blog_accessary/jsonp/basic/local.html" download="">Example file</a><br>It is the fundamental property of browser which utilized by jsonp.</p>
+<p>Moreover,the javascript can create the load the script to be loaded dynamically like</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</span></span><br><span class="line"><span class="meta">        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">            var url = "http://jeff-chung.com/blog_accessary/jsonp/advanced/remote.js";</span></span><br><span class="line"><span class="undefined">            var script = document.createElement('script');</span></span><br><span class="line"><span class="undefined">            script.setAttribute('src', url);</span></span><br><span class="line"><span class="undefined">            document.getElementsByTagName('head')[0].appendChild(script);</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://jeff-chung.com/blog_accessary/jsonp/advanced/local.html" download="">Example file</a></p>
+<h3 id="Jsonp-component"><a href="#Jsonp-component" class="headerlink" title="Jsonp component"></a>Jsonp component</h3><p>The jsonp file will contain the message(usually in json format but not necessary) with a wrapper function <strong>(which defined in local file)</strong>.For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrapper(&#123;&quot;Name&quot;: &quot;Police&quot;, &quot;Id&quot;: 1, &quot;PhoneNumber&quot;: 67221234&#125;);</span><br></pre></td></tr></table></figure>
+<p>After the loading this jsonp file using the script,when the browser evaluate the jsonp file,the jsonp file <strong>call the wrapper function</strong>,therefore the remote data of jsonp is <strong>passed</strong> to local file(due to the function is defined in local file).</p>
+<p>Now Jeff knows what is jsonp now,he is going the build his online phone book now.</p>
+<h2 id="How-to-make-cross-domain-request-using-jsonp"><a href="#How-to-make-cross-domain-request-using-jsonp" class="headerlink" title="How to make cross domain request using jsonp?"></a>How to make cross domain request using jsonp?</h2><p>Here are three jsonp file<br>Hospital:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsonPFileLoadedHandler(&#123;&quot;Name&quot;: &quot;Hospital&quot;, &quot;Id&quot;: 1, &quot;PhoneNumber&quot;: 63221234&#125;);</span><br></pre></td></tr></table></figure>
+<p>Police:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsonPFileLoadedHandler(&#123;&quot;Name&quot;: &quot;Police&quot;, &quot;Id&quot;: 2, &quot;PhoneNumber&quot;: 67221434&#125;);</span><br></pre></td></tr></table></figure>
+<p>Library:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsonPFileLoadedHandler(&#123;&quot;Name&quot;: &quot;Library&quot;, &quot;Id&quot;: 3, &quot;PhoneNumber&quot;: 67221224&#125;);</span><br></pre></td></tr></table></figure>
+<p>Local:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</span></span><br><span class="line"><span class="meta">        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://jeff-chung.com//blog_accessary/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">            var jsonPFileLoadedHandler = function (data) &#123;</span></span><br><span class="line"><span class="undefined">                console.log(data);</span></span><br><span class="line"><span class="xml">                $("#phones").append("<span class="tag">&lt;<span class="name">li</span>&gt;</span>" +data.Id+" . " +data.Name + "("+data.PhoneNumber+ ")<span class="tag">&lt;/<span class="name">li</span>&gt;</span>");</span></span><br><span class="line"><span class="undefined">            &#125;;</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"phones"</span>&gt;</span><span class="tag">&lt;<span class="name">li</span>&gt;</span>first<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://jeff-chung.com/blog_accessary/jsonp/community/hospital.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://jeff-chung.com/blog_accessary/jsonp/community/police.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://jeff-chung.com/blog_accessary/jsonp/community/library.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Result:<br><img src="http://jeff-chung.com/blog_accessary/blog_images/jsonp/1.png" alt=" "></p>
+<p><a href="http://jeff-chung.com/blog_accessary/jsonp/community/community.zip" download="">Example</a></p>
+<p>As we can see that the wrapper function is not important(the important thing is the transmission of data and the evaluation(calling process)),therefore,<br>In <strong>official jsonp format</strong>,the wrapper function name is defined in the url,for example</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://jeff-chung.com/blog_accessary/jsonp/community/hospital.js?callback=jsonPFileLoadedHandler</span><br></pre></td></tr></table></figure>
+<p>Then the server side will change to proper wrapper according to the callback name.</p>
+<h2 id="Metaphore"><a href="#Metaphore" class="headerlink" title="Metaphore"></a>Metaphore</h2><p>In jsonp just like government department sending a US-Citizens(<strong>jsonp provider</strong>) with department name(<strong>wrapper function</strong>) and the people will write their opinion(<strong>message in wrapper function</strong>).The government will wait and receive until the citizen finish writing their opinion.</p>
+<h2 id="Pros-and-Cons-of-jsonp"><a href="#Pros-and-Cons-of-jsonp" class="headerlink" title="Pros and Cons of jsonp"></a>Pros and Cons of jsonp</h2><ol>
+<li><p>Risk:<br><a href="https://en.wikipedia.org/wiki/JSONP" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/JSONP</a></p>
+</li>
+<li><p>JQuery implementation:<br><a href="http://stackoverflow.com/questions/5943630/basic-example-of-using-ajax-with-jsonp" target="_blank" rel="noopener">http://stackoverflow.com/questions/5943630/basic-example-of-using-ajax-with-jsonp</a><br>**Although jquery put the jsonp in ajax function,it is</p>
+</li>
+</ol>
+<h2 id="Jeff-has-finished-the-phone-book"><a href="#Jeff-has-finished-the-phone-book" class="headerlink" title="Jeff has finished the phone book"></a>Jeff has finished the phone book</h2><p>The phone book is completed,the immigrates can use the online phone book to get the phone number of police,hospital and library.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html" data-id="cjgj5jq6z002jlapvbu50253j" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/04/28/web-frontend/graphical-designer-quickly-involve-design-implement.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Graphical designer must have programming technical skill in order to do part of design implementation in react
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2018/04/28/web-frontend/minutes-decide-device-min-resolution.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">响应式(Responsive)网页设计-1分钟决定最小分辨率</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">作品墙</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://www.kingmed.com.cn/">Kingmed - 中国龙头第三方医学检验数字化病理诊断工具</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.vy.com.hk">www.vy.com.hk - 全香港最大的P2P葡萄酒网上销售平台</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.okibook.com">www.okibook.com - 全香港最优惠的自助餐预订平台</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/chungchi300/eaglet">eaglet - 最简單直接的 Koa2 的脚手架</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web前端/">Web前端</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/代码审查/">代码审查</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于我/">关于我</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/写作/">写作</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/">前端开发</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作目标/">工作目标</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/市场营销/">市场营销</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发工具/">开发工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/徒手训练/">徒手训练</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/成果交付管理/">成果交付管理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/沟通基本功/">沟通基本功</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序设计/">程序设计</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/管理和协作/">管理和协作</a><span class="category-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">61</span></li></ul>
+        </div>
+    </div>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 Jeff Chung<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://jeff-chung.com/2018/04/28/web-frontend/jsonp-tutorial.html';
+        
+        this.page.identifier = 'web-frontend/jsonp-tutorial';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'jeffchung' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
