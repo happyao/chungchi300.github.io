@@ -11,3 +11,5 @@ keywords:
 | True  | Negative | 不好       | True Negative  | 真负 漏报率 |
 | False | Positive | 不好       | False Positive | 假正 误报率 |
 | False | Negative | 好         | False Negative | 假负        |
+
+domain knowledge
