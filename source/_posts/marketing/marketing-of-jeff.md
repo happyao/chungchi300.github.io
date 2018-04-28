@@ -71,4 +71,4 @@ P.S 每周更新，以减少社交媒体的使用,香港=>http://jeffchung.com, 
 
 #### 支持
 
-http://jeff-chung.com/2018/01/12/support-me.html
+/2018/01/12/support-me.html

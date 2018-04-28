@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title></title>
+        <script>
+            var localHandler = function (data) {
+                alert('local function:remote data=' + data.result);
+            };
+            var url = "http://jeff-chung.com/blog_accessary/jsonp/advanced/remote.js";
+            var script = document.createElement('script');
+            script.setAttribute('src', url);
+            document.getElementsByTagName('head')[0].appendChild(script);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

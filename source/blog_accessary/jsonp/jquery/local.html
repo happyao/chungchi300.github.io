@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title></title>
+        <script src="jquery-1.11.3.min.js" ></script>
+        <script>
+            var localHandler = function(data){
+                console.log('callback function parameter' + data);
+            };
+            //call back function style
+            jQuery(document).ready(function(){
+                $.ajax({
+                    type: "get",
+                    async: false,
+                    url: "http://jeff-chung.com/blog_accessary/jsonp/jquery/static_remote_callback_data.js",
+                    dataType: "jsonp",
+                    jsonp: "callback",
+                    //which act as callback and wrapper function
+                    jsonpCallback:"localHandler",
+                    success: function(data){
+                        //after called ,the function parameter will also passed to success function
+                        console.log("wrapped data got in callback style");
+                        console.log(data);
+                    },
+                    error: function(){
+                        console.log('wrapped data got failed in callback style');
+                    }
+                });
+            });
+            //static remote data style
+            jQuery(document).ready(function(){
+                $.ajax({
+                    type: "get",
+                    async: false,
+                    url: "http://jeff-chung.com/blog_accessary/jsonp/jquery/static_remote_wrapper_data.js",
+                    contentType:"application/json",
+                    dataType: 'jsonp',
+                    jsonp:false,
+                    jsonpCallback:"wrapper",
+                    crossDomain: true,
+                    success: function(data){
+                        //after called ,the function parameter will also passed to success function
+                        console.log("wrapped data got in static remote style");
+                        console.log(data);
+                    },
+                    error: function(){
+                        console.log("wrapped data got failed in static remote style");
+                    }
+                });
+            });
+            //dynamic remote data style
+            jQuery(document).ready(function(){
+                $.ajax({
+                    type: "get",
+                    async: false,
+                    //the url will automatically append ?callback=jquery123123 which act as the wrapper
+                    url: "http://jeff-chung.com/blog_accessary/jsonp/jquery/dynamic_remote_wrapper_data.js",
+                    contentType:"application/json",
+                    dataType: 'jsonp',
+                    jsonp:true,
+                    //wrapper function jquery123123(data)
+                    crossDomain: true,
+                    success: function(data){
+                        //after called ,the function parameter will also passed to success function
+
+                        console.log("wrapped data got in dynamic remote style");
+
+                    },
+                    error: function(){
+                        console.log("wrapped data got failed in dynamic remote style,yes,because the remote_data.js don't change wrapper function name due to it is hosted on github page which cannot run php");
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -2,13 +2,13 @@
 layout: post
 title: How to negotiate with your boss to get a nice computer for your work
 category: 管理和协作
-keywords: http://jeff-chung.com/blog_accessary/blog_images/negotiation/negotiation1.png
+keywords: /blog_accessary/blog_images/negotiation/negotiation1.png
 
 date: 2018-04-28 16:09:02
 ---
 
 <p align="center">
-  <img src="http://jeff-chung.com/blog_accessary/blog_images/negotiation/negotiation1.png">
+  <img src="/blog_accessary/blog_images/negotiation/negotiation1.png">
 </p>
 ## Before Reading
 As a software engineer we all knows a good computer or tool can massively improve our productivity,but our manager usually don't understand this.
@@ -25,7 +25,7 @@ They may think you can **work** with **any device** but they don't know how much
 ## Should you start a negotiation with your boss about your computer?
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/decision.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/decision.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Decision</div><br />
 <div class="minipic-content">Based on the programming task to decide negotiation or not</div>
@@ -52,7 +52,7 @@ Now you have decide you need to negotiate with your manager,but how to do it?
 ## Timing of start a negotiation
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/timing.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/timing.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Timing</div><br />
 <div class="minipic-content">Pick a timing that your manager need to decide quickly</div>
@@ -67,7 +67,7 @@ Please remind that your attitude should be **nice** and you do this for the **go
 ## Define your bargaining range
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/options.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/options.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Option</div><br />
 <div class="minipic-content">Always prepare enough option for bargaining</div>
@@ -83,7 +83,7 @@ supply and demand picture
 ## Convince your manager that many company are providing good computer to programmer
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/demandAndSupply.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/demandAndSupply.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Demand and supply</div><br />
 <div class="minipic-content">Let's your manager know the demand and supply of good computer</div>
@@ -102,7 +102,7 @@ Because programmer will generally work for company providing those thing.
 ## Give the motivation to your manager
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/motivate.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/motivate.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Motivate</div><br />
 <div class="minipic-content">Motivate your manager in their point of view</div>

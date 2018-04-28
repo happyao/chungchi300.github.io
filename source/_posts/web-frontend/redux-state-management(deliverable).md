@@ -48,7 +48,7 @@ Development and maintenance time :).
 
 ### How to achieve quick development
 
-1.  [Good Action Design](<http://jeff-chung.com/2017/05/08/redux-state-management(action-design).html>)
+1.  [Good Action Design](</2017/05/08/redux-state-management(action-design).html>)
 
 ## low learning curve
 

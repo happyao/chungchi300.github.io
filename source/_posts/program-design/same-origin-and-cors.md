@@ -12,7 +12,7 @@ date: 2018-04-28 16:09:02
 
 1.  Same Origin strategy
 1.  CORS
-1.  jsonp(<http://jeff-chung.com/2015/10/07/jsonp-tutorial.html>)
+1.  jsonp(</2015/10/07/jsonp-tutorial.html>)
 
 1.  How much time you will use for reading this article? 30 minutes
 
@@ -20,15 +20,15 @@ date: 2018-04-28 16:09:02
 
 ## Same origin strategy
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/same-origin.png) Browser is OS js and origin is application
+![ ](/blog_accessary/blog_images/same-origin-and-cors/same-origin.png) Browser is OS js and origin is application
 
 ## Read From CORS
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/read-request-cors.png) The requested resource is called once and actually returned to OS even if CORS not permitted.But the Browser will not pass data to **JS1**.
+![ ](/blog_accessary/blog_images/same-origin-and-cors/read-request-cors.png) The requested resource is called once and actually returned to OS even if CORS not permitted.But the Browser will not pass data to **JS1**.
 
 ## CUD From CORS
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/cud-request-cors.png) The requested operation will not be called because the browser **read and check the response of preflight request**
+![ ](/blog_accessary/blog_images/same-origin-and-cors/cud-request-cors.png) The requested operation will not be called because the browser **read and check the response of preflight request**
 
 **preflight request hints** Both preflight request and actual CUD request need to return same cors response.E.g
 

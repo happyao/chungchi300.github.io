@@ -26,7 +26,7 @@ Therefore,he intend to create a online phone book which contains such phone numb
 ## Whether I should use jsonp?
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/decision.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/decision.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Communication technique decision</div><br />
 <div class="minipic-content">Cross domain request in client side need jsonp</div>
@@ -53,14 +53,14 @@ The browser will download the javascript file based on url **no matter the url i
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title></title>
-        <script type="text/javascript" src="http://jeff-chung.com/blog_accessary/jsonp/basic/remote.js"></script>
+        <script type="text/javascript" src="/blog_accessary/jsonp/basic/remote.js"></script>
     </head>
     <body>
     </body>
 </html>
 ```
 
-<a href="http://jeff-chung.com/blog_accessary/jsonp/basic/local.html" download>Example file</a>
+<a href="/blog_accessary/jsonp/basic/local.html" download>Example file</a>
 It is the fundamental property of browser which utilized by jsonp.
 
 Moreover,the javascript can create the load the script to be loaded dynamically like
@@ -72,7 +72,7 @@ Moreover,the javascript can create the load the script to be loaded dynamically 
     <head>
         <title></title>
         <script>
-            var url = "http://jeff-chung.com/blog_accessary/jsonp/advanced/remote.js";
+            var url = "/blog_accessary/jsonp/advanced/remote.js";
             var script = document.createElement('script');
             script.setAttribute('src', url);
             document.getElementsByTagName('head')[0].appendChild(script);
@@ -83,7 +83,7 @@ Moreover,the javascript can create the load the script to be loaded dynamically 
 </html>
 ```
 
-<a href="http://jeff-chung.com/blog_accessary/jsonp/advanced/local.html" download>Example file</a>
+<a href="/blog_accessary/jsonp/advanced/local.html" download>Example file</a>
 
 ### Jsonp component
 
@@ -126,7 +126,7 @@ Local:
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title></title>
-        <script src="http://jeff-chung.com//blog_accessary/jquery.js"></script>
+        <script src="//blog_accessary/jquery.js"></script>
         <script>
             var jsonPFileLoadedHandler = function (data) {
                 console.log(data);
@@ -137,22 +137,22 @@ Local:
     <body>
         <ul id="phones"><li>first</li></ul>
     </body>
-    <script type="text/javascript" src="http://jeff-chung.com/blog_accessary/jsonp/community/hospital.js"></script>
-    <script type="text/javascript" src="http://jeff-chung.com/blog_accessary/jsonp/community/police.js"></script>
-    <script type="text/javascript" src="http://jeff-chung.com/blog_accessary/jsonp/community/library.js"></script>
+    <script type="text/javascript" src="/blog_accessary/jsonp/community/hospital.js"></script>
+    <script type="text/javascript" src="/blog_accessary/jsonp/community/police.js"></script>
+    <script type="text/javascript" src="/blog_accessary/jsonp/community/library.js"></script>
 </html>
 ```
 
 Result:
-![ ](http://jeff-chung.com/blog_accessary/blog_images/jsonp/1.png)
+![ ](/blog_accessary/blog_images/jsonp/1.png)
 
-<a href="http://jeff-chung.com/blog_accessary/jsonp/community/community.zip" download>Example</a>
+<a href="/blog_accessary/jsonp/community/community.zip" download>Example</a>
 
 As we can see that the wrapper function is not important(the important thing is the transmission of data and the evaluation(calling process)),therefore,
 In **official jsonp format**,the wrapper function name is defined in the url,for example
 
 ```html
-http://jeff-chung.com/blog_accessary/jsonp/community/hospital.js?callback=jsonPFileLoadedHandler
+/blog_accessary/jsonp/community/hospital.js?callback=jsonPFileLoadedHandler
 ```
 
 Then the server side will change to proper wrapper according to the callback name.

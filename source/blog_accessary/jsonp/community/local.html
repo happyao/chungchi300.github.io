@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title></title>
+        <script src="http://jeff-chung.com/blog_accessary/jquery.js"></script>
+        <script>
+            var jsonPFileLoadedHandler = function (data) {
+                console.log(data);
+                $("#phones").append("<li>" +data.Id+" . " +data.Name + "("+data.PhoneNumber+ ")</li>");
+            };
+
+            function addScriptAndEval( src ) {
+                var s = document.createElement('script');
+                s.src = src;
+                s.type = "text/javascript";
+                s.async = false;                                 // <-- this is important in order to load synchronously
+                document.getElementsByTagName('head')[0].appendChild(s);
+            }
+            $(document).ready(function(){
+                addScriptAndEval("http://jeff-chung.com/blog_accessary/jsonp/community/hospital.js");
+                addScriptAndEval("http://jeff-chung.com/blog_accessary/jsonp/community/police.js");
+                addScriptAndEval("http://jeff-chung.com/blog_accessary/jsonp/community/library.js");
+            });
+        </script>
+
+    </head>
+    <body>
+        <ul id="phones"></ul>
+    </body>
+
+</html>

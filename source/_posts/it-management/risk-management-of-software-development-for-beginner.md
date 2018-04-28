@@ -2,11 +2,11 @@
 layout: post
 title: 15 minutes Risk management of software development for beginner
 category: 管理和协作
-keywords: 'http://jeff-chung.com/blog_accessary/blog_images/risk-management/1.jpg'
+keywords: '/blog_accessary/blog_images/risk-management/1.jpg'
 date: 2018-04-28 16:09:02
 ---
 
-![](http://jeff-chung.com/blog_accessary/blog_images/risk-management/1.jpg)
+![](/blog_accessary/blog_images/risk-management/1.jpg)
 
 # Before Reading
 

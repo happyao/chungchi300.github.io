@@ -22,7 +22,7 @@ Jeff is a programmer who want some improvement,he heard about that writing can h
 You have read my article so you should able to do that.I use markdown to write this article
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/principle.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/principle.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Writing principle</div><br />
 <div class="minipic-content">Write for fun</div>

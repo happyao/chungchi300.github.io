@@ -75,6 +75,6 @@ return: user information
 
 P.S
 
-* [Naming convention and method](http://jeff-chung.com/2017/04/25/Restful-api-naming-convention,method-and-params.html)
+* [Naming convention and method](/2017/04/25/Restful-api-naming-convention,method-and-params.html)
 
-* [Empty Fields](http://jeff-chung.com/2017/05/18/rest-empty-field.html)
+* [Empty Fields](/2017/05/18/rest-empty-field.html)

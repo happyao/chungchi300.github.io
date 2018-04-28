@@ -34,7 +34,7 @@ Adv:
 Example:
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/principle.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/principle.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Head first Writing principle</div><br />
 <div class="minipic-content">Write in structure and fun!</div>

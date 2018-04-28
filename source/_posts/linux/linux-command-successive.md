@@ -12,20 +12,20 @@ date: 2018-04-28 16:09:02
 
 # difference
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/difference.png)
+![ ](/blog_accessary/blog_images/linux_command/combined/difference.png)
 
 # com1;com2
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/;.png)
+![ ](/blog_accessary/blog_images/linux_command/combined/;.png)
 
 # (com1;com2)
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/group;groupEnd.png)
+![ ](/blog_accessary/blog_images/linux_command/combined/group;groupEnd.png)
 
 # com1&com2
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/&.png)
+![ ](/blog_accessary/blog_images/linux_command/combined/&.png)
 
 # com1&&com2
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/&&.png)
+![ ](/blog_accessary/blog_images/linux_command/combined/&&.png)

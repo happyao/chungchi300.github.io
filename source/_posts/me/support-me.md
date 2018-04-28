@@ -8,8 +8,8 @@ date: 2018-04-28 16:09:02
 
 ## 中国读者
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/support-me/zfb.jpg)
-![ ](http://jeff-chung.com/blog_accessary/blog_images/support-me/wechat.png)
+![ ](/blog_accessary/blog_images/support-me/zfb.jpg)
+![ ](/blog_accessary/blog_images/support-me/wechat.png)
 
 ## 国外读者
 

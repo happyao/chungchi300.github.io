@@ -23,7 +23,7 @@ date: 2018-04-28 16:09:02
 ```
 <img src="theImage.svg" />
 ```
-![](http://jeff-chung.com/blog_accessary/blog_images/svg/address.svg)
+![](/blog_accessary/blog_images/svg/address.svg)
 
 适用的场景:
  * 不需要提供交互性
@@ -32,7 +32,7 @@ date: 2018-04-28 16:09:02
 
 #### 一种颜色
 
-![](http://jeff-chung.com/blog_accessary/blog_images/svg/1.png)
+![](/blog_accessary/blog_images/svg/1.png)
 
 **html中Inline(内联)使用**
 
@@ -60,7 +60,7 @@ P.S
 
 #### 2种颜色
 
-![](http://jeff-chung.com/blog_accessary/blog_images/svg/2.png)
+![](/blog_accessary/blog_images/svg/2.png)
 
 
 **html中Inline(内联)和在svg使用currentColor 属性**
@@ -72,7 +72,7 @@ P.S
 
 ### 使用React(JS)动态变更多种(>2)颜色和用JS变更
 
-![](http://jeff-chung.com/blog_accessary/blog_images/svg/sample.png)
+![](/blog_accessary/blog_images/svg/sample.png)
 
 [点击试试](https://codepen.io/chungchi300/pen/OQNYOB)
 

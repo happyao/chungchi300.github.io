@@ -2,7 +2,7 @@
 layout: post
 title: Get Volume of different three dimensional
 category: 算法
-keywords: http://jeff-chung.com/blog_accessary/blog_images/hackerrank/open.png
+keywords: /blog_accessary/blog_images/hackerrank/open.png
 date: 2018-04-28 16:09:02
 ---
 

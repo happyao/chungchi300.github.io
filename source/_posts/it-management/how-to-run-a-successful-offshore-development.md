@@ -2,11 +2,11 @@
 layout: post
 title: How to manage offshore development successfully.
 category: 管理和协作
-keywords: http://jeff-chung.com/blog_accessary/blog_images/off-shore-development/4.jpg
+keywords: /blog_accessary/blog_images/off-shore-development/4.jpg
 date: 2018-04-28 16:09:02
 ---
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/off-shore-development/4.jpg)
+![ ](/blog_accessary/blog_images/off-shore-development/4.jpg)
 
 ## Before Reading
 
@@ -29,7 +29,7 @@ He has too many project to work on recently and he wonder whether some of them c
 ## Things you need to think about before making a project to be developed by offshore team.
 
 <div class="minipic-container">
-<img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/decision.jpg" />
+<img class="minipic" src="/blog_accessary/writing_common_accessary/decision.jpg" />
 <div class="minitext-container">
 <div class="minipic-title">Decision</div><br />
 <div class="minipic-content">Overhead of offshore development for every project exists,all you need to do is find those low overhead project and reduce the overhead as much as possible</div>
@@ -60,13 +60,13 @@ Adv:
 4.  Efficient cost analysis and development speed analysis tool.
 
 Sample of pivotal tracker on
-![ ](http://jeff-chung.com/blog_accessary/blog_images/off-shore-development/1.jpg)
+![ ](/blog_accessary/blog_images/off-shore-development/1.jpg)
 
 ## Testing document on test lodge
 
 Test lodge is a **testing management tools** which has a good integration with pivotal tracker.
 For the requirement that is complicated,it is good to record them in a test case so that the offshore developer can run through the test case before you check it which can reduce many communication cost.
-![ ](http://jeff-chung.com/blog_accessary/blog_images/off-shore-development/2.jpg)
+![ ](/blog_accessary/blog_images/off-shore-development/2.jpg)
 
 ## Deployment on hockey app
 
@@ -76,7 +76,7 @@ Adv:
 1.  Multiple version coexistence
 2.  Email notification after deployed
 3.  Easy integration(6 hours)
-    ![ ](http://jeff-chung.com/blog_accessary/blog_images/off-shore-development/3.jpg)
+    ![ ](/blog_accessary/blog_images/off-shore-development/3.jpg)
 
 ## Regular meeting on every week
 

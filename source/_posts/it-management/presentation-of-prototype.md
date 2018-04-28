@@ -2,12 +2,12 @@
 layout: post
 title: Presentation of working product of a sprint
 category: 管理和协作
-keywords: http://jeff-chung.com/blog_accessary/blog_images/presentation/presentation_of_scrum.png
+keywords: /blog_accessary/blog_images/presentation/presentation_of_scrum.png
 date: 2018-04-28 16:09:02
 ---
 
 <p align="center">
-  <img src="http://jeff-chung.com/blog_accessary/blog_images/presentation/presentation_of_scrum.png">
+  <img src="/blog_accessary/blog_images/presentation/presentation_of_scrum.png">
 </p>
 
 ## Before Reading

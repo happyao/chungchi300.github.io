@@ -2,11 +2,11 @@
 layout: post
 title: How it manager fulfill the need of kiosk service of their company
 category: 管理和协作
-keywords: 'http://jeff-chung.com/blog_accessary/blog_images/kiosk/kiosk.png'
+keywords: '/blog_accessary/blog_images/kiosk/kiosk.png'
 date: 2018-04-28 16:09:02
 ---
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/kiosk/kiosk.png)
+![ ](/blog_accessary/blog_images/kiosk/kiosk.png)
 
 # Before Reading
 
@@ -32,7 +32,7 @@ Jeff is a it manager of a big real estate company of Hong Kong. The real estate 
 # Evaluate the need of kiosk service
 
 <div class="minipic-container">
-  <img class="minipic" src="http://jeff-chung.com/blog_accessary/writing_common_accessary/need.png">
+  <img class="minipic" src="/blog_accessary/writing_common_accessary/need.png">
   <p>
 </p>
   <p>

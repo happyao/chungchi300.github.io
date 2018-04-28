@@ -19,7 +19,7 @@ date: 2018-04-28 16:09:02
 我们喜欢解决真正的问题，解决可以改变人们生活的问题。
 
 * uml application(sequence diagram,class diagrammplantuml sequence diagram) -
-  [Stop writing uml ! - Agile Program design process](http://jeff-chung.com/2018/04/13/general-agile-design-process.html)
+  [Stop writing uml ! - Agile Program design process](/2018/04/13/general-agile-design-process.html)
 
 * Documentation generator(Markdown & plantuml generation tool) - [Min Doc](https://github.com/chungchi300/min-doc)
 * Recompose,And Rewrite Local

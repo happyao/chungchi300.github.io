@@ -2,11 +2,11 @@
 layout: post
 title: How to select proper cloud platform for java or php application
 category: 程序设计
-keywords: http://jeff-chung.com/blog_accessary/blog_images/cloud/cloud-computing.jpg
+keywords: /blog_accessary/blog_images/cloud/cloud-computing.jpg
 date: 2018-04-28 16:09:02
 ---
 
-![ ](http://jeff-chung.com/blog_accessary/blog_images/cloud/cloud-computing.jpg)
+![ ](/blog_accessary/blog_images/cloud/cloud-computing.jpg)
 
 For an web application,it is very common to put them to cloud platform for scalability and cost(cash flow) reason.
 This article will talk about
