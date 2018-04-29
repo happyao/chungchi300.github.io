@@ -198,7 +198,7 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-code-review/general-review" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-communication/increase-deliver-information-ability-for-programmer-and-tester" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -206,7 +206,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/general-review.html">我的代码审查实践(25分钟看完系列)</a>
+            <a class="article-title" href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">Increase delivery information ability for software engineer(Read for 10 minutes)</a>
         </h1>
     
 
@@ -215,7 +215,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/general-review.html">
+        <a href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -224,7 +224,7 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/代码审查/">代码审查</a>
+        <a class="article-category-link" href="/categories/沟通基本功/">沟通基本功</a>
     </div>
 
                         
@@ -239,42 +239,31 @@ ga('send', 'pageview');
             <h2 id="阅读前"><a href="#阅读前" class="headerlink" title="阅读前"></a>阅读前</h2><ol>
 <li>阅读这篇文章后你能学到什么?</li>
 </ol>
-<p>我的代码审查实践</p>
+<ul>
+<li>Speak with purpose</li>
+<li>Triangle principle</li>
+<li>Fact,Action principle,Reason come last</li>
+<li>Without filler words</li>
+<li>Reason come last</li>
+<li>Ask listener to repeat</li>
+<li>Supplement</li>
+</ul>
 <ol start="2">
-<li>你将用多少时间来阅读这篇文章?</li>
+<li>你将用多少时间来阅读这篇文章?<br>15 minutes</li>
 </ol>
-<p>25 分钟</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li><strong>分享知识</strong></li>
-<li><strong>提高代码的可读性</strong></li>
-</ul>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="一般错误"><a href="#一般错误" class="headerlink" title="一般错误"></a>一般错误</h3><h4 id="不必要的额外的逻辑层"><a href="#不必要的额外的逻辑层" class="headerlink" title="不必要的额外的逻辑层"></a>不必要的额外的逻辑层</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line"> if(Auth.isLogin())&#123;</span><br><span class="line">   return Auth::user();</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">   throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>错误</strong></p>
-<ul>
-<li>程序员需要额外的一层才能知道程序会抛出异常<strong>如果用户不满意</strong>。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line">if(!Auth.isLogin())&#123;</span><br><span class="line">  throw Error(&apos;get user when user is not authorized&apos;)    </span><br><span class="line">&#125;</span><br><span class="line">  return Auth::user();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>改进</strong></p>
-<ul>
-<li>程序员知道调用者必须确保用户<strong>需要确保用户需要登录</strong>才能正确地调用**这个功能</li>
-</ul>
-<h4 id="Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys"><a href="#Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys" class="headerlink" title="Retrieve array of items from indexed data object when already have indexed keys"></a>Retrieve array of items from indexed data object when already have indexed keys</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return _.filter(usersById, user =&gt;</span><br><span class="line">    targetUserIds.includes(</span><br><span class="line">      user.id</span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>错误</strong></p>
-<ul>
-<li>low performance and readability</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return targetUserIds.map(targetUserId=&gt;usersById[targetUserId])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>改进</strong></p>
-<ul>
-<li>better performance and readability</li>
-</ul>
-<h4 id="Unnecessary-extra-logic-layer-when-processing-overloading-function"><a href="#Unnecessary-extra-logic-layer-when-processing-overloading-function" class="headerlink" title="Unnecessary extra logic layer when processing overloading function"></a>Unnecessary extra logic layer when processing overloading function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;user.id==idOrIds);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>错误</strong></p>
-<ul>
-<li>Should seperation the type conversion and only have one process logic</li>
-</ul>
-<p><strong>改进</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(!Array.isArray(idOrIds))&#123;</span><br><span class="line">     idOrIds = [idOrIds];</span><br><span class="line">   &#125;</span><br><span class="line">  //One processing logic only</span><br><span class="line">   let results =   predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line"></span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">    return results;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return results[0];</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Speak-with-purpose"><a href="#Speak-with-purpose" class="headerlink" title="Speak with purpose"></a>Speak with purpose</h2><p><strong>Write done the information on paper you want to deliver before speaking</strong>.It help you get prepared and enter the speaking mode.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p>Purpose:<br>There is a bug for search API on query field of shopping cart</p>
+<p>Extra information to deliver information:</p>
+<p>query “nike” return product of “Addidas” and “Nike”</p>
+<h2 id="Triangle-principle"><a href="#Triangle-principle" class="headerlink" title="Triangle principle"></a>Triangle principle</h2><p><strong>Keep information number below 3.</strong></p>
+<p>The efficient of deliver information is greatly reduced when information number is bigger then 3 due to human focus ability.</p>
+<h2 id="Fact-and-action-first-reason-come-last"><a href="#Fact-and-action-first-reason-come-last" class="headerlink" title="Fact and action first,reason come last"></a>Fact and action first,reason come last</h2><p>When the information is about telling some fact/action,<strong>express the fact/action first and then follow the reason</strong>.Because people will be more focus at first and the reason make the fact/action more rational</p>
+<h2 id="Without-filler-words"><a href="#Without-filler-words" class="headerlink" title="Without filler words"></a>Without filler words</h2><p><strong>Don’t speak with filler words like (this,there,like,aa),just keep silent when you are thinking during speaking</strong> .</p>
+<p>It greatly reduce noise in communication process and make you looks very smart.</p>
+<h2 id="Ask-listener-to-repeat"><a href="#Ask-listener-to-repeat" class="headerlink" title="Ask listener to repeat"></a>Ask listener to repeat</h2><p><strong>Ask listener to repeat what you said can let you know the percentage that listener accept your information</strong> . And reverse you can apply the same skill to let them know.</p>
+<h2 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h2><p>Why we not good at,just a practice and switching the mind.</p>
+<p>Those sales also sucks at calculation &amp; data analysis,the same principle</p>
+<p>Shannon Communication Model</p>
 
         
         </div>
@@ -285,7 +274,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general-review.html" data-id="cjgjdklbj00032upv5s7vm1fp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html" data-id="cjgkg5w240003kgpvtn460lyb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -353,7 +342,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/general-review.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/general-review.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">评论</a>
     
 
         </footer>
@@ -406,7 +395,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/demo.html" data-id="cjgjdkl9x00002upv0gpv7d0s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/demo.html" data-id="cjgkg5w0c0001kgpv5abypb6q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -571,7 +560,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-error-api-design.html" data-id="cjgjdklcu001o2upv3zxoex0i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-error-api-design.html" data-id="cjgkg5w44001okgpvj9b2mhhw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -704,7 +693,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-post-css-selection.html" data-id="cjgjdklcw001r2upvl2u5ug64" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-post-css-selection.html" data-id="cjgkg5w45001rkgpvr2bqcxuj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -917,7 +906,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-programming-design.html" data-id="cjgjdklcx001s2upvceic8x9o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/essentialism-programming-design.html" data-id="cjgkg5w46001skgpvdnho1mkh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -995,7 +984,7 @@ E.g sign up
 
 
 
-    <article id="post-communication/increase-deliver-information-ability-for-programmer-and-tester" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-development-tool/git-and-svn-quick-learning" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1003,7 +992,7 @@ E.g sign up
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">Increase delivery information ability for software engineer(Read for 10 minutes)</a>
+            <a class="article-title" href="/2018/04/28/development-tool/git-and-svn-quick-learning.html">Learn Git and Svn in two graph instead of two hundred commands</a>
         </h1>
     
 
@@ -1012,7 +1001,7 @@ E.g sign up
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">
+        <a href="/2018/04/28/development-tool/git-and-svn-quick-learning.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -1021,7 +1010,7 @@ E.g sign up
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/沟通基本功/">沟通基本功</a>
+        <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
     </div>
 
                         
@@ -1033,34 +1022,47 @@ E.g sign up
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="阅读前"><a href="#阅读前" class="headerlink" title="阅读前"></a>阅读前</h2><ol>
-<li>阅读这篇文章后你能学到什么?</li>
+            <h1 id="Before-Reading-Before-Reading"><a href="#Before-Reading-Before-Reading" class="headerlink" title="Before Reading(Before Reading)"></a>Before Reading(Before Reading)</h1><ol>
+<li>What you can learn after reading this article?</li>
 </ol>
+<p>Learn git &amp; svn in the prospective of data instead of their procedures to get the whole picture</p>
 <ul>
-<li>Speak with purpose</li>
-<li>Triangle principle</li>
-<li>Fact,Action principle,Reason come last</li>
-<li>Without filler words</li>
-<li>Reason come last</li>
-<li>Ask listener to repeat</li>
-<li>Supplement</li>
+<li>How much time you will use for reading this article? 25 minutes<br>es</li>
 </ul>
-<ol start="2">
-<li>你将用多少时间来阅读这篇文章?<br>15 minutes</li>
+<h2 id="Why-we-don’t-learn-commands-first"><a href="#Why-we-don’t-learn-commands-first" class="headerlink" title="Why we don’t learn commands first?"></a>Why we don’t learn commands first?</h2><p>Because we are human,data is much more easier to understand and meaningful then procedures.If we can learn in the data first,we can understand &amp; apply those proper Knowledge to undergo proper operation.</p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><div class="center" style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://www.lucidchart.com/documents/embeddedchart/64bbe993-4d80-425a-a0b8-30b3f65408b9" id="7JDb.imKG_hY"></iframe></div>
+
+<h2 id="Merge-amp-amp-Rebase-different-method-to-merge-other-people-code"><a href="#Merge-amp-amp-Rebase-different-method-to-merge-other-people-code" class="headerlink" title="Merge &amp;&amp; Rebase - different method to merge other people code"></a>Merge &amp;&amp; Rebase - different method to merge other people code</h2><h3 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h3><p><strong>Procedures</strong></p>
+<ol>
+<li>Git add -A</li>
+<li>Git commit -m”local update”</li>
+<li>Git pull(which trigger git checout and Merging)</li>
+<li>Git add -A</li>
+<li>Git commit -m”merged result”</li>
+<li>Git push</li>
 </ol>
-<h2 id="Speak-with-purpose"><a href="#Speak-with-purpose" class="headerlink" title="Speak with purpose"></a>Speak with purpose</h2><p><strong>Write done the information on paper you want to deliver before speaking</strong>.It help you get prepared and enter the speaking mode.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p>Purpose:<br>There is a bug for search API on query field of shopping cart</p>
-<p>Extra information to deliver information:</p>
-<p>query “nike” return product of “Addidas” and “Nike”</p>
-<h2 id="Triangle-principle"><a href="#Triangle-principle" class="headerlink" title="Triangle principle"></a>Triangle principle</h2><p><strong>Keep information number below 3.</strong></p>
-<p>The efficient of deliver information is greatly reduced when information number is bigger then 3 due to human focus ability.</p>
-<h2 id="Fact-and-action-first-reason-come-last"><a href="#Fact-and-action-first-reason-come-last" class="headerlink" title="Fact and action first,reason come last"></a>Fact and action first,reason come last</h2><p>When the information is about telling some fact/action,<strong>express the fact/action first and then follow the reason</strong>.Because people will be more focus at first and the reason make the fact/action more rational</p>
-<h2 id="Without-filler-words"><a href="#Without-filler-words" class="headerlink" title="Without filler words"></a>Without filler words</h2><p><strong>Don’t speak with filler words like (this,there,like,aa),just keep silent when you are thinking during speaking</strong> .</p>
-<p>It greatly reduce noise in communication process and make you looks very smart.</p>
-<h2 id="Ask-listener-to-repeat"><a href="#Ask-listener-to-repeat" class="headerlink" title="Ask listener to repeat"></a>Ask listener to repeat</h2><p><strong>Ask listener to repeat what you said can let you know the percentage that listener accept your information</strong> . And reverse you can apply the same skill to let them know.</p>
-<h2 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h2><p>Why we not good at,just a practice and switching the mind.</p>
-<p>Those sales also sucks at calculation &amp; data analysis,the same principle</p>
-<p>Shannon Communication Model</p>
+<p><strong>What procedures really do?</strong></p>
+<p>it means merge a group ocommits(files) from local anremote branch into oncommit(files).</p>
+<h3 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h3><ol>
+<li>Git add -A</li>
+<li>Git commit -m”local update”</li>
+<li>Git pull –rebase(which trigger git checout and Merging)</li>
+<li>Git rebase –continue &amp;&amp; Git add -A (multiple times,depends on the number of commit)</li>
+<li>Git commit -m”rebased result”</li>
+<li>Git push</li>
+</ol>
+<h3 id="Stashing-hack-update-latest-version-and-apply-local-file-changes"><a href="#Stashing-hack-update-latest-version-and-apply-local-file-changes" class="headerlink" title="Stashing hack(update latest version and apply local file changes)"></a>Stashing hack(update latest version and apply local file changes)</h3><p><strong>Procedures</strong></p>
+<ol>
+<li>Git stash(restore files to original version)</li>
+<li>Git pull(which trigger git checout,it will always successful checkout because all files are in last version)</li>
+<li>Git stash pop(apply the changes)</li>
+<li>Git add -A</li>
+<li>Git commit -m”apply changes to latest version”</li>
+<li>Git push</li>
+</ol>
+<p><strong>What procedures really do?</strong></p>
+<p>it means merge a group ocommits(files) from local anremote branch into oncommit(files).</p>
+<h2 id="Svn"><a href="#Svn" class="headerlink" title="Svn"></a>Svn</h2><div class="center" style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://www.lucidchart.com/documents/embeddedchart/00b25a30-54be-403c-9665-9f286dc1211c" id="GFDbOms4Pgfw"></iframe></div>
 
         
         </div>
@@ -1071,7 +1073,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html" data-id="cjgjdklbk00042upvdmpsaq3w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/development-tool/git-and-svn-quick-learning.html" data-id="cjgkg5w270004kgpvmn686b1f" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1139,7 +1141,7 @@ E.g sign up
 
             
     
-        <a href="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/communication/increase-deliver-information-ability-for-programmer-and-tester.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/development-tool/git-and-svn-quick-learning.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/development-tool/git-and-svn-quick-learning.html">评论</a>
     
 
         </footer>
@@ -1283,7 +1285,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/general-agile-design-process.html" data-id="cjgjdklcz001w2upvenk3widl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/general-agile-design-process.html" data-id="cjgkg5w4a001wkgpvmwtxf1an" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1466,7 +1468,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html" data-id="cjgjdkld0001z2upv82eve844" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-critical-thinking-help-me-make-more-good-program-decision.html" data-id="cjgkg5w4b001zkgpvfaet38zt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1614,7 +1616,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-to-select-proper-cloud-platform-for-java-or-php-application.html" data-id="cjgjdkld100202upvntqo7gc7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/how-to-select-proper-cloud-platform-for-java-or-php-application.html" data-id="cjgkg5w4d0020kgpvdwvlv7lk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1804,7 +1806,7 @@ E.g sign up
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/rest-api-101.html" data-id="cjgjdkld200232upvnwo6vyjt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/program-design/rest-api-101.html" data-id="cjgkg5w4e0023kgpvsjlmlqwz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1909,7 +1911,11 @@ E.g sign up
                     </li>
                 
                     <li>
-                        <a href="https://github.com/chungchi300/eaglet">eaglet - 最简單直接的 Koa2 的脚手架</a>
+                        <a href="https://github.com/chungchi300/eaglet">Eaglet - 最简單直接的 Koa2 的脚手架</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/chungchi300/min-doc">Min-doc - hackable文档生成工具</a>
                     </li>
                 
             </ul>
