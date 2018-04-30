@@ -1,0 +1,36 @@
+{
+    "packages": {
+        "jeff/example": {
+            "dev-master": {
+                "name": "jeff/example",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://chungchi300@bitbucket.org/chungchi300/jeff_example.git",
+                    "reference": "66daadeb853f59e15492f5bfe65af7fbff26a7aa"
+                },
+                "require": {
+                    "illuminate/support": "4.2.*",
+                    "php": ">=5.4.0"
+                },
+                "time": "2015-10-01 10:28:16",
+                "type": "library",
+                "autoload": {
+                    "classmap": [
+                        "src/migrations"
+                    ],
+                    "psr-0": {
+                        "Jeff\\Example\\": "src/"
+                    }
+                },
+                "authors": [
+                    {
+                        "name": "Jeff Chung",
+                        "email": "chungchi300@hotmail.com"
+                    }
+                ]
+            }
+        }
+    }
+}

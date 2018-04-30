@@ -1,0 +1,114 @@
+
+  /head_first_befored/php/2015-10-1-laravel4-paging
+
+  /head_first_befored/php/2015-10-1-prime-number-easiest
+
+  /head_first_befored/program-design/2015-10-2-Association,Aggregation,Composition-explanation-concept-with-example,uml,program,database-level
+
+  /head_first_befored/mobile-development/2015-10-2-Hockey-App-Deploy-test-version-of-app(android,ios)-to-tester-quickly-and-solely
+
+  /head_first_befored/php/2015-10-2-Laravel4-IOC-Container
+
+  /head_first_befored/java/2015-10-2-criticism-of-java-optional-parameter-on-method-and-compare-to-php
+
+  /head_first_befored/web-frontend/2015-10-2-css3-animation
+
+  /head_first_befored/php/2015-10-2-good-laravel-library
+
+  /head_first_befored/mobile-development/2015-10-2-mobile-application-monitoring(Splunk-MINT)
+
+  /head_first_befored/program-design/2015-10-2-null-object-pattern,failed-example
+
+  /head_first_befored/web-frontend/2015-10-2-sequence-js-in-3-minutes
+
+  /head_first_befored/it-professionalism/2015-10-2-things-you-should-do-after-UAT
+
+  /head_first_befored/php/2015-10-2-use-composer-as-a-build-tool
+
+  /head_first_befored/java/2015-10-2-use-maven-and-gradle-as-a-build-tool
+
+  /head_first_befored/mobile-development/2015-10-9-Api-development-mobile-development-concurrently
+
+  /head_first_befored/program-design/2015-10-9-builder-pattern
+
+  /head_first_befored/program-design/2015-10-9-rest-api
+
+  /head_first_befored/program-design/2015-10-9-software-design
+
+  /head_first_befored/program-design/2015-10-9-template-design-pattern
+
+  /404
+
+  /
+
+  /pages/rss.xml
+
+  /sitemap.txt
+
+
+
+  /2017/06/02/essentialist-career-goal.html
+
+  /2017/06/01/essentialism-error-api-design.html
+
+  /2017/05/27/use-draft-wysiswyg-to-create-powerpoint-style-online-software.html
+
+  /2017/05/18/rest-empty-field.html
+
+  /2017/05/12/redux-state-management(state-and-reducer-design).html
+
+  /2017/05/11/general-review.html
+
+  /2017/05/08/redux-state-management(deliverable).html
+
+  /2017/05/08/redux-state-management(action-design).html
+
+  /2017/04/28/general-review.html
+
+  /2017/04/27/paypal-integration-deliverable-management.html
+
+  /2017/04/26/rest-api-101.html
+
+  /2017/04/25/Restful-api-naming-convention,method-and-params.html
+
+  /2017/04/20/linux-yum-learning.html
+
+  /2017/04/12/graphical-designer-quickly-involve-design-implement.html
+
+  /2017/04/12/design-implement.html
+
+  /2016/09/15/tech-cash-flow.html
+
+  /2016/09/07/react-state-strategy.html
+
+  /2016/08/18/linux-command-successive.html
+
+  /2016/08/12/same-origin-and-cors.html
+
+  /2016/08/09/pomotodo-for-programmer.html
+
+  /2016/06/18/lunch-calisthenics.html
+
+  /2016/03/20/risk-management-of-software-development-for-beginner.html
+
+  /2016/01/11/presentation-of-prototype.html
+
+  /2015/12/30/how-to-select-proper-cloud-platform-for-java-or-php-application.html
+
+  /2015/12/07/get-volume-of-different-three-dimensional.html
+
+  /2015/12/07/find-max-and-min-lexical-substrings-of-a-string.html
+
+  /2015/11/20/how-to-negotiate-with-your-boss-to-get-a-nice-computer.html
+
+  /2015/11/02/software-engineer-clothe.html
+
+  /2015/10/17/how-to-run-a-successful-offshore-development.html
+
+  /2015/10/17/how-it-manager-fulfill-the-need-of-kiosk-service-of-your-company.html
+
+  /2015/10/13/how-to-write-headfirst-sample.html
+
+  /2015/10/12/how-to-write-head-first-style-blog-in-35-minute.html
+
+  /2015/10/07/jsonp-tutorial.html

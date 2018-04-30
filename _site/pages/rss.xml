@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Jeff Chung blogger</title>
+    <link>http://localhost:4000</link>
+    <description>Jeff Chung blogger-Share ideas and spread knowledge</description>
+    
+      <item>
+        <title>Essentialism - Software Engineer Career Goal</title>
+        <link>http://localhost:4000/2017/06/02/essentialist-career-goal.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/02/essentialist-career-goal.html</guid>
+        <pubDate>Fri, 02 Jun 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;essential-goal&quot;&gt;Essential Goal&lt;/h1&gt;
+
+&lt;p&gt;Increase my salary range to 28-33K while keep enough family time and personal life.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-the-basic-requirement&quot;&gt;What is the basic requirement?&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Allow me to leave accurately so that I have time to stay with my family.(Currently I came to office at 8:15 and leave 6:00,the office is in New Territories)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hardware environment&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;2 - dual monitor(19)&lt;/li&gt;
+      &lt;li&gt;i7 cpu&lt;/li&gt;
+      &lt;li&gt;256G SSD computer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rational manager who make prospective and economy technical decision and I can decide them by myself(Currently my head and I make 60% and 40% of technical decision seperately).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t reinvent wheels&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;29-33K salary range&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;P.S (1-4) are what I get in current company(Astri)&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-the-highest-requirement&quot;&gt;What is the highest requirement?&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Opportunity to communication with client to achieve maximum development resource utilization.(Involve more in requirement phase)
+    &lt;ul&gt;
+      &lt;li&gt;Understand customer SWOT analysis and decide development roadmap and features&lt;/li&gt;
+      &lt;li&gt;To use statistical information help customer develop mobile or desktop first application/website&lt;/li&gt;
+      &lt;li&gt;Know all Business schedule and prepare enough technology in order to create enough buffer for business to run smoothly&lt;/li&gt;
+      &lt;li&gt;Cooperate client to develop and teach important concept and procedure in the system.&lt;/li&gt;
+      &lt;li&gt;Develop risk management strategy with client&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Increase my technical decision percentage&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;backend technology selection like develop backend that support web socket&lt;/li&gt;
+      &lt;li&gt;source code as documentation&lt;/li&gt;
+      &lt;li&gt;use uml as communication and use it properly only when it needed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Delieverable management&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Negotiate with client about the compatibility strategy for differnet browser and device.&lt;/li&gt;
+      &lt;li&gt;If it is a big data size program.I can decide the standard(data size,response time) the delieverable before the software is developed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Development procedure improvement
+    &lt;ul&gt;
+      &lt;li&gt;Require backend developer to develop automation test program for api instead of curl for testing their own api&lt;/li&gt;
+      &lt;li&gt;TDD - test coverage 100% for entire project&lt;/li&gt;
+      &lt;li&gt;Regular code review&lt;/li&gt;
+      &lt;li&gt;Code refactoring in daily basis&lt;/li&gt;
+      &lt;li&gt;Effective communication habit - everyone must know the goal of communication before communication and need to double confirm it after communication.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Essentialism(Best practise and rethink) - Design rest api error</title>
+        <link>http://localhost:4000/2017/06/01/essentialism-error-api-design.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/01/essentialism-error-api-design.html</guid>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article? Rest api design&lt;/li&gt;
+  &lt;li&gt;How much time you will use for reading this article? 25 minutes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;what-is-our-challenge&quot;&gt;What is our challenge?&lt;/h1&gt;
+
+&lt;p&gt;Design error rest api message that satisfied&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Operation Status&lt;/li&gt;
+  &lt;li&gt;Operation Message(translation)&lt;/li&gt;
+  &lt;li&gt;Operation error message (translation)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;what-is-the-basic-requirement&quot;&gt;What is the basic requirement?&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Enough branching in the message for provide different translation in different component of app.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;what-is-the-highest-requirement&quot;&gt;What is the highest requirement?&lt;/h1&gt;
+
+&lt;h2 id=&quot;optimize-the-data-transfer-efficiencies-and-dry&quot;&gt;Optimize the data transfer efficiencies and DRY&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;We use http response code as indicator(2xx succeed,4xx error).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Global domain for error message(e.g user is not authorized)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;high-readability-so-that-clientor-any-tester-can-fill-it-without-learning&quot;&gt;High readability so that client(or any tester) can fill it without learning&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Entity Domain(e.g user) for error message&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;silence-enough-to-developer-and-user-seperatelyif-you-have-front-line-supporterclientservicecode-is-also-need&quot;&gt;Silence enough to developer and user seperately(if you have front line supporter,clientServiceCode is also need)&lt;/h2&gt;
+
+&lt;p&gt;We structuralized the&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;developerMessage:&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//Mostly&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;don't&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;need&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;fill,because&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;usually&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;operation,the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;enough&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;talk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;about&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//describe&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;domain&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;global&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;field&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;_error&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fail&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//field&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;domain&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;entity&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;field&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;theFieldName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wrongFormat&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;E.g sign up
+{
+  developerMessage:&quot;validation.fail&quot;,
+  //the 400 indicate the operation is fail is enough
+  message:&quot;&quot;,
+  errors:{
+    //describe the global error
+    {
+        &quot;domain&quot;: &quot;membership.registration&quot;,
+        &quot;field&quot;: &quot;_error&quot;,
+        &quot;message&quot;: &quot;onlyAllowAge65AndMaleToRegister&quot;
+    },
+    //field error
+    {
+        &quot;domain&quot;: &quot;validation&quot;,
+        &quot;field&quot;: &quot;email&quot;,
+        &quot;message&quot;: &quot;wrongFormat&quot;
+    },
+    {
+        &quot;domain&quot;: &quot;validation&quot;,
+        &quot;field&quot;: &quot;avator&quot;,
+        &quot;message&quot;: &quot;wrongSize&quot;,
+        &quot;minWidth&quot;:200,
+        &quot;minHeight&quot;:200
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;determine-something-should-go-to-message-field-or-global-field-error&quot;&gt;Determine something should go to message field or global field error&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If the message only tells something that user can fix,put it global field error.&lt;/li&gt;
+  &lt;li&gt;If the message only notifies user,put it in message field&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;present-error-message-to-user-in-ui-by-priority&quot;&gt;Present error message to user in ui by priority&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Field error&lt;/li&gt;
+  &lt;li&gt;Global error field&lt;/li&gt;
+  &lt;li&gt;Message&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;referencing&quot;&gt;Referencing&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://soabits.blogspot.hk/2013/05/error-handling-considerations-and-best.html&quot;&gt;http://soabits.blogspot.hk/2013/05/error-handling-considerations-and-best.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Google cloud drive api&lt;/li&gt;
+  &lt;li&gt;Github api&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Use draft-wysiswyg to create power point style multi-text box editor</title>
+        <link>http://localhost:4000/2017/05/27/use-draft-wysiswyg-to-create-powerpoint-style-online-software.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/27/use-draft-wysiswyg-to-create-powerpoint-style-online-software.html</guid>
+        <pubDate>Sat, 27 May 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h2 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article?
+    &lt;ul&gt;
+      &lt;li&gt;What is draft js&lt;/li&gt;
+      &lt;li&gt;Basic components in draftjs and custom style&lt;/li&gt;
+      &lt;li&gt;What happen when draft js toggle custom inline style&lt;/li&gt;
+      &lt;li&gt;How draftjs-to-html(a draft js utils library) convert the draftjs to html&lt;/li&gt;
+      &lt;li&gt;What is draft-wysiswyg&lt;/li&gt;
+      &lt;li&gt;How draftjs-wysiswyg manage their style&lt;/li&gt;
+      &lt;li&gt;html to draftjs(draft-wysiswyg only)&lt;/li&gt;
+      &lt;li&gt;How we combine all these components and build own multi-text box editor?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How much time you will use for reading this article?
+25 minutes for reading.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-is-draft-js&quot;&gt;What is draft js?&lt;/h2&gt;
+&lt;p&gt;Draft js is a rich-text editor create by facebook.
+It has 3 Advantages&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Single direction data flow&lt;/li&gt;
+  &lt;li&gt;Build with immutable js&lt;/li&gt;
+  &lt;li&gt;Highly customziable and low customziation cost&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;basic-components-in-draftjs-and-custom-style&quot;&gt;Basic components in draftjs and custom style&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.lucidchart.com/invitations/accept/a2f3b7ed-ce12-42c9-a452-85bf4908642f&quot;&gt;Components in draft js&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;custom-style&quot;&gt;Custom style&lt;/h3&gt;
+&lt;p&gt;You can define your own style(and its related css style) and pass to Draftjs(custom style map)&lt;/p&gt;
+
+&lt;h2 id=&quot;what-happen-when-draft-js-toggle-one-specific-custom-inline-style&quot;&gt;What happen when draft js toggle one specific custom inline style&lt;/h2&gt;
+
+&lt;p&gt;If current font not all have the style,their will all have the style.&lt;/p&gt;
+
+&lt;p&gt;If current font all have the style,their will all remove the style.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-draftjs-to-htmla-draft-js-utils-library-convert-the-draftjs-to-html&quot;&gt;How draftjs-to-html(a draft js utils library) convert the draftjs to html&lt;/h2&gt;
+
+&lt;p&gt;It will read the characters and its style and create related 1 character html block with related css(defined by the style) .&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-draft-wysiswyg&quot;&gt;What is draft-wysiswyg&lt;/h2&gt;
+&lt;p&gt;A editor which have predefined styles.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-draftjs-wysiswyg-manage-their-style&quot;&gt;How draftjs-wysiswyg manage their style&lt;/h2&gt;
+&lt;h3 id=&quot;style-in-draftjs-wysiswyg&quot;&gt;Style in draftjs-wysiswyg&lt;/h3&gt;
+&lt;p&gt;For example,it have predefined style rules that map 1 css rule&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Style&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;CSS style(color)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;color-rgb(255,255,255)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;rgb(255,255,255)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;color-rgb(200,200,200)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;rgb(200,200,200)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Style&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;CSS style(background-color)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;bgcolor-rgb(255,255,255)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;rgb(255,255,255)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;bgcolor-rgb(200,200,200)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;rgb(200,200,200)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;draftjs-utilsa-library-that-manage-the-style-in-draftjs-wysiswyg&quot;&gt;draftjs-utils(a library that manage the style in draftjs-wysiswyg)&lt;/h3&gt;
+
+&lt;p&gt;As you can see that a style(like color) have a similiar pattern(we call it a &lt;strong&gt;style group&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;If we use the draftjs-utils toggle custom inline style(color)(e.g rgb(200,200,200)).&lt;/p&gt;
+
+&lt;p&gt;Possible situation:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;If current already have color-rgb(255,255,255)&lt;strong&gt;color style group&lt;/strong&gt; .It will remove existing rule and replace with new current style (no more color-rgb(255,255,255) and all is rgb(200,200,200)).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If it is already rgb(200,200,200),it will become no color style.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;html-to-draftjsdraft-wysiswyg-only-because-it-read-the-html-character-css-style-and-turn-it-to-own-style&quot;&gt;html to draftjs(draft-wysiswyg only because it read the html character css style and turn it to own style)&lt;/h2&gt;
+&lt;p&gt;The css style color above is the best example&lt;/p&gt;
+
+&lt;h2 id=&quot;how-we-combine-all-these-components-and-build-own-multi-text-box-editor&quot;&gt;How we combine all these components and build own multi-text box editor?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Create a group of texts components.&lt;/li&gt;
+  &lt;li&gt;When db click texts components,we convert them to draftjs-editor using html-to-draft js pluin.&lt;/li&gt;
+  &lt;li&gt;When we done editing,we convert them back to html(using draftjs-to-html)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Possible limitation&lt;/p&gt;
+
+&lt;p&gt;You want to defined your own style group.Them you can build your own draft js with custom predefined stylemap and develop your own draftjs-utils and html to draftj.s&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Rest - Empty fields mapping </title>
+        <link>http://localhost:4000/2017/05/18/rest-empty-field.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/18/rest-empty-field.html</guid>
+        <pubDate>Thu, 18 May 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What you can learn after reading this article? Rest - Empty fields map&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How much time you will use for reading this article? 10 minutes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;when-fields-is-emptywhat-should-it-represent-in-json&quot;&gt;When fields is empty,what should it represent in json&lt;/h1&gt;
+
+&lt;p&gt;I decide the empty fields by javascript definition&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Empty array = []&lt;/li&gt;
+  &lt;li&gt;Empty string = “” #because javascript string is primitive type&lt;/li&gt;
+  &lt;li&gt;Empty Number = 0 #Because Stringify(new Number()) is 0&lt;/li&gt;
+  &lt;li&gt;Empty Object = null&lt;/li&gt;
+  &lt;li&gt;Empty Timestamp = null #because javascript DateTime is an object&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Redux state management(state and reducer design )</title>
+        <link>http://localhost:4000/2017/05/12/redux-state-management(state-and-reducer-design).html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/12/redux-state-management(state-and-reducer-design).html</guid>
+        <pubDate>Fri, 12 May 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;state-design&quot;&gt;State design&lt;/h1&gt;
+
+&lt;h2 id=&quot;theory&quot;&gt;Theory&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-make-a-function-should-be-reducer&quot;&gt;What make a function should be reducer?&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Can manage a state all by itself with the action input&lt;/li&gt;
+  &lt;li&gt;pure function(not mutating the arguments,returning a complete new object to apply state change)&lt;/li&gt;
+  &lt;li&gt;(previousState,action)=&amp;gt;newState pattern&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;flatten-as-possibleand-when-and-what-we-need-to-do-when-there-is-a-nested-state&quot;&gt;Flatten as possible,and when and what we need to do when there is a nested state&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/38842454/why-should-i-keep-the-state-flat&quot;&gt;Flat adv&lt;/a&gt; //TODO&lt;/p&gt;
+
+&lt;h3 id=&quot;typical-three-category-datawhich-can-normal-lead-to-pretty-flatten-state-&quot;&gt;Typical three category data(which can normal lead to pretty flatten state )&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;domain&lt;/li&gt;
+  &lt;li&gt;app state&lt;/li&gt;
+  &lt;li&gt;ui state&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;advance-combine-reducer&quot;&gt;Advance combine reducer&lt;/h3&gt;
+
+&lt;p&gt;reference state as three parameter(not immutable it) //TODO&lt;/p&gt;
+
+&lt;h2 id=&quot;practical&quot;&gt;Practical&lt;/h2&gt;
+
+&lt;h3 id=&quot;verification&quot;&gt;Verification&lt;/h3&gt;
+
+&lt;p&gt;After design the state design.It is very important to review with other developer(e.g developer lead)(because it state design is so important which I think it is the most important design in frontend development).&lt;/p&gt;
+
+&lt;p&gt;P.S&lt;/p&gt;
+
+&lt;p&gt;I remember I hit a performance issue.My principle engineer tell me that I can build a hashmap in order to have in memory cache.It takes me 2 weeks to fix it.It is totally preventable if I verify my design with it which should only use 4 hours.&lt;/p&gt;
+
+&lt;h3 id=&quot;refactoring&quot;&gt;Refactoring&lt;/h3&gt;
+
+&lt;h3 id=&quot;refactoring-of-state-state-skill&quot;&gt;Refactoring of state state skill&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;redux.js.org/docs/recipes/reducers/RefactoringReducersExample.html&quot;&gt;best&lt;/a&gt; Which apply &lt;strong&gt;flatten&lt;/strong&gt;,&lt;strong&gt;domain,app ,ui&lt;/strong&gt; seperation skill we mentioned before.&lt;/p&gt;
+
+&lt;h3 id=&quot;common-state-componenti-will-complete-them-later&quot;&gt;Common State Component(I will complete them later)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;form-redux form&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;i18n-i18n reducer&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;userAgent&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;notifications&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;domain&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;routing redux-react router&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Special common state-&amp;gt;popup redux-react router&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>General Code Review 2</title>
+        <link>http://localhost:4000/2017/05/11/general-review.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/11/general-review.html</guid>
+        <pubDate>Thu, 11 May 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What you can learn after reading this article? My code review practice&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How much time you will use for reading this article? 25 minutes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;content&quot;&gt;Content&lt;/h1&gt;
+
+&lt;h2 id=&quot;unnecessary-extra-logic-layer-when-processing-overloading-function&quot;&gt;Unnecessary extra logic layer when processing overloading function&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  function getUser(idOrIds){
+    let relatedUser;
+    let predefinedUsers = [
+      {&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;},
+      {&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;},
+
+
+    ];
+     if(Array.isArray(idOrIds)){
+       return  predefinedUsers.filter(user=&amp;gt;idOrIds.includes(user.id));
+     }else{
+       return  predefinedUsers.filter(user=&amp;gt;user.id==idOrIds);
+     }
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Error&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Should seperation the type conversion and only have one process logic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Improvement&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  function getUser(idOrIds){
+    let relatedUser;
+    let predefinedUsers = [
+      {&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;},
+      {&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;},
+
+
+    ];
+     if(!Array.isArray(idOrIds)){
+       idOrIds = [idOrIds];
+     }
+    //One processing logic only
+     let results =   predefinedUsers.filter(user=&amp;gt;idOrIds.includes(user.id));
+
+     if(Array.isArray(idOrIds)){
+      return results;
+     }else{
+       return results[0];
+     }
+
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Redux state management(Deliverable)</title>
+        <link>http://localhost:4000/2017/05/08/redux-state-management(deliverable).html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/08/redux-state-management(deliverable).html</guid>
+        <pubDate>Mon, 08 May 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article? Things you must know in order to achieve good state management after you select redux as your state management tool.&lt;/li&gt;
+  &lt;li&gt;How much time you will use for reading this article? 30 minutes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;we-choose-reduxnow-what&quot;&gt;We choose redux…now what?&lt;/h1&gt;
+
+&lt;p&gt;We choose redux as our state management lib in order to have &lt;strong&gt;predictable(which mean high readability and easy to debug) state change&lt;/strong&gt; (which is achieved by [Three Principle] &lt;a href=&quot;http://redux.js.org/docs/introduction/ThreePrinciples.html).However,it&quot;&gt;http://redux.js.org/docs/introduction/ThreePrinciples.html).However,it&lt;/a&gt; just the starting point of it.If we want more(&lt;strong&gt;performance,quick development,low learning curve,async&lt;/strong&gt;) while keeping the predictability,we need to know more about staff in redux.&lt;/p&gt;
+
+&lt;h1 id=&quot;understand-the-contextwhat-and-when-we-want-beside-predictable-state&quot;&gt;Understand the context,what and when we want beside predictable state?&lt;/h1&gt;
+
+&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
+
+&lt;h3 id=&quot;when-we-want-performance&quot;&gt;When we want performance?&lt;/h3&gt;
+
+&lt;p&gt;Different project require different performance level,we can determine it by two factor.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;No of Data&lt;/li&gt;
+  &lt;li&gt;Display&amp;amp;changed simultaneously&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Real life case - Image Manipulation Program&lt;/strong&gt;: I write a image Manipulation program which require to display ,changed over 20,000 state objects simultaneously and immediately.It require high performance or else it will be super lag so it &lt;strong&gt;require very high performance&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Real life case - Normal shopping cart website&lt;/strong&gt; only 300-800 object.Moreover ,state objects need to displayed and update partly so it &lt;strong&gt;require low performance&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-the-performance&quot;&gt;What is the performance&lt;/h3&gt;
+
+&lt;p&gt;The state change is very quick.Allow render component (react) to determine and rerender the state that’s change efficiently.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-achieve-good-performance&quot;&gt;How to achieve good performance&lt;/h3&gt;
+
+&lt;h2 id=&quot;quick-development&quot;&gt;Quick development&lt;/h2&gt;
+
+&lt;h3 id=&quot;when-we-want-quick-development&quot;&gt;When we want quick development&lt;/h3&gt;
+
+&lt;p&gt;The development cost mainly on the complex reducer and async action.Too many Actions.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-the-quick-development&quot;&gt;What is the quick development&lt;/h3&gt;
+
+&lt;p&gt;Development and maintenance time :).&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-achieve-quick-development&quot;&gt;How to achieve quick development&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jeff-chung.com/2017/05/08/redux-state-management(action-design).html&quot;&gt;Good Action Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;low-learning-curve&quot;&gt;low learning curve&lt;/h2&gt;
+
+&lt;p&gt;We want low learning curve all the time &lt;strong&gt;:)&lt;/strong&gt; .&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Redux state management(Action design )</title>
+        <link>http://localhost:4000/2017/05/08/redux-state-management(action-design).html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/08/redux-state-management(action-design).html</guid>
+        <pubDate>Mon, 08 May 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;action-design&quot;&gt;Action design&lt;/h1&gt;
+
+&lt;h2 id=&quot;fsa&quot;&gt;FSA&lt;/h2&gt;
+
+&lt;p&gt;FSA is just a design style for action.&lt;/p&gt;
+
+&lt;p&gt;Adv:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Human-friendly. FSA actions should be easy to read and write by humans.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Conventional&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Type-&amp;gt;the action name,should able to look at&lt;/li&gt;
+      &lt;li&gt;Payload-&amp;gt;data support the action() &lt;!-- just like rest api --&gt;&lt;/li&gt;
+      &lt;li&gt;error-&amp;gt;true or false,if true,the payload should be a &lt;strong&gt;error object&lt;/strong&gt; about the message.&lt;/li&gt;
+      &lt;li&gt;Meta-&amp;gt;extra information that is not in payload.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Simple. FSA definition is straight forward&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Last but most important&lt;/strong&gt;.Many useful redux library only support FSA action&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;psmeta-usage&quot;&gt;PS.Meta usage&lt;/h2&gt;
+
+&lt;p&gt;In admin on rest ,it use meta to fetch dependent resource&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>General Code Review</title>
+        <link>http://localhost:4000/2017/04/28/general-review.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/28/general-review.html</guid>
+        <pubDate>Fri, 28 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What you can learn after reading this article? My code review practice&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How much time you will use for reading this article? 25 minutes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;content&quot;&gt;Content&lt;/h1&gt;
+
+&lt;h2 id=&quot;general-error&quot;&gt;General error&lt;/h2&gt;
+
+&lt;h3 id=&quot;unnecessary-extra-logic-layer&quot;&gt;Unnecessary extra logic layer&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  function getUserAccount(){
+   if(Auth.isLogin()){
+     return Auth::user();
+   }else{
+     throw Error('get user when user is not authorized')
+   }
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Error&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The programmer need extra layer to know that the program will throw exception &lt;strong&gt;if user is not loign&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  function getUserAccount(){
+  if(!Auth.isLogin()){
+    throw Error('get user when user is not authorized')    
+  }
+    return Auth::user();
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Improvement&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The programmer know that the caller must ensure the user &lt;strong&gt;need to ensure user need to login&lt;/strong&gt; in order to call &lt;strong&gt;this function properly&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys&quot;&gt;retrieve array of items from indexed data object when already have indexed keys&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function getUsers(usersById,targetUserIds){
+  return _.filter(usersById, user =&amp;gt;
+    targetUserIds.includes(
+      user.id
+    )
+  );
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Error&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;low performance and readability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function getUsers(usersById,targetUserIds){
+  return targetUserIds.map(targetUserId=&amp;gt;usersById[targetUserId])
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Improvement&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;better performance and readability&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Paypal integration deliverable management</title>
+        <link>http://localhost:4000/2017/04/27/paypal-integration-deliverable-management.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/27/paypal-integration-deliverable-management.html</guid>
+        <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Paypal development deliverable for &lt;strong&gt;EXPRESS CHECKOUT&lt;/strong&gt; with&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;lowest development cost&lt;/li&gt;
+  &lt;li&gt;high reliability and security&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;middle user experience&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How much time you will use for reading this article? 25 minutes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;deliverable&quot;&gt;Deliverable&lt;/h1&gt;
+
+&lt;p&gt;Execute a integrated paypal payment from buyer@yourwebsite.com to seller@yourwebsite.com&lt;/p&gt;
+
+&lt;h1 id=&quot;basic-background-knowledge&quot;&gt;Basic background Knowledge&lt;/h1&gt;
+
+&lt;h2 id=&quot;what-is-developerpaypalcom&quot;&gt;What is developer.paypal.com&lt;/h2&gt;
+
+&lt;p&gt;A website that provide third party integration with paypal.Your login on here using your real paypal.com account&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-sandbox&quot;&gt;What is sandbox&lt;/h2&gt;
+
+&lt;p&gt;Sandbox(&lt;a href=&quot;https://www.sandbox.paypal.com/&quot;&gt;https://www.sandbox.paypal.com/&lt;/a&gt;) is a test website to paypal(which have exactly the same functionality to real &lt;a href=&quot;https://www.paypal.com&quot;&gt;https://www.paypal.com&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h1 id=&quot;preparation&quot;&gt;Preparation&lt;/h1&gt;
+
+&lt;p&gt;A paypal account(You can register it on paypal.com)&lt;/p&gt;
+
+&lt;h2 id=&quot;create-of-sandbox-account-buyeryourwebsitecom-to-selleryourwebsitecom-on-developerpaypalcom&quot;&gt;Create of sandbox account( buyer@yourwebsite.com to seller@yourwebsite.com) on developer.paypal.com&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create seller&amp;amp; buyer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Buyer&lt;a href=&quot;https://www.awesomescreenshot.com/image/557043/af319b20-4e46-4085-66ad-55763013ec79&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Seller&lt;a href=&quot;https://www.awesomescreenshot.com/image/2510092/21a59bf325d99f6346acc73e50601538&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Related user list &lt;a href=&quot;https://www.awesomescreenshot.com/image/2510092/21a59bf325d99f6346acc73e50601538&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;create-apps&quot;&gt;Create apps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create Apps &lt;a href=&quot;https://www.awesomescreenshot.com/image/2510126/4dbe36df97ed03ed2fc8c4a7b9f3d80a&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Apps list &lt;a href=&quot;https://www.awesomescreenshot.com/image/2510128/7ab5c8972ad8b7686040d70fa5994695&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;development&quot;&gt;development&lt;/h2&gt;
+
+&lt;h3 id=&quot;great-tool---low-development-cost&quot;&gt;Great tool - Low development cost&lt;/h3&gt;
+
+&lt;p&gt;Use the official paypal sdk or payment processing library to greatly reduce development cost&lt;/p&gt;
+
+&lt;h3 id=&quot;security-with-low-cost&quot;&gt;Security with low cost&lt;/h3&gt;
+
+&lt;p&gt;Use express checkout with full page redirection instead of ajax api integration.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration&quot;&gt;Configuration&lt;/h3&gt;
+
+&lt;p&gt;In sandbox environment,you should use clientID that is sandbox&lt;/p&gt;
+
+&lt;h3 id=&quot;time-cost&quot;&gt;Time Cost&lt;/h3&gt;
+
+&lt;p&gt;3 manday for senior development&lt;/p&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;Create a purchase on your website and pay with seller@yourwebsite.com.Then check the account balance of buyer@yourwebsite.com on developer.paypal.com &lt;a href=&quot;https://www.awesomescreenshot.com/image/2510120/03b9b9cb1711884fb796b189e953a5aa&quot;&gt;&lt;/a&gt; . You should see the balance increase(&lt;strong&gt;It will not be 100% become paypal will charge 1-2% transaction fee&lt;/strong&gt;)&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>rest-api-101</title>
+        <link>http://localhost:4000/2017/04/26/rest-api-101.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/26/rest-api-101.html</guid>
+        <pubDate>Wed, 26 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is rest api&lt;/li&gt;
+  &lt;li&gt;what is the advantage of it&lt;/li&gt;
+  &lt;li&gt;Implementation example in real life(login and auth api )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How much time you will use for reading this article?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;25 minutes&lt;/p&gt;
+
+&lt;h1 id=&quot;terms&quot;&gt;Terms&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;App state - state that independent to client,only related to the parameter&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Session state - state that related to the client instance and server instance mapping&lt;/p&gt;
+
+    &lt;p&gt;How to determine it is session state ? If switching &lt;strong&gt;server instance&lt;/strong&gt; and &lt;strong&gt;client&lt;/strong&gt; will make the &lt;strong&gt;state change&lt;/strong&gt;.it is a &lt;strong&gt;session state&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Idempotent - the &lt;strong&gt;side effect&lt;/strong&gt; of calling multiple and calling single once time are &lt;strong&gt;equal&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;what-is-rest-api&quot;&gt;What is rest api&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Resource base and method api style on http&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Session state not located in session-(either change to holded by client or app state)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Request only initialize from client&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Stateless Connection protocol(http)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;what-is-the-advantage-of-it&quot;&gt;What is the advantage of it&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Scalability&lt;/li&gt;
+  &lt;li&gt;High Readability&lt;/li&gt;
+  &lt;li&gt;Cache&lt;/li&gt;
+  &lt;li&gt;because sensitive api can be indempotent,don’t need to worry calling sensitive api twice&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;implementation-example-in-real-lifelogin-and-auth-api-&quot;&gt;Implementation example in real life(login and auth api )&lt;/h1&gt;
+
+&lt;h2 id=&quot;login-api&quot;&gt;Login API&lt;/h2&gt;
+
+&lt;p&gt;/login&lt;/p&gt;
+
+&lt;p&gt;params:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;username&lt;/li&gt;
+  &lt;li&gt;password&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;return:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Can be token&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Can be cookie(the server instances accessing their cookie must be in a centralized storage like database or redis cluster)( &lt;strong&gt;in order to move the cookie in server instance from session state to application state&lt;/strong&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;user-info-api&quot;&gt;User info API&lt;/h2&gt;
+
+&lt;p&gt;/user/me(a special resource id)&lt;/p&gt;
+
+&lt;p&gt;params:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can be cookie&lt;/li&gt;
+  &lt;li&gt;can be token&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;return: user information&lt;/p&gt;
+
+&lt;p&gt;P.S&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://jeff-chung.com/2017/04/25/Restful-api-naming-convention,method-and-params.html&quot;&gt;Naming convention and method&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://jeff-chung.com/2017/05/18/rest-empty-field.html&quot;&gt;Empty Fields&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>restful api naming convention</title>
+        <link>http://localhost:4000/2017/04/25/Restful-api-naming-convention,method-and-params.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/25/Restful-api-naming-convention,method-and-params.html</guid>
+        <pubDate>Tue, 25 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;design api in restful style&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How much time you will use for reading this article?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;10 minutes&lt;/p&gt;
+
+&lt;h1 id=&quot;the-url-and-method-imply-action&quot;&gt;The url and method imply action&lt;/h1&gt;
+
+&lt;p&gt;Restful is source based api style.&lt;/p&gt;
+
+&lt;p&gt;We should get 2 information from &lt;strong&gt;uri and method&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;resource(which resource?is it a list?is it a item)&lt;/li&gt;
+  &lt;li&gt;action(what action it is doing)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;General template&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;resource/action&lt;/li&gt;
+  &lt;li&gt;resource/{id}/action&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;if the action is empty,it should be a view action&lt;/p&gt;
+
+&lt;p&gt;E.g&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;user (GET) (view alist of users)&lt;/li&gt;
+  &lt;li&gt;user (POST)(create user )&lt;/li&gt;
+  &lt;li&gt;user/batchDelete (DELETE)(delete a list of users)&lt;/li&gt;
+  &lt;li&gt;user/1/delete (delete )&lt;/li&gt;
+  &lt;li&gt;user/1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;the-parameter-provide-information-support-resource-action&quot;&gt;The parameter provide information support resource action&lt;/h1&gt;
+
+&lt;p&gt;E.g&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;user?filter[]=ageBiggerThen25 (GET) (view alist of users with ages over 25)&lt;/li&gt;
+  &lt;li&gt;user (which have user information)(POST)(create user ) ) )&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Few command and knowledge you need to know to do 99% job what you want yum to do on centos7.</title>
+        <link>http://localhost:4000/2017/04/20/linux-yum-learning.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/20/linux-yum-learning.html</guid>
+        <pubDate>Thu, 20 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-readingbefore-reading&quot;&gt;Before Reading(Before Reading)&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article? commands and basic knowledge to use yum&lt;/li&gt;
+  &lt;li&gt;How much time you will use for reading this article? minutes minutes 25minutes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;what-is-yumrepopackageversion&quot;&gt;What is yum?repo?package?version?&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Yum&lt;/strong&gt; is a command in centos to install software.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Repo&lt;/strong&gt; is a remote file server that hold the software in binary form.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Package&lt;/strong&gt; is the software you want to install&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Version&lt;/strong&gt; is the software version&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;frequent-commands&quot;&gt;Frequent Commands&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Add Repo&lt;/strong&gt;&lt;a href=&quot;http://www.cyberciti.biz/faq/installing-rhel-epel-repo-on-centos-redhat-7-x/&quot;&gt;How To Install EPEL Repo on a CentOS and RHEL 7.x&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;List Repo&lt;/strong&gt;&lt;a href=&quot;https://www.cyberciti.biz/faq/centos-fedora-redhat-yum-repolist-command-tolist-package-repositories/&quot;&gt;CentOS / RHEL: List All Configured Repositories&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;List version of package and install specific version of package&lt;/strong&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/151689/how-can-i-instruct-yum-to-install-a-specific-version-of-package-x&quot;&gt;How can I instruct yum to install a specific version of package X? - Unix &amp;amp; Linux Stack Exchange&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Install software for specific repo&lt;/strong&gt; &lt;img src=&quot;/blog_accessary/blog_images/moved_from_atom/Image Capture 2.png&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/blog_accessary/blog_images/moved_from_atom/Image Capture.png&quot; alt=&quot;&quot; /&gt; P.S Yum Select Non-conflict Package if Base Repo Is Disabled(if Base Is Enable,it More Prefer the Conflict One)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Graphical designer must have programming technical skill in order to do part of design implementation in react</title>
+        <link>http://localhost:4000/2017/04/12/graphical-designer-quickly-involve-design-implement.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/12/graphical-designer-quickly-involve-design-implement.html</guid>
+        <pubDate>Wed, 12 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What you can learn after reading this article? Programming technical skill for Graphical designer and the schedule.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How much time you will use for reading this article? 30 minutes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;designer-know-some-programming-technical-skill-can-greatly-help-design-implementation&quot;&gt;Designer know some programming technical skill can greatly help design implementation&lt;/h1&gt;
+
+&lt;p&gt;Designer know some programming technical skill can greatly help design implementation because they can know how they design implemented.&lt;/p&gt;
+
+&lt;h1 id=&quot;gitfor-1-week&quot;&gt;Git(For 1 week)&lt;/h1&gt;
+
+&lt;p&gt;Quick theory:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Git is just like &lt;strong&gt;ftp protocol with branch and versioning&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Bitbucket or github is just like &lt;strong&gt;ftp server&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Sourcetree is just like &lt;strong&gt;filezilla for git&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Preparation:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://backlogtool.com/git-guide/tw/&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Get a git server on github or Bitbucket&lt;/li&gt;
+  &lt;li&gt;Install sourcetree&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Learning outcome:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ability to create commit&lt;/li&gt;
+  &lt;li&gt;Ability to create branch&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Learning material&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A repository(ftp server location) store you design (which has &lt;strong&gt;main branch with at least 3 commit&lt;/strong&gt;,&lt;strong&gt;newFeatureBranch&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;csssasssuperset-for-cssfor-1-week&quot;&gt;css,Sass(superset for css)(For 1 week)&lt;/h1&gt;
+
+&lt;p&gt;Quick theory:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sass is just css that required compilation which convert (scss to css)&lt;/li&gt;
+  &lt;li&gt;Sass support more syntax(variable,inheritance)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Preparation:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sass-lang.com/guide&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Learning outcome:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ability to modify existing project scss&lt;/li&gt;
+  &lt;li&gt;Change predefined variable like fontFamily for bootstrap-sass&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;jscomponentized-inline-cssfor-1-week&quot;&gt;js(componentized inline css)(For 1 week)&lt;/h1&gt;
+
+&lt;p&gt;Quick theory:&lt;/p&gt;
+
+&lt;p&gt;Preparation:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/css-modules/css-modules&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Learning outcome:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ability to modify existing project component css and content&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>How UI designer and front end programmer cooperate together in order to implement the design perfectly(at least 95%) in the program with 50% workload remotely.</title>
+        <link>http://localhost:4000/2017/04/12/design-implement.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/12/design-implement.html</guid>
+        <pubDate>Wed, 12 Apr 2017 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What you can learn after reading this article? Learn the cooperation between UI designer and front end programmer to implement design perfectly in program even they are different location or work in different company.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How much time you will use for reading this article? 25 minutes.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;common-life-scenario&quot;&gt;Common Life scenario&lt;/h1&gt;
+
+&lt;p&gt;UI Designer complete the graphical design in photoshop(psd).The front end progammer implement the design with little time due to &lt;strong&gt;project schedule&lt;/strong&gt; so if even he is have some question about the color,margin,he &lt;strong&gt;don’t have the time&lt;/strong&gt; to ask the designer about those back and forth question which cause &lt;strong&gt;tremendous time&lt;/strong&gt; .It results in the &lt;strong&gt;bad result&lt;/strong&gt; when &lt;strong&gt;software deploy in the first version&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://image.slidesharecdn.com/badgoodexamplesofwebsites-creativemedia-110919043702-phpapp01/95/bad-good-examples-of-websites-creative-media-3-728.jpg?cb=1316407115&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;ui-designer-annotate-the-design-precisely-and-quicklyusing-zeplin&quot;&gt;UI designer annotate the design precisely and quickly(using zeplin)&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog_accessary/blog_images/moved_from_atom/Zeplin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All UI Designer need to do is&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;export psd to zeplin&lt;/li&gt;
+  &lt;li&gt;Maintain the &lt;strong&gt;style guide(the component language)&lt;/strong&gt; properly if neccessary&lt;/li&gt;
+  &lt;li&gt;comment when neccessary&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Advantages of zeplin&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Webapp(programmer can read it on browser even they are using different os)&lt;/li&gt;
+  &lt;li&gt;auto read photoshop attribute(designer mostly only need export psd to zeplin only)&lt;/li&gt;
+  &lt;li&gt;Support Style Guide&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Cherry on top&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Free plan !&lt;/li&gt;
+  &lt;li&gt;Very user friendly&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;programe-that-implemented-precisely-and-quickly&quot;&gt;Programe that implemented precisely and quickly&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://alloyteam.github.io/AlloyDesigner/docimg/ad.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Programmer develop the layout with &lt;a href=&quot;https://chrome.google.com/webstore/detail/alloydesigner/ojooeaohlmgpcjajikhmibcnbebfenid?utm_source=chrome-app-launcher-info-dialog&quot;&gt;&lt;strong&gt;alloyDesigner&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Advantages of alloyDesigner&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Cross browser&lt;/li&gt;
+  &lt;li&gt;Fix position&lt;/li&gt;
+  &lt;li&gt;Opacity and scale adjustment&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;program-implementation-can-be-responsed-quickly-and-accurately&quot;&gt;Program implementation can be responsed quickly and accurately&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/Ee78c5G0-KKrN-PWbKBjQN1DZWwmnTBTZFnnDh6UPjG4rT0L0VgzzWv2ZlakgXiGxCoCT4Xxtw=s640-h400-e365-rw&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Programe result can be screen capture with &lt;a href=&quot;https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj?hl=en&quot;&gt;&lt;strong&gt;Awesome screenshot&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Advantages of alloyDesigner&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Support comment(designer can comment accurately to programmer)&lt;/li&gt;
+  &lt;li&gt;Support share with link(everyone can get the newest comment and image)&lt;/li&gt;
+  &lt;li&gt;Free&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;Those are good cooperation practice for designer to write &lt;strong&gt;design precisely&lt;/strong&gt; and programmer can &lt;strong&gt;implement precisely&lt;/strong&gt; and &lt;strong&gt;receive feedback precisely and quickly&lt;/strong&gt; to achieve 100% design implementation with half the effort.&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Good senior software engineer goal</title>
+        <link>http://localhost:4000/2016/09/15/tech-cash-flow.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/09/15/tech-cash-flow.html</guid>
+        <pubDate>Thu, 15 Sep 2016 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How much time you will use for reading this article? 30 minutes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;work---increase-software-people-deliverable&quot;&gt;Work - increase software people deliverable&lt;/h1&gt;
+
+&lt;p&gt;Maximum deliverable values=&amp;gt;deliverable mainly is software&lt;/p&gt;
+
+&lt;h1 id=&quot;software-deliverable-values&quot;&gt;Software deliverable values:&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Relevance&lt;/li&gt;
+  &lt;li&gt;Automation level=&amp;gt;can determine the software deliverable options which is relevant to customer requirement without client speaking.&lt;/li&gt;
+  &lt;li&gt;Timely(expectation well adjusted)&lt;/li&gt;
+  &lt;li&gt;Functional requirement difficulties&lt;/li&gt;
+  &lt;li&gt;Non functional requirement difficulties&lt;/li&gt;
+  &lt;li&gt;Quick&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;software-people-deliverable-values-that-i-pursue&quot;&gt;Software people deliverable values that I pursue:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;For 1,2&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Create highly relevant software deliverable requirement and get software&lt;/li&gt;
+      &lt;li&gt;requirement accurately by reading and communication&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;3&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;tell what and when you can do, no boasting&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;4&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Good Design for functional requirement&lt;/li&gt;
+      &lt;li&gt;Implement hard functional requirement&lt;/li&gt;
+      &lt;li&gt;implement functional with lowest cost&lt;/li&gt;
+      &lt;li&gt;lead other people to solve it efficiently&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;5&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Good Design for non functional requirement&lt;/li&gt;
+      &lt;li&gt;find out non functional requirement quickly&lt;/li&gt;
+      &lt;li&gt;implement functional with lowest cost&lt;/li&gt;
+      &lt;li&gt;lead other people to solve it efficiently&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;6&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;quick&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>React state strategy in 25 minutes</title>
+        <link>http://localhost:4000/2016/09/07/react-state-strategy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/09/07/react-state-strategy.html</guid>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What you can learn after reading this article?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Determine whether you should store you state.Global or Or component state itself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How much time you will use for reading this article? 25 minutes for reading.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;state-location&quot;&gt;State location&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Location&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Transfer method&lt;/th&gt;
+      &lt;th&gt;Child Transfer state to parent path&lt;/th&gt;
+      &lt;th&gt;Adv&lt;/th&gt;
+      &lt;th&gt;Example&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Global&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;single source of truth&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;view-&amp;gt;action-&amp;gt;single source of truth&lt;/td&gt;
+      &lt;td&gt;view-&amp;gt;action-&amp;gt;single source of truth -&amp;gt;parent&lt;/td&gt;
+      &lt;td&gt;easy notify another view,more easier to trace &amp;amp; easier to store and reproduce&lt;/td&gt;
+      &lt;td&gt;data list,app mode,state that other view need to know&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Local&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;React component state&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;view-&amp;gt;view state-&amp;gt;child view&lt;/td&gt;
+      &lt;td&gt;parent pass function to child view to set&lt;/td&gt;
+      &lt;td&gt;encapsulation&lt;/td&gt;
+      &lt;td&gt;fliped,hovered.State that only that view need to know&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux succesive command</title>
+        <link>http://localhost:4000/2016/08/18/linux-command-successive.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/18/linux-command-successive.html</guid>
+        <pubDate>Thu, 18 Aug 2016 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How much time you will use for reading this article? 30 minutes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;difference&quot;&gt;difference&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/difference.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;com1com2&quot;&gt;com1;com2&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/;.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;com1com2-1&quot;&gt;(com1;com2)&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/group;groupEnd.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;com1com2-2&quot;&gt;com1&amp;amp;com2&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/&amp;amp;.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;com1com2-3&quot;&gt;com1&amp;amp;&amp;amp;com2&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/linux_command/combined/&amp;amp;&amp;amp;.png&quot; alt=&quot; &quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Same Origin policy and CORS</title>
+        <link>http://localhost:4000/2016/08/12/same-origin-and-cors.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/12/same-origin-and-cors.html</guid>
+        <pubDate>Fri, 12 Aug 2016 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;What you can learn after reading this article?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Same Origin strategy&lt;/li&gt;
+  &lt;li&gt;CORS&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;jsonp(&lt;a href=&quot;http://jeff-chung.com/2015/10/07/jsonp-tutorial.html&quot;&gt;http://jeff-chung.com/2015/10/07/jsonp-tutorial.html&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How much time you will use for reading this article? 30 minutes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;flow&quot;&gt;Flow&lt;/h1&gt;
+
+&lt;h2 id=&quot;same-origin-strategy&quot;&gt;Same origin strategy&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/same-origin.png&quot; alt=&quot; &quot; /&gt; Browser is OS js and origin is application&lt;/p&gt;
+
+&lt;h2 id=&quot;read-from-cors&quot;&gt;Read From CORS&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/read-request-cors.png&quot; alt=&quot; &quot; /&gt; The requested resource is called once and actually returned to OS even if CORS not permitted.But the Browser will not pass data to &lt;strong&gt;JS1&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;cud-from-cors&quot;&gt;CUD From CORS&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://jeff-chung.com/blog_accessary/blog_images/same-origin-and-cors/cud-request-cors.png&quot; alt=&quot; &quot; /&gt; The requested operation will not be called because the browser &lt;strong&gt;read and check the response of preflight request&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;preflight request hints&lt;/strong&gt; Both preflight request and actual CUD request need to return same cors response.E.g&lt;/p&gt;
+
+&lt;p&gt;Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS Access-Control-Allow-Origin:&lt;a href=&quot;http://rdv.dpms.com:9966&quot;&gt;http://rdv.dpms.com:9966&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;implementation&quot;&gt;Implementation&lt;/h1&gt;
+
+&lt;h2 id=&quot;http-response-header-for-cors&quot;&gt;Http Response header for CORS&lt;/h2&gt;
+
+&lt;p&gt;Allow Origin:&lt;a href=&quot;http://abc.com&quot;&gt;http://abc.com&lt;/a&gt; Allow methods :PUT,GET,POST,OPTIONS(Preflight request)&lt;/p&gt;
+
+&lt;h2 id=&quot;server&quot;&gt;Server&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Origin 2 need to added those header in http response.&lt;/li&gt;
+  &lt;li&gt;Handle preflight request properly&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;cookie&quot;&gt;Cookie&lt;/h2&gt;
+
+&lt;p&gt;If cookie is used in request.It cannot be too general.(e.g &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;)&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>My Motivation System</title>
+        <link>http://localhost:4000/2016/08/09/pomotodo-for-programmer.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/09/pomotodo-for-programmer.html</guid>
+        <pubDate>Tue, 09 Aug 2016 00:00:00 +0800</pubDate>
+        <description>&lt;h1 id=&quot;before-reading&quot;&gt;Before Reading&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is about my motivation management system.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How much time you will use for reading this article? 30 minutes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;personal-implementation&quot;&gt;Personal Implementation&lt;/h1&gt;
+
+&lt;h2 id=&quot;arrange-staff-efficientlystrength-model&quot;&gt;Arrange staff efficiently(Strength model)&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Do crucial staff on morning(reading=&amp;gt;learning=&amp;gt;writing before 10:30 am)&lt;/li&gt;
+  &lt;li&gt;exercise after eating&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;recognize-bad-behaviorrecognize-bad-behavior-easily-lower-bad-behavior&quot;&gt;Recognize bad behavior(Recognize bad behavior easily-&amp;gt;lower bad behavior)&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Overeating&lt;/strong&gt;-starve rich man in city,don’t know they can eat better just after 15 minutes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Lack of motivation&lt;/strong&gt;-the walker&amp;amp;stand player in basketball that think sitting can help them win.&lt;/li&gt;
+  &lt;li&gt;I forgive myself everytime for my bad behavior.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;no-moral-licensinglower-bad-behavior&quot;&gt;No moral licensing(lower bad behavior)&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;I am a with &lt;strong&gt;top fighting spirits&lt;/strong&gt;-I bring my A-GAME every moment.&lt;/li&gt;
+  &lt;li&gt;I am a &lt;strong&gt;spartan warriors&lt;/strong&gt;-I eat and train to keep best physique I can in order to kill most people in war.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;focus--flow-no-multi-taskinglower-stress-lower-bad-behavior-by-increase-higher-recognize-chance&quot;&gt;Focus &amp;amp; flow. (No multi-tasking,Lower stress-&amp;gt;lower bad behavior by increase higher Recognize chance)&lt;/h2&gt;
+
+&lt;p&gt;I use pomotodo for my todoist &amp;amp; .It helps me ensure&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All things is arranged properly.I don’t need to think about anything l was missing when I was doing some task.(todoist)&lt;/li&gt;
+  &lt;li&gt;Focus one job on one time.No multi-tasking.(pomodoro)&lt;/li&gt;
+  &lt;li&gt;Easier to enter flow state.(pomodoro)&lt;/li&gt;
+  &lt;li&gt;Focus more on high priority things.(todoist)&lt;/li&gt;
+  &lt;li&gt;No immediate temptation(&lt;strong&gt;learn from motivation book&lt;/strong&gt;).It blocks website like facebook.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;artificial-reward-systemincrease-good-behavior&quot;&gt;Artificial reward system(Increase good behavior)&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;I have a program that read my pomotodo History to calculate my score which can allow me to do fun staff（I have a list for it).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;lower-the-strength-for-undergo-good-behavior&quot;&gt;Lower the Strength for undergo good behavior&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;I have nuts in my office.&lt;/li&gt;
+  &lt;li&gt;I have gym tool in my office and home.And I can do calisthenics.I can train anytime and everywhere.&lt;/li&gt;
+  &lt;li&gt;I have kindle that have many book I like.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;social&quot;&gt;Social&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write this blog to get more engineer friend.&lt;/li&gt;
+  &lt;li&gt;Be friend with Chung and Yuk.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;healthincrease-overall-ability&quot;&gt;Health(Increase overall ability)&lt;/h2&gt;
+
+&lt;p&gt;Sleep on 10am and wake up at 5:30am.&lt;/p&gt;
+
+&lt;h1 id=&quot;motivation-model&quot;&gt;Motivation Model&lt;/h1&gt;
+
+&lt;p&gt;Strength model. &lt;strong&gt;Use them efficiently&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;High on morning.&lt;/li&gt;
+  &lt;li&gt;High after eating.&lt;/li&gt;
+  &lt;li&gt;High blood sugar.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Trainable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Daily habit.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;strategy&quot;&gt;Strategy&lt;/h1&gt;
+
+&lt;h2 id=&quot;increase-overall-ability&quot;&gt;Increase overall ability&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Meditation&lt;/li&gt;
+  &lt;li&gt;Good Sleep&lt;/li&gt;
+  &lt;li&gt;Low pressure&lt;/li&gt;
+  &lt;li&gt;Log heartbeat&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;lower-bad-behavior&quot;&gt;Lower bad behavior&lt;/h2&gt;
+
+&lt;p&gt;How we lost control(Reverse thinking)=&amp;gt;Never sense the behavior and decision for the bad behavior =&amp;gt;no control.&lt;/p&gt;
+
+&lt;p&gt;Increase decision opportunity instead of natural instinct&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;No multi-tasking&lt;/li&gt;
+  &lt;li&gt;Easier pattern for bad behavior.(Reduce bad behavior variable)(characteristic it)&lt;/li&gt;
+  &lt;li&gt;No immediate temptation(chocolate on table)&lt;/li&gt;
+  &lt;li&gt;No moral licensing(think about your desired identity)&lt;/li&gt;
+  &lt;li&gt;Forgive yourself for bad behavior to prevent unrecognized successive bad behavior.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;increase-make-good-decision&quot;&gt;Increase make good decision&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Artificial reward system&lt;/li&gt;
+  &lt;li&gt;Lower the Strength for undergo good behavior.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;social-acceptance&quot;&gt;Social acceptance&lt;/h2&gt;
+
+&lt;p&gt;Approach&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find those people that have desired feature and be friend to them.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+  </channel>
+</rss>

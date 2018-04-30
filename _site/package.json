@@ -1,0 +1,23 @@
+{
+  "name": "chungchi300.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss-build": " $(npm bin)/node-sass ./assets/_sass/style.scss -o=./assets/css ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chungchi300/chungchi300.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chungchi300/chungchi300.github.io/issues"
+  },
+  "homepage": "https://github.com/chungchi300/chungchi300.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.5.2"
+  }
+}
