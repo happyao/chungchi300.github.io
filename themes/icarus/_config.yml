@@ -1,10 +1,10 @@
 # Menus
 menu:
-  Home: .
-  Archives: archives
-  Categories: categories
-  Tags: tags
-  About: about
+  主页: .
+#   Archives: archives
+  分类: categories
+ # Tags: tags
+  关于我: /2018/04/28/me/to-recruiter.html
 
 # Customize
 customize:
@@ -15,33 +15,34 @@ customize:
         url: images/logo.png
     profile:
         enabled: true # Whether to show profile bar
-        fixed: true
         avatar: css/images/avatar.png
         gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-        author: PPOffice
-        author_title: Web Developer & Designer
-        location: Harbin, China
-        follow: https://github.com/ppoffice/
+        author: Jeff Chung
+        author_title: 有影响力的软件工程师
+        location: 深圳，香港
+
     highlight: monokai
     sidebar: right # sidebar position, options: left, right or leave it empty
     thumbnail: true # enable posts thumbnail, options: true, false
     favicon: # path to favicon
     social_links:
-        github: http://github.com/ppoffice/hexo-theme-icarus
-        twitter: /
-        facebook: /
-        dribbble: /
-        rss: /
+        github: https://github.com/chungchi300/
+        send : mailto:chungchi300@hotmail.com
+        linkedin : https://www.linkedin.com/in/jeff-chung-52a89956/
+       # twitter: /
+       # facebook: /
+       # dribbble: /
+       # rss: /
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
 # Widgets
 widgets:
-    - recent_posts
+    - links
+#    - recent_posts
     - category
     - archive
-    - tag
-    - tagcloud
-    - links
+#    - tag
+#    - tagcloud
 
 # Search
 search:
@@ -51,7 +52,7 @@ search:
 
 # Comment
 comment:
-    disqus:  # enter disqus shortname here
+    disqus: jeffchung  # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
     facebook: # enter true to enable
@@ -82,7 +83,7 @@ share: default # options: jiathis, bdshare, addtoany, default
 plugins:
     lightgallery: true # options: true, false
     justifiedgallery: true # options: true, false
-    google_analytics: # enter the tracking ID for your Google Analytics
+    google_analytics: UA-69191655-1 # enter the tracking ID for your Google Analytics
     google_site_verification: # enter Google site verification code
     baidu_analytics: # enter Baidu Analytics hash key
     mathjax: false # options: true, false
@@ -95,4 +96,9 @@ miscellaneous:
         twitter_id:
         google_plus:
     links:
-        Hexo: http://hexo.io
+        Kingmed - 中国龙头第三方医学检验数字化病理诊断工具: http://www.kingmed.com.cn/
+        www.vy.com.hk - 全香港最大的P2P葡萄酒网上销售平台 : http://www.vy.com.hk
+        www.okibook.com - 全香港最优惠的自助餐预订平台 : http://www.okibook.com
+        Eaglet - 最简單直接的 Koa2 的脚手架: https://github.com/chungchi300/eaglet
+        Min-doc - hackable文档生成工具: https://github.com/chungchi300/min-doc
+#        Hexo: http://hexo.io
