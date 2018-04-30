@@ -1,0 +1,54 @@
+---
+layout: post
+title: 我的代码审查实践(25分钟看完系列)
+category: 代码审查
+keywords: null
+date: 2018-04-28 16:09:02
+---
+
+## 阅读前
+
+1.  阅读这篇文章后你能学到什么?
+
+我的代码审查实践
+
+2.  你将用多少时间来阅读这篇文章?
+
+25 分钟
+
+## 目标
+
+* **分享知识**
+* **提高代码的可读性**
+
+Code Review 做法和好处
+2018-04-28 CODE REVIEW
+Code Review 做得好和做得不好的信号
+Code Review 做得好和做得不好的信号
+
+1.  阅读前
+2.  Code Review 的好处
+3.  做法
+4.  Code review 做得好和做得不好的信号
+5.  例子
+6.  阅读前阅读这篇文章后你能学到什么?
+    Code Review 做法和好处
+
+你将用多少时间来阅读这篇文章?
+25 分钟
+
+2.  Code Review 的好处分享知识提高代码的可读性
+3.  做法在每次 Code Review 和 解决 bug 之后,我们都會发现新的有效做法并写在 CONTRIBUTION.md 上,共同维护最佳做法定期地 - 每个星期五我们都會做 Code Review
+4.  Code review 做得好和做得不好的信号好
+
+团队成员知识增长 Team member knowledge increase
+团队成员接受培训而不是批评 Team member feel being trained instead of criticized
+团队成员知道代码评审何时发生并期待它 Team member know when the code review happen and look forward to it
+给定特定的代码块，您无法判断是谁编写的。Given specific block of code,you cannot tell who write it.
+相同/相似的 bug 不会重复两次 Same/similar bug don’t repeat twice
+不好
+
+毫无理由地批评代码——当你指出一个代码写得很差时，你不能指出相关的代码 on CONTRIBUTION.md criticize code without reason - When you point an code written poorly,you cannot point that related implementation on CONTRIBUTION.md
+
+5.  例子
+    Code Review 一般错误(Javascript)
