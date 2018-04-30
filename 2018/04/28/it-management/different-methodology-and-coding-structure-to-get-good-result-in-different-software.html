@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Jeff Chung</title>
+    <title>Different methodology and practice to achieve goal of different software we write | Jeff Chung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Jeff Chung">
-<meta property="og:url" content="http://jeff-chung.com/page/2/index.html">
+    <meta name="description" content="Technical explorationObjectiveShort Feedback cycleFast MVPFastFeasible ProjectGeneral KISS 原則  Component Design S.O.L.I.D 原則 DRY 原則  MethodologyMany object - OOPMany function - FP Main Component types">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Different methodology and practice to achieve goal of different software we write">
+<meta property="og:url" content="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">
 <meta property="og:site_name" content="Jeff Chung">
+<meta property="og:description" content="Technical explorationObjectiveShort Feedback cycleFast MVPFastFeasible ProjectGeneral KISS 原則  Component Design S.O.L.I.D 原則 DRY 原則  MethodologyMany object - OOPMany function - FP Main Component types">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-30T13:34:15.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jeff Chung">
+<meta name="twitter:title" content="Different methodology and practice to achieve goal of different software we write">
+<meta name="twitter:description" content="Technical explorationObjectiveShort Feedback cycleFast MVPFastFeasible ProjectGeneral KISS 原則  Component Design S.O.L.I.D 原則 DRY 原則  MethodologyMany object - OOPMany function - FP Main Component types">
     
 
     
@@ -197,8 +201,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main">
-    <article id="post-code-review/helper" class="article article-type-post"
+            <section id="main"><article id="post-it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software" class="article article-type-post"
     itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -206,8 +209,8 @@ ga('send', 'pageview');
                         <header class="article-header">
                             
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/helper.html">Code Review - Helper</a>
+        <h1 class="article-title" itemprop="name">
+            Different methodology and practice to achieve goal of different software we write
         </h1>
     
 
@@ -216,7 +219,7 @@ ga('send', 'pageview');
                                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/helper.html">
+        <a href="/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -225,7 +228,7 @@ ga('send', 'pageview');
                                             
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+        <a class="article-category-link" href="/categories/管理和协作/">管理和协作</a>
     </div>
 
                                                 
@@ -237,7 +240,33 @@ ga('send', 'pageview');
                                 <div class="article-entry" itemprop="articleBody">
                                     
                                             
-                                                    
+                                                <div id="toc" class="toc-article">
+                                                    <strong class="toc-title">
+                                                        文章目录
+                                                    </strong>
+                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Technical-exploration"><span class="toc-number">1.</span> <span class="toc-text">Technical exploration</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MVP"><span class="toc-number">2.</span> <span class="toc-text">MVP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Project"><span class="toc-number">3.</span> <span class="toc-text">Project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#General"><span class="toc-number">3.1.</span> <span class="toc-text">General</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Component-Design"><span class="toc-number">3.2.</span> <span class="toc-text">Component Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methodology"><span class="toc-number">3.3.</span> <span class="toc-text">Methodology</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Main-Component-types-and-interconnected-method"><span class="toc-number">3.4.</span> <span class="toc-text">Main Component types and interconnected method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-structure-Design-and-Implementation"><span class="toc-number">3.5.</span> <span class="toc-text">Data structure Design and Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TDD"><span class="toc-number">3.6.</span> <span class="toc-text">TDD</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Product"><span class="toc-number">4.</span> <span class="toc-text">Product</span></a></li></ol>
+                                                </div>
+                                                
+                                                    <h1 id="Technical-exploration"><a href="#Technical-exploration" class="headerlink" title="Technical exploration"></a>Technical exploration</h1><p>Objective<br>Short Feedback cycle<br>Fast</p>
+<h1 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h1><p>Fast<br>Feasible</p>
+<h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1><h2 id="General"><a href="#General" class="headerlink" title="General"></a>General</h2><ul>
+<li>KISS 原則</li>
+</ul>
+<h2 id="Component-Design"><a href="#Component-Design" class="headerlink" title="Component Design"></a>Component Design</h2><ul>
+<li>S.O.L.I.D 原則</li>
+<li>DRY 原則</li>
+</ul>
+<h2 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h2><p>Many object - OOP<br>Many function - FP</p>
+<h2 id="Main-Component-types-and-interconnected-method"><a href="#Main-Component-types-and-interconnected-method" class="headerlink" title="Main Component types and interconnected method"></a>Main Component types and interconnected method</h2><ul>
+<li>MVC</li>
+<li>Redux</li>
+</ul>
+<h2 id="Data-structure-Design-and-Implementation"><a href="#Data-structure-Design-and-Implementation" class="headerlink" title="Data structure Design and Implementation"></a>Data structure Design and Implementation</h2><ul>
+<li>Single Source of Truth for data component</li>
+</ul>
+<h2 id="TDD"><a href="#TDD" class="headerlink" title="TDD"></a>TDD</h2><p>100% unit test coverage on component that</p>
+<h1 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h1><p>Refactor 實踐<br>Tdd 實踐<br>Pure function 實踐<br>Curring 實踐<br>Naming clean code<br>訂立 coding 約定並每䢛决定 實踐</p>
+
                                                         
                                 </div>
                                 <footer class="article-footer">
@@ -247,7 +276,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/helper.html" data-id="cjgmacubo003el9pvma0v4ib2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html" data-id="cjgmacubw003ol9pv98qtjma2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -315,20 +344,47 @@ ga('send', 'pageview');
 
                                         
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/helper.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/helper.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">评论</a>
     
 
                                 </footer>
     </div>
     
+        
+<nav id="article-nav">
+    
+        <a href="/2018/04/30/code-review/general-review.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Code Review 做法和好处
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2018/04/28/code-review/asset.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Code Review - Asset</div>
+        </a>
+    
+</nav>
+
+
+            
 </article>
 
 
-
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 </section>
+    
+
+        </section>
             
                 
 <aside id="sidebar">
@@ -401,11 +457,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html';
+        
+        this.page.identifier = 'it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'jeffchung' + '.disqus.com/count.js';
+        s.src = '//' + 'jeffchung' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

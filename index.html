@@ -157,11 +157,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                61
+                11
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                15
+                2
                 <span>分类</span>
             </div>
         </div>
@@ -198,514 +198,99 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-writing/term" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/general-review" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/writing/term.html">模型用词</a>
+            <a class="article-title" href="/2018/04/30/code-review/general-review.html">Code Review 做法和好处</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/writing/term.html">
-            <time datetime="2018-04-28T08:52:49.549Z" itemprop="datePublished">2018-04-28</time>
+        <a href="/2018/04/30/code-review/general-review.html">
+            <time datetime="2018-04-30T03:43:00.000Z" itemprop="datePublished">2018-04-30</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/写作/">写作</a>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <table>
-<thead>
-<tr>
-<th>事实</th>
-<th>模型</th>
-<th>模型凖确度</th>
-<th>Eng</th>
-<th>中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>True</td>
-<td>Positive</td>
-<td>好</td>
-<td>True Positive</td>
-<td>真正</td>
-</tr>
-<tr>
-<td>True</td>
-<td>Negative</td>
-<td>不好</td>
-<td>True Negative</td>
-<td>真负 漏报率</td>
-</tr>
-<tr>
-<td>False</td>
-<td>Positive</td>
-<td>不好</td>
-<td>False Positive</td>
-<td>假正 误报率</td>
-</tr>
-<tr>
-<td>False</td>
-<td>Negative</td>
-<td>好</td>
-<td>False Negative</td>
-<td>假负</td>
-</tr>
-</tbody>
-</table>
-<p>domain knowledge</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/writing/term.html" data-id="cjgkh1go600350ipvulmvv2ks" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://jeff-chung.com/2018/04/28/writing/term.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/writing/term.html">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-program-design/avoid callback hell" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><a href="http://localhost:8000/admin" target="_blank" rel="noopener">http://localhost:8000/admin</a></p>
-<p><a href="https://www.youtube.com/watch?v=obaSQBBWZLk&amp;t=369s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=obaSQBBWZLk&amp;t=369s</a></p>
-<p><a href="https://segmentfault.com/a/1190000004451095" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004451095</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/avoid callback hell.html" data-id="cjgkh1gn5001n0ipv5bu2nsxu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://jeff-chung.com/2018/04/28/program-design/avoid callback hell.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/avoid callback hell.html">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-program-design/front-end-design-pattern" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><h2 id="Life-cycle"><a href="#Life-cycle" class="headerlink" title="Life cycle"></a>Life cycle</h2><h3 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h3><ol>
-<li>App Initial state</li>
-<li>Create view object(which simultaneously call render view)</li>
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    <img src="/2018/04/30/code-review/general-review/measure.jpg">
+<h1 id="阅读前"><a href="#阅读前" class="headerlink" title="阅读前"></a>阅读前</h1><ol>
+<li>阅读这篇文章后你能学到什么?</li>
 </ol>
-<h3 id="MVC-User-interaction-For-compare-and-contrast"><a href="#MVC-User-interaction-For-compare-and-contrast" class="headerlink" title="MVC User interaction(For compare and contrast )"></a>MVC User interaction(For compare and contrast )</h3><ol>
-<li>User interact(e.g click) view - <strong>a action</strong></li>
-<li>Controller analysis the action and called related model</li>
-<li>Model changed</li>
-<li>Controller get model newest state and passed necessary data to view to re-render</li>
-</ol>
-<p>Disadv:</p>
-<ol>
-<li><p>One Big Controller need to remember many view</p>
-</li>
-<li><p>Bad Programmer approach-(if the changing of model state occur only once &amp;&amp; only one model related,they can direct change model state )<br>causing the data flow directly go to model <strong>bypassing</strong> the controller.Make <strong>Bad Result Listed below</strong></p>
-<ol>
-<li>result in future related model and view don’t know the state changed but they need to because the controller  by-passed(causing a bug)(Not OCP)</li>
-<li>hard to debug,the controller no longer only source that trigger model and view change(to many source,low readability and predictability)</li>
-</ol>
-</li>
-</ol>
-<p>3.Bad Programmer on renderView-&gt;the renderView will trigger app state on render ,it cause the container view loop forever.(that is really hard to debug)</p>
-<h3 id="Good-View-in-MVC"><a href="#Good-View-in-MVC" class="headerlink" title="Good View in MVC"></a>Good View in MVC</h3><h4 id="Must-be-stateless-At-least-never-container-the-model-state"><a href="#Must-be-stateless-At-least-never-container-the-model-state" class="headerlink" title="Must be stateless(At least never container the model state)."></a>Must be stateless(At least never container the model state).</h4><p>Adv:</p>
-<ol>
-<li>increase predictability</li>
-</ol>
-<p>Except</p>
-<ul>
-<li>if the view need some state</li>
-<li>controller calculate new state takes very long time and you can predict the new state without the model(temp view state)</li>
-</ul>
-<h4 id="Never-effect-model-state-when-render"><a href="#Never-effect-model-state-when-render" class="headerlink" title="Never effect model state when render"></a>Never effect model state when render</h4><p>When render(newViewRelatedProps) is called</p>
-<p>Adv:</p>
-<ol>
-<li>Avoid infinite loop when app state changed.</li>
-</ol>
-<h4 id="Never-direct-change-model-state"><a href="#Never-direct-change-model-state" class="headerlink" title="Never direct change model state"></a>Never direct change model state</h4><p>Adv:</p>
-<ol>
-<li>All another/future/related model can know the related state change.(OCP for new model and view)</li>
-<li>Increase ease of debug,creating a single source of state change.</li>
-</ol>
-<h3 id="P-S"><a href="#P-S" class="headerlink" title="P.S."></a>P.S.</h3><h4 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h4><p>Model state=&gt;State that effect the business logic.</p>
-<p>View state=&gt;State that helps display</p>
-<p>Model have zero or many view. View callback call the controller function.Not direct interacted with model</p>
-<h4 id="Converting-jquery-plugin-to-view-component-only-by-callback"><a href="#Converting-jquery-plugin-to-view-component-only-by-callback" class="headerlink" title="Converting jquery plugin to view component only by callback"></a>Converting jquery plugin to view component only by callback</h4><ol>
-<li>Return false on plugin onchange event and called the controller.(By passing plugin model and disable it change value)</li>
-<li>Ensure there is render view function and ensure it definitely don’t trigger the model onchange event.</li>
-<li>Some plugin really stop</li>
-</ol>
-<h2 id="User-interaction-Flux-Perfect-way"><a href="#User-interaction-Flux-Perfect-way" class="headerlink" title="User interaction(Flux Perfect way)"></a>User interaction(Flux Perfect way)</h2><ol>
-<li>a</li>
-<li>s</li>
-</ol>
-<h2 id="User-interaction-Flux-Inperfect-way-view-contains-some-state"><a href="#User-interaction-Flux-Inperfect-way-view-contains-some-state" class="headerlink" title="User interaction(Flux Inperfect way,view contains some state)"></a>User interaction(Flux Inperfect way,view contains some state)</h2><h2 id="MVVM-User-interaction-For-compare-and-contrast"><a href="#MVVM-User-interaction-For-compare-and-contrast" class="headerlink" title="MVVM User interaction(For compare and contrast )"></a>MVVM User interaction(For compare and contrast )</h2><ol>
-<li>User interact(e.g click) view - <strong>a action</strong></li>
-<li>Model changed</li>
-<li>Observer render the model when it’s state change and re-render</li>
-</ol>
-<p>Disadv:</p>
-<p>Data is bi-directional between model and view.It is very hard to predict the behaviour of application.E.g a view<br><strong>Bad Result Listed below</strong></p>
-<ol>
-<li>nested view check dirty is hard to debug.very frequent to trigger infinite loop</li>
-</ol>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/front-end-design-pattern.html" data-id="cjgkh1gnd001v0ipvurzpdajq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://jeff-chung.com/2018/04/28/program-design/front-end-design-pattern.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/front-end-design-pattern.html">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-program-design/Restful-api-naming-convention,method-and-params" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/program-design/Restful-api-naming-convention,method-and-params.html">restful api naming convention</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/program-design/Restful-api-naming-convention,method-and-params.html">
-            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/程序设计/">程序设计</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Before-Reading-Before-Reading"><a href="#Before-Reading-Before-Reading" class="headerlink" title="Before Reading(Before Reading)"></a>Before Reading(Before Reading)</h1><ol>
-<li>What you can learn after reading this article?</li>
-</ol>
-<p>design api in restful style</p>
+<p>Code Review 做法和好处</p>
 <ol start="2">
-<li>How much time you will use for reading this article?</li>
+<li>你将用多少时间来阅读这篇文章?</li>
 </ol>
-<p>10 minutes</p>
-<h1 id="The-url-and-method-imply-action"><a href="#The-url-and-method-imply-action" class="headerlink" title="The url and method imply action"></a>The url and method imply action</h1><p>Restful is source based api style.</p>
-<p>We should get 2 information from <strong>uri and method</strong></p>
-<ol>
-<li>resource(which resource?is it a list?is it a item)</li>
-<li>action(what action it is doing)</li>
-</ol>
-<p>General template</p>
-<ul>
-<li>resource/action</li>
-<li>resource/{id}/action</li>
+<p>25 分钟</p>
+<h1 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h1><ul>
+<li><strong>分享知识</strong></li>
+<li><strong>提高代码的可读性</strong></li>
 </ul>
-<p>if the action is empty,it should be a view action</p>
-<p>E.g</p>
-<ul>
-<li>user (GET) (view alist of users)</li>
-<li>user (POST)(create user )</li>
-<li>user/batchDelete (DELETE)(delete a list of users)</li>
-<li>user/1/delete (delete )</li>
-<li>user/1</li>
+<h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><ul>
+<li>在每次 Code Review 和 解决 bug 之后,我们都會发现新的有效做法并写在 CONTRIBUTION.md 上,共同维护最佳做法</li>
+<li>定期地 - 每个星期五我们都會做 Code Review</li>
 </ul>
-<h1 id="The-parameter-provide-information-support-resource-action"><a href="#The-parameter-provide-information-support-resource-action" class="headerlink" title="The parameter provide information support resource action"></a>The parameter provide information support resource action</h1><p>E.g</p>
+<h1 id="Code-review-做得好和做得不好的信号"><a href="#Code-review-做得好和做得不好的信号" class="headerlink" title="Code review 做得好和做得不好的信号"></a>Code review 做得好和做得不好的信号</h1><h2 id="好"><a href="#好" class="headerlink" title="好"></a>好</h2><ul>
+<li>团队成员知识增长 Team member knowledge increase</li>
+<li>团队成员接受培训而不是批评 Team member feel being trained instead of criticized</li>
+<li>团队成员知道代码评审何时发生并期待它 Team member know when the code review happen and look forward to it</li>
+<li>给定特定的代码块，您无法判断是谁编写的。Given specific block of code,you cannot tell who write it.</li>
+<li>相同/相似的 bug 不会重复两次 Same/similar bug don’t repeat twice</li>
+</ul>
+<h2 id="不好"><a href="#不好" class="headerlink" title="不好"></a>不好</h2><ul>
+<li>毫无理由地批评代码——当你指出一个代码写得很差时，你不能指出相关的代码 on CONTRIBUTION.md criticize code without reason - When you point an code written poorly,you cannot point that related implementation on CONTRIBUTION.md</li>
+</ul>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
+<li><a href="/2018/04/28/code-review/general.html" title="Code Review - General(Javascript)">Code Review - General(Javascript)</a>
+</li>
+</ul>
+<p>React &amp; Redux</p>
 <ul>
-<li>user?filter[]=ageBiggerThen25 (GET) (view alist of users with ages over 25)</li>
-<li>user (which have user information)(POST)(create user ) ) )</li>
+<li><a href="/2018/04/28/code-review/action.html" title="Code Review - Action">Code Review - Action</a></li>
+<li><a href="/2018/04/28/code-review/reducer.html" title="Code Review - Reducer">Code Review - Reducer</a></li>
+<li><a href="/2018/04/28/code-review/helper.html" title="Code Review - Helper">Code Review - Helper</a></li>
+<li><a href="/2018/04/28/code-review/smart-component.html" title="Code Review - Smart Component">Code Review - Smart Component</a></li>
+<li><a href="/2018/04/28/code-review/dummy-component.html" title="Code Review - Dummy-component">Code Review - Dummy-component</a></li>
+<li><a href="/2018/04/28/code-review/middleware.html" title="Code Review - Middleware">Code Review - Middleware</a></li>
+<li><a href="/2018/04/28/code-review/network.html" title="Code Review - Network">Code Review - Network</a></li>
+<li><a href="/2018/04/28/code-review/asset.html" title="Code Review - Asset">Code Review - Asset</a>
+</li>
 </ul>
 
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/program-design/Restful-api-naming-convention,method-and-params.html" data-id="cjgkh1gn4001k0ipvbp15is8v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/30/code-review/general-review.html" data-id="cjgkh1glk00030ipvxgc6mp9w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -771,108 +356,87 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/program-design/Restful-api-naming-convention,method-and-params.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/program-design/Restful-api-naming-convention,method-and-params.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/30/code-review/general-review.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/30/code-review/general-review.html">评论</a>
     
 
-        </footer>
+                                </footer>
     </div>
     
 </article>
 
 
 
-    <article id="post-development-tool/git-and-svn-quick-learning" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/development-tool/git-and-svn-quick-learning.html">Learn Git and Svn in two graph instead of two hundred commands</a>
+            <a class="article-title" href="/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">Different methodology and practice to achieve goal of different software we write</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/development-tool/git-and-svn-quick-learning.html">
+        <a href="/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
+        <a class="article-category-link" href="/categories/管理和协作/">管理和协作</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Before-Reading-Before-Reading"><a href="#Before-Reading-Before-Reading" class="headerlink" title="Before Reading(Before Reading)"></a>Before Reading(Before Reading)</h1><ol>
-<li>What you can learn after reading this article?</li>
-</ol>
-<p>Learn git &amp; svn in the prospective of data instead of their procedures to get the whole picture</p>
-<ul>
-<li>How much time you will use for reading this article? 25 minutes<br>es</li>
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    <h1 id="Technical-exploration"><a href="#Technical-exploration" class="headerlink" title="Technical exploration"></a>Technical exploration</h1><p>Objective<br>Short Feedback cycle<br>Fast</p>
+<h1 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h1><p>Fast<br>Feasible</p>
+<h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1><h2 id="General"><a href="#General" class="headerlink" title="General"></a>General</h2><ul>
+<li>KISS 原則</li>
 </ul>
-<h2 id="Why-we-don’t-learn-commands-first"><a href="#Why-we-don’t-learn-commands-first" class="headerlink" title="Why we don’t learn commands first?"></a>Why we don’t learn commands first?</h2><p>Because we are human,data is much more easier to understand and meaningful then procedures.If we can learn in the data first,we can understand &amp; apply those proper Knowledge to undergo proper operation.</p>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><div class="center" style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://www.lucidchart.com/documents/embeddedchart/64bbe993-4d80-425a-a0b8-30b3f65408b9" id="7JDb.imKG_hY"></iframe></div>
+<h2 id="Component-Design"><a href="#Component-Design" class="headerlink" title="Component Design"></a>Component Design</h2><ul>
+<li>S.O.L.I.D 原則</li>
+<li>DRY 原則</li>
+</ul>
+<h2 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h2><p>Many object - OOP<br>Many function - FP</p>
+<h2 id="Main-Component-types-and-interconnected-method"><a href="#Main-Component-types-and-interconnected-method" class="headerlink" title="Main Component types and interconnected method"></a>Main Component types and interconnected method</h2><ul>
+<li>MVC</li>
+<li>Redux</li>
+</ul>
+<h2 id="Data-structure-Design-and-Implementation"><a href="#Data-structure-Design-and-Implementation" class="headerlink" title="Data structure Design and Implementation"></a>Data structure Design and Implementation</h2><ul>
+<li>Single Source of Truth for data component</li>
+</ul>
+<h2 id="TDD"><a href="#TDD" class="headerlink" title="TDD"></a>TDD</h2><p>100% unit test coverage on component that</p>
+<h1 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h1><p>Refactor 實踐<br>Tdd 實踐<br>Pure function 實踐<br>Curring 實踐<br>Naming clean code<br>訂立 coding 約定並每䢛决定 實踐</p>
 
-<h2 id="Merge-amp-amp-Rebase-different-method-to-merge-other-people-code"><a href="#Merge-amp-amp-Rebase-different-method-to-merge-other-people-code" class="headerlink" title="Merge &amp;&amp; Rebase - different method to merge other people code"></a>Merge &amp;&amp; Rebase - different method to merge other people code</h2><h3 id="Merging"><a href="#Merging" class="headerlink" title="Merging"></a>Merging</h3><p><strong>Procedures</strong></p>
-<ol>
-<li>Git add -A</li>
-<li>Git commit -m”local update”</li>
-<li>Git pull(which trigger git checout and Merging)</li>
-<li>Git add -A</li>
-<li>Git commit -m”merged result”</li>
-<li>Git push</li>
-</ol>
-<p><strong>What procedures really do?</strong></p>
-<p>it means merge a group ocommits(files) from local anremote branch into oncommit(files).</p>
-<h3 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h3><ol>
-<li>Git add -A</li>
-<li>Git commit -m”local update”</li>
-<li>Git pull –rebase(which trigger git checout and Merging)</li>
-<li>Git rebase –continue &amp;&amp; Git add -A (multiple times,depends on the number of commit)</li>
-<li>Git commit -m”rebased result”</li>
-<li>Git push</li>
-</ol>
-<h3 id="Stashing-hack-update-latest-version-and-apply-local-file-changes"><a href="#Stashing-hack-update-latest-version-and-apply-local-file-changes" class="headerlink" title="Stashing hack(update latest version and apply local file changes)"></a>Stashing hack(update latest version and apply local file changes)</h3><p><strong>Procedures</strong></p>
-<ol>
-<li>Git stash(restore files to original version)</li>
-<li>Git pull(which trigger git checout,it will always successful checkout because all files are in last version)</li>
-<li>Git stash pop(apply the changes)</li>
-<li>Git add -A</li>
-<li>Git commit -m”apply changes to latest version”</li>
-<li>Git push</li>
-</ol>
-<p><strong>What procedures really do?</strong></p>
-<p>it means merge a group ocommits(files) from local anremote branch into oncommit(files).</p>
-<h2 id="Svn"><a href="#Svn" class="headerlink" title="Svn"></a>Svn</h2><div class="center" style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://www.lucidchart.com/documents/embeddedchart/00b25a30-54be-403c-9665-9f286dc1211c" id="GFDbOms4Pgfw"></iframe></div>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/development-tool/git-and-svn-quick-learning.html" data-id="cjgkh1glv00070ipvfeb41s8i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html" data-id="cjgmacubw003ol9pv98qtjma2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -938,134 +502,68 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/development-tool/git-and-svn-quick-learning.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/development-tool/git-and-svn-quick-learning.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">评论</a>
     
 
-        </footer>
+                                </footer>
     </div>
     
 </article>
 
 
 
-    <article id="post-exercise-for-programmer/lunch-calisthenics" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/asset" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/exercise-for-programmer/lunch-calisthenics.html">My lunch 徒手训练</a>
+            <a class="article-title" href="/2018/04/28/code-review/asset.html">Code Review - Asset</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/exercise-for-programmer/lunch-calisthenics.html">
+        <a href="/2018/04/28/code-review/asset.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/徒手训练/">徒手训练</a>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Before-Reading"><a href="#Before-Reading" class="headerlink" title="Before Reading"></a>Before Reading</h1><ol>
-<li><p>This is about my 徒手训练(exercise that don’t require any exercise).I do my exercise during lunch hour(It takes 35 minutes to complete it (including the stretching)).</p>
-</li>
-<li><p>How much time you will use for reading this article? 30 minutes</p>
-</li>
-</ol>
-<h1 id="Personal-Schedule"><a href="#Personal-Schedule" class="headerlink" title="Personal Schedule"></a>Personal Schedule</h1><p>Focus on more back muscle exercise and lower back</p>
-<h1 id="Progression-schedule"><a href="#Progression-schedule" class="headerlink" title="Progression schedule"></a>Progression schedule</h1><h2 id="Pull-up"><a href="#Pull-up" class="headerlink" title="Pull up"></a>Pull up</h2><ol>
-<li>Jump pull up(15,15)</li>
-<li>chin up(15,15)*</li>
-<li>pull up(15,15)</li>
-<li>muscle up(15,15)</li>
-<li>half single hand pull up(15,15)</li>
-<li>single hand pull up(15,15)</li>
-</ol>
-<h2 id="squat"><a href="#squat" class="headerlink" title="squat"></a>squat</h2><ol>
-<li>30kg squat</li>
-<li>30kg squat with half tight flexbar</li>
-<li>30kg squat with full tight flexbar*</li>
-<li>50kg squat</li>
-<li>80kg squat</li>
-</ol>
-<h2 id="Push-up"><a href="#Push-up" class="headerlink" title="Push up"></a>Push up</h2><ol>
-<li>30kg push up</li>
-<li>30kg with half tight flexbar</li>
-<li>30kg with full tight flexbar*</li>
-<li>50kg bench press+10dips</li>
-<li>80kg bench press+20dips</li>
-</ol>
-<h2 id="explosive-push-up"><a href="#explosive-push-up" class="headerlink" title="explosive push up"></a>explosive push up</h2><ol>
-<li>clip hand</li>
-<li>clip chest</li>
-<li>clip leg</li>
-<li>double clip</li>
-<li>clip back*</li>
-</ol>
-<h2 id="reverse-stand"><a href="#reverse-stand" class="headerlink" title="reverse stand"></a>reverse stand</h2><ol>
-<li>half stand</li>
-<li>full stand*(reverse dip,reverse climp)</li>
-<li>free stand</li>
-</ol>
-<h2 id="Bridge"><a href="#Bridge" class="headerlink" title="Bridge"></a>Bridge</h2><ol>
-<li>Basketball bridge(20,20)</li>
-<li>perfect bridge(20,20)*</li>
-<li>one leg one hand(30,30)</li>
-</ol>
-<h2 id="L-set"><a href="#L-set" class="headerlink" title="L set"></a>L set</h2><ol>
-<li>Low L</li>
-<li>Standard L*</li>
-<li>Advanced L</li>
-<li>Dragon flag</li>
-</ol>
-<p>Common of L set</p>
-<ol>
-<li>60X10 * 2</li>
-<li>4X15 * 2</li>
-<li>3X20 * 2</li>
-<li>2X30 * 2</li>
-<li>1X60 * 2</li>
-</ol>
-<h2 id="Neck-100-clear"><a href="#Neck-100-clear" class="headerlink" title="Neck(100% clear)"></a>Neck(100% clear)</h2><ol>
-<li>Neck no pull(20)</li>
-<li>Neck with weak pull(20)</li>
-<li>Neck with full pull(20)</li>
-<li>Head bridge 2min *</li>
-</ol>
-<h1 id="My-History-Great-oaks-from-little-acorns-grow"><a href="#My-History-Great-oaks-from-little-acorns-grow" class="headerlink" title="My History(Great oaks from little acorns grow)"></a>My History(Great oaks from little acorns grow)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br></pre></td><td class="code"><pre><span class="line">2015-10-26 leg rising(2) * 40*3</span><br><span class="line">27 Oct 2015 08:50</span><br><span class="line">2015-10-27 back rising(2)*（25+20=20)</span><br><span class="line">1 Nov 2015 22:06</span><br><span class="line">2015-11-1 back rising2( 25+25+21)</span><br><span class="line">3 Nov 2015 09:09</span><br><span class="line">2015-11-3 leg rising(3)*15*2 target</span><br><span class="line">4 Nov 2015 22:46</span><br><span class="line">Lef rising (3) 10*2</span><br><span class="line">5 Nov 2015 09:30</span><br><span class="line">Plunk70 70 62</span><br><span class="line">6 Nov 2015 12:52</span><br><span class="line">push 15(3) 15 + 15</span><br><span class="line">10 Nov 2015</span><br><span class="line">Backrising 40 40 40</span><br><span class="line">13 Nov 2015 11:00</span><br><span class="line">push 20 +15+15 on 12-10-2015</span><br><span class="line">15 Nov 2015 17:34</span><br><span class="line">leg rising(3) 15 + 15+15</span><br><span class="line">17 Nov 2015 06:03</span><br><span class="line">deep down 8 + 8</span><br><span class="line">18 Nov 2015 09:37</span><br><span class="line">Push(3) 20 15 15standard^_^</span><br><span class="line">19 Nov 2015 08:20</span><br><span class="line">Plunk 70 70 70</span><br><span class="line">21 Nov 2015 23:11</span><br><span class="line">Lrg rising(3) 20 20 20</span><br><span class="line">22 Nov 2015 12:14</span><br><span class="line">back rising (3) 8 not very standard,but remember to look at the back wall</span><br><span class="line">24 Nov 2015 08:28</span><br><span class="line">Deep down 8 10 10 standard, focusing on the butt</span><br><span class="line">25 Nov 2015 21:38</span><br><span class="line">Plunk 80 80 80</span><br><span class="line">27 Nov 2015 22:41</span><br><span class="line">Push 20 15 15</span><br><span class="line">28 Nov 2015 17:16</span><br><span class="line">Leg rising(3) 25 25 20</span><br><span class="line">1 Dec 2015 18:45</span><br><span class="line">26-11-2015 back rising(3) 9*9*9</span><br><span class="line">1 Dec 2015 23:06</span><br><span class="line">Plunk 90 90 90 40 40 40 40&#125;:-)</span><br><span class="line">2 Dec 2015 08:17</span><br><span class="line">Deep down(3) 12 12 12</span><br><span class="line">3 Dec 2015 22:24</span><br><span class="line">Push 20 20 16</span><br><span class="line">4 Dec 2015 08:10</span><br><span class="line">Leg rising(3) 30 30 25</span><br><span class="line">7 Dec 2015 22:20</span><br><span class="line">Back(3) 11 10 9</span><br><span class="line">11 Dec 2015 08:56</span><br><span class="line">10~12~2015 Plunk 100 50 50 100 50 50 100</span><br><span class="line">11 Dec 2015 23:51</span><br><span class="line">Deep down(3) 13 13 13</span><br><span class="line">15 Dec 2015 08:21</span><br><span class="line">Push(3) 20 20 20 go to 4 when 30,30,30</span><br><span class="line">17 Dec 2015 08:06</span><br><span class="line">Leg rising(3)(30 30 30 30) 16 Dec,ready to (4) now</span><br><span class="line">17 Dec 2015 08:22</span><br><span class="line">back(3) 12 12 12</span><br><span class="line">18 Dec 2015 11:30</span><br><span class="line">deep down (3) 15 15 15</span><br><span class="line">21 Dec 2015 09:08</span><br><span class="line">Back(3) 15 15 12 extra splunk 110 60 60</span><br><span class="line">22 Dec 2015 08:58</span><br><span class="line">Leg rising(4) 15 15 15</span><br><span class="line">23 Dec 2015 22:55</span><br><span class="line">Deep down (3) 18 18 18</span><br><span class="line">24 Dec 2015 08:47</span><br><span class="line">Push (3)25 25 20&#125;:-)</span><br><span class="line">25 Dec 2015 08:33</span><br><span class="line">Splunk 110 60 60 110 60 60 110</span><br><span class="line">26 Dec 2015 15:44</span><br><span class="line">Pull up(20,20,15)</span><br><span class="line">28 Dec 2015 09:38</span><br><span class="line">Pull up 30 20 20</span><br><span class="line">29 Dec 2015 07:08</span><br><span class="line">Bridge(3) 18 18 15</span><br><span class="line">30 Dec 2015 08:44</span><br><span class="line">Leg rising 4(20 18 15)</span><br><span class="line">31 Dec 2015 08:17</span><br><span class="line">deep down(3) 21 21 21</span><br><span class="line">1 Jan 08:19</span><br><span class="line">提腫(1)(20,20) next week is (25,25,25)</span><br><span class="line">push(3),30,20,25)</span><br><span class="line">Horizontal small hand(1)(</span><br><span class="line">4 Jan 23:58</span><br><span class="line">Bridge(3) (21 18 18)</span><br><span class="line">5 Jan 08:22</span><br><span class="line">Small leg(1) 25 25 25,next week 30 30 30 30,leg rising 21 18 18</span><br><span class="line">6 Jan 08:54</span><br><span class="line">Insanity 17 minutes</span><br><span class="line">7 Jan 09:00</span><br><span class="line">Push 25 25 25</span><br><span class="line">8 Jan 08:54</span><br><span class="line">deep down 24,24,24</span><br><span class="line">9 Jan 12:40</span><br><span class="line">Pull up 27 25 25(small leg 35 35 35)</span><br><span class="line">11 Jan 06:57</span><br><span class="line">Leg rising (4)25 25 25,next week to 5,small leg 40 40 40 40</span><br><span class="line">12 Jan 07:17</span><br><span class="line">push 28 28 25 ,feeling fantastic</span><br><span class="line">13 Jan 08:14</span><br><span class="line">Bridge 12 12 12 .Remember breath control and straight handa and leg do 10 step 2 for feeling,vacam stomatch (step 1),20s,20s,20s</span><br><span class="line">14 Jan 07:41</span><br><span class="line">deeep down 27,27,27,small leg 40,40,40</span><br><span class="line">15 Jan 07:44</span><br><span class="line">leg rising (4) 8 8 8 ,standard</span><br><span class="line">16 Jan 06:38</span><br><span class="line">pull up 6,6,6 standard.Remember to use your back to pull your up as yong chun,foot root as supporting point.straight body,hand on the tool edge.And over the joint between hand count 1.</span><br><span class="line">17 Jan 08:40</span><br><span class="line">golden step,L-bent-step 1,turn around-step 2,bridge step 2.</span><br><span class="line">18 Jan 07:31</span><br><span class="line">pull up 7,7,7 standard.leg width is same to shoulder.And the latter half end part contract the back to touch the tool</span><br><span class="line">19 Jan 08:22</span><br><span class="line">Leg rising (4) 9 9 9 standard,small leg 50 50 50 50</span><br><span class="line">20 Jan 11:05</span><br><span class="line">push up(29,26,29)</span><br><span class="line">21 Jan 07:40</span><br><span class="line">bridge(3) 13 13 13 standard,step 1 as warm up,do 30 step(2),do 10 step (1) as warm up</span><br><span class="line">22 Jan 23:26</span><br><span class="line">Deep down 28 28 28</span><br><span class="line">23 Jan 15:59</span><br><span class="line">L-step-1(15 s,15s,15s) basic,</span><br><span class="line">Turn around-2 2set,</span><br><span class="line">bride step 2 ,3 set</span><br><span class="line">25 Jan 08:16</span><br><span class="line">pull up(2) 8 8 8</span><br><span class="line">26 Jan 07:47</span><br><span class="line">Leg rising (4) 10 10 10 standard ,small leg(5) 30 30 30 30</span><br><span class="line">27 Jan 07:37</span><br><span class="line">Push up (3)(30 30 30)upgrade to push up (4)(10 ,10)</span><br><span class="line">28 Jan 15:07</span><br><span class="line">bridge (3) 14 ,14,14 .Use your shoulder muscle to train raise me up,neck 10,10,do relaxing group</span><br><span class="line">29 Jan 09:13</span><br><span class="line">Deep down 29 29 29,small leg 35 35 35 35</span><br><span class="line">30 Jan 09:31</span><br><span class="line">reverse stand 30s,neck trainning 11(down),11(up)</span><br><span class="line">31 Jan 12:14</span><br><span class="line">slide bycle 10</span><br><span class="line">1 Feb 08:26</span><br><span class="line">pull up 10,10,9 small hand(1) 30,30,30,30s</span><br><span class="line">2 Feb 07:26</span><br><span class="line">Leg rising 13 13 13 small leg 40 40 40 40</span><br><span class="line">3 Feb 08:08</span><br><span class="line">Push up(4)(basketball in the chest)</span><br><span class="line">19 19,side bicycle 13 13</span><br><span class="line">IMG_20160203_080727.jpgCanceled</span><br><span class="line">4 Feb 08:59</span><br><span class="line">Bridge 16 16 16 neck 12 12</span><br><span class="line">5 Feb 08:23</span><br><span class="line">Deep down 30 30 30,upgrade</span><br><span class="line">6 Feb</span><br><span class="line">Neck 13 13 reverse stand 37 s</span><br><span class="line">8 Feb 09:26</span><br><span class="line">Pull up 12 11 12 ,40 40 40</span><br><span class="line">9 Feb 14:40</span><br><span class="line">Deep down (5) 10 10,small leg 45 45 45</span><br><span class="line">10 Feb 10:21</span><br><span class="line">Push up 22 22,(reach 25 need upgrade),side 14 14</span><br><span class="line">11 Feb 09:42</span><br><span class="line">Leg rising 16 16 14</span><br><span class="line">12 Feb 09:28</span><br><span class="line">Reverse stand 42 42,neck 14 14</span><br><span class="line">14 Feb 21:05</span><br><span class="line">bridge 17 16,neck 15 15</span><br><span class="line">15 Feb 08:52</span><br><span class="line">Pull up 14 13 13,45 45 45</span><br><span class="line">16 Feb 09:34</span><br><span class="line">Leg rising(4) 19 19 19,small leg 55 55 55</span><br><span class="line">17 Feb 12:22</span><br><span class="line">push up(4,25,25,25)</span><br><span class="line">18 Feb 06:48</span><br><span class="line">Bridge(2) 32 32 32 neck 16back only in future</span><br><span class="line">19 Feb 22:10</span><br><span class="line">deep down 11 11 提腫(single) 10 10</span><br><span class="line">20 Feb 06:43</span><br><span class="line">Reverse stand 60 47 ,side 14</span><br><span class="line">22 Feb 09:08</span><br><span class="line">pull up 15 15 15 , 17s 17s 15 s</span><br><span class="line">23 Feb 06:56</span><br><span class="line">Leg rising 21 21 21 ,提腫 15 15ultimate</span><br><span class="line">24 Feb 11:47</span><br><span class="line">Push 5(10 10)</span><br><span class="line">25 Feb 06:30</span><br><span class="line">Bride(2) 34 34 34 side 16 16</span><br><span class="line">26 Feb 08:26</span><br><span class="line">deep down 13 13 13 ,提腫 20 20ultimate</span><br><span class="line">27 Feb 04:59</span><br><span class="line">Reverse stand 55 s, 65s.neck 16</span><br><span class="line">29 Feb 07:56</span><br><span class="line">Pulp up 17 17 17 30s 20s 35s</span><br><span class="line">1 Mar 07:24</span><br><span class="line">leg rising 23,23,23 提腫 20 18ultimate</span><br><span class="line">2 Mar 09:44</span><br><span class="line">push 5(13 13)perfect</span><br><span class="line">3 Mar 10:26</span><br><span class="line">Bridge (2)37 36 35 side 18 18,if other leg is higher,it can tougher</span><br><span class="line">4 Mar 12:44</span><br><span class="line">deep down 15 15 14,提腫 22 21ultimate</span><br><span class="line">5 Mar 08:02</span><br><span class="line">Reverse stand 60s 70s ,neck 17</span><br><span class="line">7 Mar 12:23</span><br><span class="line">Pull up 19 19 19,40s *2 30s</span><br><span class="line">8 Mar 14:34</span><br><span class="line">Leg rising (4) 25 25 25 upgrade to five ultimate 24*2set</span><br><span class="line">9 Mar 10:15</span><br><span class="line">push (5) (15,15) perfect</span><br><span class="line">11 Mar 09:25</span><br><span class="line">Bridge (2)38 37,bridge(3) 5,side 19 19</span><br><span class="line">12 Mar 08:09</span><br><span class="line">reverse stand 70s 70s,neck train 18</span><br><span class="line">13 Mar 14:17</span><br><span class="line">deep down 16,16,14</span><br><span class="line">14 Mar 10:52</span><br><span class="line">pull up 20,20,20 ,42s 42s 30s,remember the back muscle feeling,can be higher position, use the back as starting point</span><br><span class="line">15 Mar 11:38</span><br><span class="line">deep down 16*3 position fixed</span><br><span class="line">16 Mar 10:42</span><br><span class="line">PUSH (5)(17,17)perfect</span><br><span class="line">17 Mar 12:59</span><br><span class="line">bridge(3) 10,bridge(2)40 side chan 20 20 bonus pull up for fun</span><br><span class="line">18 Mar 09:33</span><br><span class="line">leg rising step(5) perfect,remember to stretch before 10 10</span><br><span class="line">19 Mar 11:31</span><br><span class="line">Neck train 20 20,reverse stand 80s 70s</span><br><span class="line">21 Mar 12:23</span><br><span class="line">Pull up(2) 22 20 50s 42s 38s pull up (3)</span><br><span class="line">23 Mar 00:59</span><br><span class="line">deep down 18 ,18 ,17</span><br><span class="line">23 Mar 18:30</span><br><span class="line">push(5)(19,19)perfect</span><br><span class="line">24 Mar 20:48</span><br><span class="line">Rest</span><br><span class="line">25 Mar 11:14</span><br><span class="line">Bridge (2) 40(3) 12 12 side chain 20 20 slow</span><br><span class="line">26 Mar 22:30</span><br><span class="line">Neck train 22 22 reverse stand 85s 75s</span><br><span class="line">27 Mar 07:56</span><br><span class="line">Bridge 5(12 12)</span><br><span class="line">28 Mar 12:41</span><br><span class="line">Pull up hold 60s 55s 40s step 3(10 10)knee style and help only in bottom</span><br><span class="line">29 Mar 13:54</span><br><span class="line">deep down 20*3,提腫 24 20ultimate</span><br><span class="line">30 Mar 09:47</span><br><span class="line">push(5) 20 19perfect</span><br><span class="line">31 Mar 11:54</span><br><span class="line">Leg(5) 15 15 perfect, golden 3,vacuum stomach, fat burning</span><br><span class="line">1 Apr 14:00</span><br><span class="line">Bridge 5(14 14)</span><br><span class="line">3 Apr 16:53</span><br><span class="line">reverse stand(1)(1m30),crow style 10s,neck train 24 24,reverse(3)(30s)</span><br><span class="line">4 Apr 12:04</span><br><span class="line">pull up(2) 24,hold 40s 50s,pull up(3）13，13，hold 60s</span><br><span class="line">5 Apr 23:10</span><br><span class="line">Leg(5) 18 18 perfect</span><br><span class="line">6 Apr 09:07</span><br><span class="line">push(5) (20*2) perfect upgrade push(6)*5(perfect),[future(regular training),(5) push up as much as possible),lower ground push up)</span><br><span class="line">7 Apr 21:53</span><br><span class="line">Deep down (23,23),small leg 26,22</span><br><span class="line">8 Apr</span><br><span class="line">Bridge 5(16 16)</span><br><span class="line">9 Apr 21:42</span><br><span class="line">crow style 15s</span><br><span class="line">10 Apr 23:54</span><br><span class="line">Reverse stand 1:35,neck 26 26,reverse stanf(3) 35s</span><br><span class="line">11 Apr 22:09</span><br><span class="line">Pull up(2) 26,pull up(3) 15,hold 45,55</span><br><span class="line">12 Apr 16:48</span><br><span class="line">deep down,25,25,small leg 26,26</span><br><span class="line">13 Apr 08:42</span><br><span class="line">push(6),7,7(remerber triangle hand),push(5) 20,explosive 10</span><br><span class="line">15 Apr 09:32</span><br><span class="line">LEG RISING(20,20) perfect,leg rising(6) 10,good</span><br><span class="line">16 Apr 21:48</span><br><span class="line">Reverse stand 1:45 s,crow style 25s，reverse stand(3) 35s 10s,neck 28</span><br><span class="line">18 Apr 16:42</span><br><span class="line">Back training,bridge(5) 18,18,side train 22 22 slow</span><br><span class="line">20 Apr 15:58</span><br><span class="line">Push(6),9,9,push(5)22,explosive 12</span><br><span class="line">21 Apr 07:08</span><br><span class="line">deep down 27,27,small leg 27,27</span><br><span class="line">22 Apr 23:02</span><br><span class="line">Leg rising 12 12 ,perfect and slow</span><br><span class="line">23 Apr 17:50</span><br><span class="line">Reverse stand 2:00.reverse stand (3) 40 s,20s,crow Style 25s,neck 30</span><br><span class="line">25 Apr 19:27</span><br><span class="line">Pull up(2) 28,pull up(3) 15 15,hold 55,45</span><br><span class="line">25 Apr</span><br><span class="line">bridge(2) 30 bridge(5) 20,20,side train 24 24 slow</span><br><span class="line">26 Apr 17:52</span><br><span class="line">deep down 28,28,small leg 28,28 leg rising 14,14 perfect and slow</span><br><span class="line">27 Apr 12:53</span><br><span class="line">push(6),12,12,push(5) 24,explosive 14,reverse stand (3) 45s</span><br><span class="line">28 Apr 22:59</span><br><span class="line">bridge(2) 30 bridge 3(22,22) side train 26 26 slow</span><br><span class="line">30 Apr 23:22</span><br><span class="line">reverse stand 2:05, reverse stand (3) 45 s,30s,crow Style 30s,(neck 32 on tomorow)</span><br><span class="line">1 May 19:44</span><br><span class="line">leg rising 16,16 perfect and slow(not correct,should totally bend even rest(90 degree thougout ,to 15 15 upgrade),neck 32</span><br><span class="line">2 May 15:47</span><br><span class="line">pull up(2) 20 , 20,pull up 17,17,hold 55 45</span><br><span class="line">4 May 23:09</span><br><span class="line">push(6) 14 ,14 ,push(5) 20 perfect,explosive 16,</span><br><span class="line">5 May 23:16</span><br><span class="line">bridge(2) 32 bridge 3(24,24) side train 26 26 slow</span><br><span class="line">6 May 22:43</span><br><span class="line">leg rising(6) 25 ,25 perfect .leg rising (7)5</span><br><span class="line">8 May 00:43</span><br><span class="line">reverse stand 2:10,reverse stand (3) 50 s ,40 s ,crow style 35s</span><br><span class="line">9 May 00:34</span><br><span class="line">deep down 30,30 ,small leg 30,30</span><br><span class="line">10 May 23:16</span><br><span class="line">push(6)16,16,push (5) 22 perfect,explosive 18</span><br><span class="line">11 May 23:12</span><br><span class="line">.leg rising (7)8</span><br><span class="line">12 May 22:57</span><br><span class="line">.(nect 34),side train 28 28 slow, bridge 3(26,26</span><br><span class="line">13 May 22:55</span><br><span class="line">deep down 30 30 perfect(clean),small leg 30,30 clean</span><br><span class="line">14 May 17:35</span><br><span class="line">reverse stand (3) 60 s ,70 s ,crow style 40s</span><br><span class="line">15 May 14:52</span><br><span class="line">Pull up (24,24) pull 3(20 20),hold 60 50</span><br><span class="line">18 May 00:02</span><br><span class="line">deep down 30(inperfect),30(perfect) ,small leg 32,32</span><br><span class="line">18 May 12:39</span><br><span class="line">Push (6)18 13 (perfect),push(5) 23 perfect, explosive 19</span><br><span class="line">19 May 20:48</span><br><span class="line">.leg rising (7)10,10 ,pull 4(2 2)</span><br><span class="line">20 May 22:56</span><br><span class="line">Reverse stand 70s 75s</span><br><span class="line">22 May 00:58</span><br><span class="line">Neck 20 heavy</span><br><span class="line">22 May 18:42</span><br><span class="line">Pull up 4(4,4) pull 2(24,24),hold 60 50,bridge 30,30</span><br><span class="line">24 May 12:45</span><br><span class="line">Close squad 10,10,small leg 30,30</span><br><span class="line">25 May 12:40</span><br><span class="line">Push(6) 20 14(perfect),explosive 20 upgrade to clip hand,push 24(5) perfect</span><br><span class="line">28 May 08:16</span><br><span class="line">Crow style 40s, reverse stand 75s 70s,leg rising 7(12 11)</span><br><span class="line">28 May 21:00</span><br><span class="line">bridge 2(30),bridge(4） 5，8</span><br><span class="line">29 May 09:03</span><br><span class="line">Pull up 4(5,5) pull 2(25)</span><br><span class="line">31 May 13:19</span><br><span class="line">Dewp down (6) 12 12,small leg 30 30</span><br><span class="line">1 Jun 21:52</span><br><span class="line">Push(6) 16 16(perfect),explosive 7 clip hand,push 25(5) perfect</span><br><span class="line">2 Jun 13:18</span><br><span class="line">Leg rising 7(14 13)</span><br><span class="line">5 Jun</span><br><span class="line">Reverse stand 75 70,Crow style 42s,bridge (2)30,bridge 3 8 10,pull up(4) 6 6,pull up (2) 26,head 20</span><br><span class="line">7 Jun 13:08</span><br><span class="line">Deep down(6) 14 14,small leg 30 30</span><br><span class="line">8 Jun 12:55</span><br><span class="line">Push (6) (18 18 )perfect,explosive 9,Push 26 (5) perfect</span><br><span class="line">10 Jun 12:57</span><br><span class="line">Leg rising 7(16,16)perfect</span><br><span class="line">10 Jun 12:58</span><br><span class="line">Reverse stand 80 70,head 20,crpw style 45s</span><br><span class="line">12 Jun 16:26</span><br><span class="line">bridge 2(30),bridge(4） 10,12</span><br><span class="line">12 Jun 17:11</span><br><span class="line">pull up(4) 8 7,pull up (2) 26,Leg rising 8(5,5)perfect,pull up (2) 27</span><br><span class="line">14 Jun 23:36</span><br><span class="line">deep down (6) (16,16),small leg</span><br><span class="line">15 Jun 00:14</span><br><span class="line">Deep down(6) 16 16,small leg 30 30</span><br><span class="line">16 Jun 13:24</span><br><span class="line">Push 6 19 19，explosive 10,push 5 27</span><br><span class="line">17 Jun 22:13</span><br><span class="line">leg rising 8(8,9),full pull up(4) perfect反手</span><br><span class="line">19 Jun 14:57</span><br><span class="line">Reverse stand 80 80.head 20(0.34body out),crow style 50s.bridge 2(30),bridge(4) 12 ,14.</span><br><span class="line">20 Jun 10:28</span><br><span class="line">pull up(4) 9 8,pull up(2)26</span><br><span class="line">21 Jun 22:47</span><br><span class="line">deep down (6) (18,18),small leg 30,30</span><br><span class="line">23 Jun 13:18</span><br><span class="line">Push 6( 20 20) upgrade to 7,explosive clip hand 12,push 5(28)</span><br><span class="line">24 Jun 22:18</span><br><span class="line">leg rising 8(10,10)</span><br><span class="line">25 Jun 14:47</span><br><span class="line">reverse stand 80,80 step 4(5) head 20(0.34 body out)perfect.crow style 55s</span><br><span class="line">27 Jun 00:41</span><br><span class="line">Bridge(4) 14 15,basic bridge(2) 30</span><br><span class="line">27 Jun 13:30</span><br><span class="line">Pull up10 10</span><br><span class="line">28 Jun 23:04</span><br><span class="line">deep down (6) (20,18),small leg 30,30</span><br><span class="line">29 Jun 20:35</span><br><span class="line">push up 7(8,8),explosive clip hand 14 14</span><br><span class="line">1 Jul 17:34</span><br><span class="line">Reverse stand 6 85</span><br><span class="line">2 Jul 21:00</span><br><span class="line">basic bridge (2) 30,bridge(4) 16 16</span><br><span class="line">3 Jul 09:58</span><br><span class="line">Pull up 11 ,10</span><br><span class="line">5 Jul 23:24</span><br><span class="line">deep down (6)(20,20) upgrade</span><br><span class="line">6 Jul 22:57</span><br><span class="line">archer half push up(14,14)(target40)</span><br><span class="line">7 Jul 22:19</span><br><span class="line">basic bridge(2) 30,bridge(4) 18 18</span><br><span class="line">8 Jul 12:26</span><br><span class="line">leg rising 8(12,12),remember tuck up,90 degree down.Step 10 is just the beginning</span><br><span class="line">9 Jul 21:27</span><br><span class="line">Reverse stand 8 60,(try reverse stand double in future,and then reverse stand)</span><br><span class="line">12 Jul 12:32</span><br><span class="line">uneven squat 5,5</span><br><span class="line">13 Jul 10:27</span><br><span class="line">11-jul archer push up(16,16),explosive push up clip chest 5,5</span><br><span class="line">13 Jul 10:38</span><br><span class="line">reverse stand 10,8</span><br><span class="line">15 Jul</span><br><span class="line">Tucked L set 1min,1min,upgrade to Low L set</span><br><span class="line">16 Jul 15:32</span><br><span class="line">Bridge 2(30),bridge (5) 10,10</span><br><span class="line">17 Jul 11:21</span><br><span class="line">Pull up 9,9 jum slow</span><br></pre></td></tr></table></figure>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/exercise-for-programmer/lunch-calisthenics.html" data-id="cjgkh1glx00080ipvhsid2wo3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/asset.html" data-id="cjgmacubk0038l9pvr5l2km7g" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1131,140 +629,68 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/exercise-for-programmer/lunch-calisthenics.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/exercise-for-programmer/lunch-calisthenics.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/asset.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/asset.html">评论</a>
     
 
-        </footer>
+                                </footer>
     </div>
     
 </article>
 
 
 
-    <article id="post-exercise-for-programmer/pomotodo-for-programmer" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/dummy-component" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/exercise-for-programmer/pomotodo-for-programmer.html">My Motivation System</a>
+            <a class="article-title" href="/2018/04/28/code-review/dummy-component.html">Code Review - Dummy-component</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/exercise-for-programmer/pomotodo-for-programmer.html">
+        <a href="/2018/04/28/code-review/dummy-component.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/徒手训练/">徒手训练</a>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Before-Reading"><a href="#Before-Reading" class="headerlink" title="Before Reading"></a>Before Reading</h1><ol>
-<li><p>This is about my motivation management system.</p>
-</li>
-<li><p>How much time you will use for reading this article? 30 minutes</p>
-</li>
-</ol>
-<h1 id="Personal-Implementation"><a href="#Personal-Implementation" class="headerlink" title="Personal Implementation"></a>Personal Implementation</h1><h2 id="Arrange-staff-efficiently-Strength-model"><a href="#Arrange-staff-efficiently-Strength-model" class="headerlink" title="Arrange staff efficiently(Strength model)"></a>Arrange staff efficiently(Strength model)</h2><ol>
-<li>Do crucial staff on morning(reading=&gt;learning=&gt;writing before 10:30 am)</li>
-<li>exercise after eating</li>
-</ol>
-<h2 id="Recognize-bad-behavior-Recognize-bad-behavior-easily-gt-lower-bad-behavior"><a href="#Recognize-bad-behavior-Recognize-bad-behavior-easily-gt-lower-bad-behavior" class="headerlink" title="Recognize bad behavior(Recognize bad behavior easily-&gt;lower bad behavior)"></a>Recognize bad behavior(Recognize bad behavior easily-&gt;lower bad behavior)</h2><ol>
-<li><strong>Overeating</strong>-starve rich man in city,don’t know they can eat better just after 15 minutes.</li>
-<li><strong>Lack of motivation</strong>-the walker&amp;stand player in basketball that think sitting can help them win.</li>
-<li>I forgive myself everytime for my bad behavior.</li>
-</ol>
-<h2 id="No-moral-licensing-lower-bad-behavior"><a href="#No-moral-licensing-lower-bad-behavior" class="headerlink" title="No moral licensing(lower bad behavior)"></a>No moral licensing(lower bad behavior)</h2><ol>
-<li>I am a with <strong>top fighting spirits</strong>-I bring my A-GAME every moment.</li>
-<li>I am a <strong>spartan warriors</strong>-I eat and train to keep best physique I can in order to kill most people in war.</li>
-</ol>
-<h2 id="Focus-amp-flow-No-multi-tasking-Lower-stress-gt-lower-bad-behavior-by-increase-higher-Recognize-chance"><a href="#Focus-amp-flow-No-multi-tasking-Lower-stress-gt-lower-bad-behavior-by-increase-higher-Recognize-chance" class="headerlink" title="Focus &amp; flow. (No multi-tasking,Lower stress-&gt;lower bad behavior by increase higher Recognize chance)"></a>Focus &amp; flow. (No multi-tasking,Lower stress-&gt;lower bad behavior by increase higher Recognize chance)</h2><p>I use pomotodo for my todoist &amp; .It helps me ensure</p>
-<ol>
-<li>All things is arranged properly.I don’t need to think about anything l was missing when I was doing some task.(todoist)</li>
-<li>Focus one job on one time.No multi-tasking.(pomodoro)</li>
-<li>Easier to enter flow state.(pomodoro)</li>
-<li>Focus more on high priority things.(todoist)</li>
-<li>No immediate temptation(<strong>learn from motivation book</strong>).It blocks website like facebook.</li>
-</ol>
-<h2 id="Artificial-reward-system-Increase-good-behavior"><a href="#Artificial-reward-system-Increase-good-behavior" class="headerlink" title="Artificial reward system(Increase good behavior)"></a>Artificial reward system(Increase good behavior)</h2><ol>
-<li>I have a program that read my pomotodo History to calculate my score which can allow me to do fun staff（I have a list for it).</li>
-</ol>
-<h2 id="Lower-the-Strength-for-undergo-good-behavior"><a href="#Lower-the-Strength-for-undergo-good-behavior" class="headerlink" title="Lower the Strength for undergo good behavior"></a>Lower the Strength for undergo good behavior</h2><ol>
-<li>I have nuts in my office.</li>
-<li>I have gym tool in my office and home.And I can do 徒手训练.I can train anytime and everywhere.</li>
-<li>I have kindle that have many book I like.</li>
-</ol>
-<h2 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h2><ol>
-<li>Write this blog to get more engineer friend.</li>
-<li>Be friend with Chung and Yuk.</li>
-</ol>
-<h2 id="Health-Increase-overall-ability"><a href="#Health-Increase-overall-ability" class="headerlink" title="Health(Increase overall ability)"></a>Health(Increase overall ability)</h2><p>Sleep on 10am and wake up at 5:30am.</p>
-<h1 id="Motivation-Model"><a href="#Motivation-Model" class="headerlink" title="Motivation Model"></a>Motivation Model</h1><p>Strength model. <strong>Use them efficiently</strong></p>
-<ol>
-<li>High on morning.</li>
-<li>High after eating.</li>
-<li>High blood sugar.</li>
-</ol>
-<p><strong>Trainable</strong></p>
-<ol>
-<li>Daily habit.</li>
-</ol>
-<h1 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h1><h2 id="Increase-overall-ability"><a href="#Increase-overall-ability" class="headerlink" title="Increase overall ability"></a>Increase overall ability</h2><ol>
-<li>Meditation</li>
-<li>Good Sleep</li>
-<li>Low pressure</li>
-<li>Log heartbeat</li>
-</ol>
-<h2 id="Lower-bad-behavior"><a href="#Lower-bad-behavior" class="headerlink" title="Lower bad behavior"></a>Lower bad behavior</h2><p>How we lost control(Reverse thinking)=&gt;Never sense the behavior and decision for the bad behavior =&gt;no control.</p>
-<p>Increase decision opportunity instead of natural instinct</p>
-<ol>
-<li>No multi-tasking</li>
-<li>Easier pattern for bad behavior.(Reduce bad behavior variable)(characteristic it)</li>
-<li>No immediate temptation(chocolate on table)</li>
-<li>No moral licensing(think about your desired identity)</li>
-<li>Forgive yourself for bad behavior to prevent unrecognized successive bad behavior.</li>
-</ol>
-<h2 id="Increase-make-good-decision"><a href="#Increase-make-good-decision" class="headerlink" title="Increase make good decision"></a>Increase make good decision</h2><ol>
-<li>Artificial reward system</li>
-<li>Lower the Strength for undergo good behavior.</li>
-</ol>
-<h2 id="Social-acceptance"><a href="#Social-acceptance" class="headerlink" title="Social acceptance"></a>Social acceptance</h2><p>Approach</p>
-<ol>
-<li>Find those people that have desired feature and be friend to them.</li>
-</ol>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/exercise-for-programmer/pomotodo-for-programmer.html" data-id="cjgkh1gm2000a0ipvkhdifj03" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html" data-id="cjgmacubl003bl9pvsfkwncbz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1330,114 +756,95 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/exercise-for-programmer/pomotodo-for-programmer.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/exercise-for-programmer/pomotodo-for-programmer.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html">评论</a>
     
 
-        </footer>
+                                </footer>
     </div>
     
 </article>
 
 
 
-    <article id="post-exercise-for-programmer/tech-cash-flow" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/general" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/exercise-for-programmer/tech-cash-flow.html">Senior Software Engineer</a>
+            <a class="article-title" href="/2018/04/28/code-review/general.html">Code Review - General(Javascript)</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/exercise-for-programmer/tech-cash-flow.html">
+        <a href="/2018/04/28/code-review/general.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/工作目标/">工作目标</a>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Before-Reading"><a href="#Before-Reading" class="headerlink" title="Before Reading"></a>Before Reading</h1><ol>
-<li>How much time you will use for reading this article?</li>
-</ol>
-<p>10 minutes</p>
-<h1 id="Work-increase-software-people-deliverable"><a href="#Work-increase-software-people-deliverable" class="headerlink" title="Work - increase software people deliverable"></a>Work - increase software people deliverable</h1><p>Maximum deliverable values=&gt;deliverable mainly is software</p>
-<h1 id="Software-deliverable-values"><a href="#Software-deliverable-values" class="headerlink" title="Software deliverable values:"></a>Software deliverable values:</h1><ol>
-<li>Relevance</li>
-<li>Automation level=&gt;can determine the software deliverable options which is relevant to customer requirement without client speaking.</li>
-<li>Timely(expectation well adjusted)</li>
-<li>Functional requirement difficulties</li>
-<li>Non functional requirement difficulties</li>
-<li>Quick</li>
-</ol>
-<h1 id="Software-people-deliverable-values-that-I-pursue"><a href="#Software-people-deliverable-values-that-I-pursue" class="headerlink" title="Software people deliverable values that I pursue:"></a>Software people deliverable values that I pursue:</h1><ul>
-<li><p>For 1,2</p>
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    <h1 id="不必要的额外的逻辑层"><a href="#不必要的额外的逻辑层" class="headerlink" title="不必要的额外的逻辑层"></a>不必要的额外的逻辑层</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line"> if(Auth.isLogin())&#123;</span><br><span class="line">   return Auth::user();</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">   throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
 <ul>
-<li>Create highly relevant software deliverable requirement and get software</li>
-<li>requirement accurately by reading and communication</li>
+<li>程序员需要额外的一层才能知道程序会抛出异常<strong>如果用户不满意</strong>。</li>
 </ul>
-</li>
-<li><p>3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line">if(!Auth.isLogin())&#123;</span><br><span class="line">  throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line">&#125;</span><br><span class="line">  return Auth::user();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong></p>
 <ul>
-<li>tell what and when you can do, no boasting</li>
+<li>程序员知道调用者必须确保用户<strong>需要确保用户需要登录</strong>才能正确地调用**这个功能</li>
 </ul>
-</li>
-<li><p>4</p>
+<h1 id="Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys"><a href="#Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys" class="headerlink" title="Retrieve array of items from indexed data object when already have indexed keys"></a>Retrieve array of items from indexed data object when already have indexed keys</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return _.filter(usersById, user =&gt;</span><br><span class="line">    targetUserIds.includes(</span><br><span class="line">      user.id</span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
 <ul>
-<li>Good Design for functional requirement</li>
-<li>Implement hard functional requirement</li>
-<li>implement functional with lowest cost</li>
-<li>lead other people to solve it efficiently</li>
+<li>low performance and readability</li>
 </ul>
-</li>
-<li><p>5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return targetUserIds.map(targetUserId=&gt;usersById[targetUserId])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong></p>
 <ul>
-<li>Good Design for non functional requirement</li>
-<li>find out non functional requirement quickly</li>
-<li>implement functional with lowest cost</li>
-<li>lead other people to solve it efficiently</li>
+<li>better performance and readability</li>
 </ul>
-</li>
-<li><p>6</p>
+<h1 id="Unnecessary-extra-logic-layer-when-processing-overloading-function"><a href="#Unnecessary-extra-logic-layer-when-processing-overloading-function" class="headerlink" title="Unnecessary extra logic layer when processing overloading function"></a>Unnecessary extra logic layer when processing overloading function</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;user.id==idOrIds);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
 <ul>
-<li>quick</li>
+<li>Should separation the type conversion and only have one process logic</li>
 </ul>
-</li>
-</ul>
+<p><strong>改进</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(!Array.isArray(idOrIds))&#123;</span><br><span class="line">     idOrIds = [idOrIds];</span><br><span class="line">   &#125;</span><br><span class="line">  //One processing logic only</span><br><span class="line">   let results =   predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line"></span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">    return results;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return results[0];</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/exercise-for-programmer/tech-cash-flow.html" data-id="cjgkh1gm3000b0ipvol0wub1k" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general.html" data-id="cjgmacubm003dl9pvf4woi20y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1503,79 +910,68 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/exercise-for-programmer/tech-cash-flow.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/exercise-for-programmer/tech-cash-flow.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/general.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/general.html">评论</a>
     
 
-        </footer>
+                                </footer>
     </div>
     
 </article>
 
 
 
-    <article id="post-hackerrank/find-max-and-min-lexical-substrings-of-a-string" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/action" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/hackerrank/find-max-and-min-lexical-substrings-of-a-string.html">Find max and min lexical substrings of a string</a>
+            <a class="article-title" href="/2018/04/28/code-review/action.html">Code Review - Action</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/hackerrank/find-max-and-min-lexical-substrings-of-a-string.html">
+        <a href="/2018/04/28/code-review/action.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/算法/">算法</a>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">readString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> in.nextLine();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">output</span><span class="params">(String string)</span> </span>&#123;</span><br><span class="line">        System.out.println(string);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Pattern <span class="title">createPattern</span><span class="params">(String pattern)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Pattern.compile(pattern);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isALexicallyBiggerThanB</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a.compareTo(b) &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;String&gt; <span class="title">getAllOrderedStringComponentOfAString</span><span class="params">(String str1, <span class="keyword">int</span> compnentSize)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; strings = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="keyword">int</span> startingPosition;</span><br><span class="line">        <span class="keyword">for</span> (startingPosition = <span class="number">0</span>; startingPosition + compnentSize &lt;= str1.length(); startingPosition++) &#123;</span><br><span class="line">            strings.add(str1.substring(startingPosition, startingPosition + compnentSize));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> strings;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String inputStr1 = readString();</span><br><span class="line">        <span class="keyword">int</span> componentSize = readInt();</span><br><span class="line">        List&lt;String&gt; orderedComponentStrs = getAllOrderedStringComponentOfAString(inputStr1, componentSize);</span><br><span class="line">        String biggestLexicalString = orderedComponentStrs.get(<span class="number">0</span>);</span><br><span class="line">        String smallestLexicalString = orderedComponentStrs.get(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; orderedComponentStrs.size(); i++) &#123;</span><br><span class="line">            biggestLexicalString = (isALexicallyBiggerThanB(biggestLexicalString, orderedComponentStrs.get(i))) ? biggestLexicalString:orderedComponentStrs.get(i);</span><br><span class="line">            smallestLexicalString = (isALexicallyBiggerThanB(smallestLexicalString, orderedComponentStrs.get(i))) ? orderedComponentStrs.get(i):smallestLexicalString;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        output(smallestLexicalString);</span><br><span class="line">        output(biggestLexicalString);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Good habit:</p>
-<ol>
-<li>SRP,each functions have own responsibility and it is short enough.</li>
-<li>Reuse,the isALexicallyBiggerThanB is written in another solution before.</li>
-</ol>
-<p>Improvements that can be made:</p>
-<ol>
-<li>Naming of getAllOrderedStringComponentOfAString,however the <strong>StringComponent</strong> can be called as <strong>substring</strong>.<br>It is unnecessary to create a entire new name.<br>It is a noise words that create meaningless distinction.<strong>(<a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank" rel="noopener">clean code uncle bob</a>)</strong></li>
-</ol>
-<p>We should change better name when you find a new one.So solve the problem and post your better solution =&gt;. <a href="https://www.hackerrank.com/challenges/java-string-compare" target="_blank" rel="noopener">Problem at hackerrank</a></p>
-<p>Or make a pull request to <a href="https://github.com/chungchi300/hackerrank" target="_blank" rel="noopener">My github for hackerrank</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/hackerrank/find-max-and-min-lexical-substrings-of-a-string.html" data-id="cjgkh1gm6000e0ipvgd04k823" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/action.html" data-id="cjgmacubj0036l9pvymntqa7y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1641,80 +1037,68 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/hackerrank/find-max-and-min-lexical-substrings-of-a-string.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/hackerrank/find-max-and-min-lexical-substrings-of-a-string.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/action.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/action.html">评论</a>
     
 
-        </footer>
+                                </footer>
     </div>
     
 </article>
 
 
 
-    <article id="post-hackerrank/get-volume-of-different-three-dimensional" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-code-review/middleware" class="article article-type-post"
+    itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+                    
+                        <header class="article-header">
+                            
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/hackerrank/get-volume-of-different-three-dimensional.html">Get Volume of different three dimensional</a>
+            <a class="article-title" href="/2018/04/28/code-review/middleware.html">Code Review - Middleware</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                                
+                                    <div class="article-meta">
+                                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/hackerrank/get-volume-of-different-three-dimensional.html">
+        <a href="/2018/04/28/code-review/middleware.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
 
 
-                        
+                                            
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/算法/">算法</a>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
     </div>
 
+                                                
+                                    </div>
+                                    
+                        </header>
                         
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><strong>Object orientated style.</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Calculate</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> Outputer output;</span><br><span class="line">    <span class="keyword">public</span> Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getINTVal</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> input = readInt();</span><br><span class="line">        <span class="keyword">if</span> (input &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NumberFormatException(<span class="string">"All the values must be positive"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> input;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> scanner.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Volume <span class="title">get_Vol</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Volume();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDoubleVal</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> input = scanner.nextDouble();</span><br><span class="line">        <span class="keyword">if</span> (input &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NumberFormatException(<span class="string">"All the values must be positive"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> input;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Volume</span> </span>&#123;</span><br><span class="line">    ThreeDimensional threeDimensional;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">        threeDimensional = <span class="keyword">new</span> Cube(a);</span><br><span class="line">        <span class="keyword">return</span> threeDimensional.getVolume();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> b, <span class="keyword">int</span> h)</span> </span>&#123;</span><br><span class="line">        threeDimensional = <span class="keyword">new</span> Cuboid(l, b, h);</span><br><span class="line">        <span class="keyword">return</span> threeDimensional.getVolume();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">double</span> r)</span> </span>&#123;</span><br><span class="line">        threeDimensional = <span class="keyword">new</span> Hemisphere(r);</span><br><span class="line">        <span class="keyword">return</span> threeDimensional.getVolume();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">double</span> r, <span class="keyword">double</span> h)</span> </span>&#123;</span><br><span class="line">        threeDimensional = <span class="keyword">new</span> Cylinder(r,h);</span><br><span class="line">        <span class="keyword">return</span> threeDimensional.getVolume();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreeDimensional</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">double</span> <span class="title">getVolume</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cube</span> <span class="keyword">extends</span> <span class="title">ThreeDimensional</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> length;</span><br><span class="line"></span><br><span class="line">    Cube(<span class="keyword">double</span> length) &#123;</span><br><span class="line">        <span class="keyword">this</span>.length = length;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getVolume</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.pow(<span class="keyword">this</span>.length, <span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cuboid</span> <span class="keyword">extends</span> <span class="title">ThreeDimensional</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> length;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> breath;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> height;</span><br><span class="line"></span><br><span class="line">    Cuboid(<span class="keyword">double</span> length, <span class="keyword">double</span> breath, <span class="keyword">double</span> height) &#123;</span><br><span class="line">        <span class="keyword">this</span>.length = length;</span><br><span class="line">        <span class="keyword">this</span>.breath = breath;</span><br><span class="line">        <span class="keyword">this</span>.height = height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getVolume</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> length * breath * height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hemisphere</span> <span class="keyword">extends</span> <span class="title">ThreeDimensional</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> radius;</span><br><span class="line"></span><br><span class="line">    Hemisphere(<span class="keyword">double</span> radius) &#123;</span><br><span class="line">        <span class="keyword">this</span>.radius = radius;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getVolume</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.PI * Math.pow(radius, <span class="number">3</span>) * <span class="number">4</span> / <span class="number">3</span> / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cylinder</span> <span class="keyword">extends</span> <span class="title">ThreeDimensional</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> radius;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> height;</span><br><span class="line"></span><br><span class="line">    Cylinder(<span class="keyword">double</span> radius, <span class="keyword">double</span> height) &#123;</span><br><span class="line">        <span class="keyword">this</span>.radius = radius;</span><br><span class="line">        <span class="keyword">this</span>.height = height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getVolume</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.PI * <span class="keyword">this</span>.radius * <span class="keyword">this</span>.radius * <span class="keyword">this</span>.height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outputer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">double</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//System.out.println(number);</span></span><br><span class="line">        System.out.println(String.format(<span class="string">"%.3f"</span>, number));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Procedure orientated style</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Calculate</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> Outputer output;</span><br><span class="line">    <span class="keyword">public</span> Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getINTVal</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> input = readInt();</span><br><span class="line">        <span class="keyword">if</span>(input &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">throw</span>  <span class="keyword">new</span> NumberFormatException(<span class="string">"All the values must be positive"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> input;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> scanner.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Volume <span class="title">get_Vol</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Volume();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDoubleVal</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        <span class="keyword">double</span> input = scanner.nextDouble();</span><br><span class="line">        <span class="keyword">if</span>(input &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">throw</span>  <span class="keyword">new</span> NumberFormatException(<span class="string">"All the values must be positive"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> input;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Volume</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a*a*a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> b, <span class="keyword">int</span> h)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> l*b*h;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">double</span> r)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.PI * Math.pow(r,<span class="number">3</span>)*<span class="number">4</span>/<span class="number">3</span> /<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">main</span><span class="params">(<span class="keyword">double</span> r, <span class="keyword">double</span> h)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.PI * r * r *h;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outputer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="keyword">double</span> number)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//System.out.println(number);</span></span><br><span class="line">       System.out.println(String.format(<span class="string">"%.3f"</span>, number));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Difference of object orientated style and procedure orientate</strong></p>
-<ol>
-<li><p>Object orientated style should have encapsulation.In here,only the <code>getVolume()</code> function exposed.</p>
-</li>
-<li><p>Object orientated style should be add class easily.<br>In this case,a new class of ThreeDimensional can be created easily.<br>The main program construct related new class and call getVolume function.(<strong><em>Still has a room of improvement</em></strong>)</p>
-</li>
-<li><p>(OCP principle,there is very likely to have new type ThreeDimensional rather than new Operation so I think it should adopt OCP style when you developing this program)</p>
-</li>
-</ol>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
 
 
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/hackerrank/get-volume-of-different-three-dimensional.html" data-id="cjgkh1gm8000f0ipv5ytdgjgb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/middleware.html" data-id="cjgmacubr003gl9pv24hze5it" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1780,12 +1164,393 @@ ga('send', 'pageview');
     })(jQuery);
 </script>
 
-            
+                                        
     
-        <a href="http://jeff-chung.com/2018/04/28/hackerrank/get-volume-of-different-three-dimensional.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/hackerrank/get-volume-of-different-three-dimensional.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/middleware.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/middleware.html">评论</a>
     
 
-        </footer>
+                                </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-code-review/network" class="article article-type-post"
+    itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+                    
+                        <header class="article-header">
+                            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/code-review/network.html">Code Review - Network</a>
+        </h1>
+    
+
+                                
+                                    <div class="article-meta">
+                                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/code-review/network.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                                            
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+    </div>
+
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/network.html" data-id="cjgmacubs003hl9pvvibbi1pw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                                        
+    
+        <a href="http://jeff-chung.com/2018/04/28/code-review/network.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/network.html">评论</a>
+    
+
+                                </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-code-review/reducer" class="article article-type-post"
+    itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+                    
+                        <header class="article-header">
+                            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/code-review/reducer.html">Code Review - Reducer</a>
+        </h1>
+    
+
+                                
+                                    <div class="article-meta">
+                                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/code-review/reducer.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                                            
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+    </div>
+
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/reducer.html" data-id="cjgmacubu003kl9pv6otx0k7v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                                        
+    
+        <a href="http://jeff-chung.com/2018/04/28/code-review/reducer.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/reducer.html">评论</a>
+    
+
+                                </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-code-review/smart-component" class="article article-type-post"
+    itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+                    
+                        <header class="article-header">
+                            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/code-review/smart-component.html">Code Review - Smart Component</a>
+        </h1>
+    
+
+                                
+                                    <div class="article-meta">
+                                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/code-review/smart-component.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                                            
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+    </div>
+
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/smart-component.html" data-id="cjgmacubv003ml9pvj4yn0adp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                                        
+    
+        <a href="http://jeff-chung.com/2018/04/28/code-review/smart-component.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/smart-component.html">评论</a>
+    
+
+                                </footer>
     </div>
     
 </article>
@@ -1793,7 +1558,7 @@ ga('send', 'pageview');
 
 
     <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
     </nav>
 </section>
             
@@ -1836,7 +1601,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web前端/">Web前端</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/代码审查/">代码审查</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于我/">关于我</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/写作/">写作</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/">前端开发</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作目标/">工作目标</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/市场营销/">市场营销</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发工具/">开发工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/徒手训练/">徒手训练</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/成果交付管理/">成果交付管理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/沟通基本功/">沟通基本功</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序设计/">程序设计</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/管理和协作/">管理和协作</a><span class="category-list-count">10</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/管理和协作/">管理和协作</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1845,7 +1610,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">61</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">11</span></li></ul>
         </div>
     </div>
 

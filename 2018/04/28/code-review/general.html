@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Jeff Chung</title>
+    <title>Code Review - General(Javascript) | Jeff Chung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Jeff Chung">
-<meta property="og:url" content="http://jeff-chung.com/page/2/index.html">
+    <meta name="description" content="不必要的额外的逻辑层1234567function getUserAccount()&amp;#123; if(Auth.isLogin())&amp;#123;   return Auth::user(); &amp;#125;else&amp;#123;   throw Error(&amp;apos;get user when user is not authorized&amp;apos;) &amp;#125;&amp;#125; 错误  程序员需要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Review - General(Javascript)">
+<meta property="og:url" content="http://jeff-chung.com/2018/04/28/code-review/general.html">
 <meta property="og:site_name" content="Jeff Chung">
+<meta property="og:description" content="不必要的额外的逻辑层1234567function getUserAccount()&amp;#123; if(Auth.isLogin())&amp;#123;   return Auth::user(); &amp;#125;else&amp;#123;   throw Error(&amp;apos;get user when user is not authorized&amp;apos;) &amp;#125;&amp;#125; 错误  程序员需要">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-30T13:34:15.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jeff Chung">
+<meta name="twitter:title" content="Code Review - General(Javascript)">
+<meta name="twitter:description" content="不必要的额外的逻辑层1234567function getUserAccount()&amp;#123; if(Auth.isLogin())&amp;#123;   return Auth::user(); &amp;#125;else&amp;#123;   throw Error(&amp;apos;get user when user is not authorized&amp;apos;) &amp;#125;&amp;#125; 错误  程序员需要">
     
 
     
@@ -197,8 +201,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main">
-    <article id="post-code-review/helper" class="article article-type-post"
+            <section id="main"><article id="post-code-review/general" class="article article-type-post"
     itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -206,8 +209,8 @@ ga('send', 'pageview');
                         <header class="article-header">
                             
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/helper.html">Code Review - Helper</a>
+        <h1 class="article-title" itemprop="name">
+            Code Review - General(Javascript)
         </h1>
     
 
@@ -216,7 +219,7 @@ ga('send', 'pageview');
                                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/helper.html">
+        <a href="/2018/04/28/code-review/general.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -237,7 +240,41 @@ ga('send', 'pageview');
                                 <div class="article-entry" itemprop="articleBody">
                                     
                                             
-                                                    
+                                                <div id="toc" class="toc-article">
+                                                    <strong class="toc-title">
+                                                        文章目录
+                                                    </strong>
+                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#不必要的额外的逻辑层"><span class="toc-number">1.</span> <span class="toc-text">不必要的额外的逻辑层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys"><span class="toc-number">2.</span> <span class="toc-text">Retrieve array of items from indexed data object when already have indexed keys</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Unnecessary-extra-logic-layer-when-processing-overloading-function"><span class="toc-number">3.</span> <span class="toc-text">Unnecessary extra logic layer when processing overloading function</span></a></li></ol>
+                                                </div>
+                                                
+                                                    <h1 id="不必要的额外的逻辑层"><a href="#不必要的额外的逻辑层" class="headerlink" title="不必要的额外的逻辑层"></a>不必要的额外的逻辑层</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line"> if(Auth.isLogin())&#123;</span><br><span class="line">   return Auth::user();</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">   throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
+<ul>
+<li>程序员需要额外的一层才能知道程序会抛出异常<strong>如果用户不满意</strong>。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getUserAccount()&#123;</span><br><span class="line">if(!Auth.isLogin())&#123;</span><br><span class="line">  throw Error(&apos;get user when user is not authorized&apos;)</span><br><span class="line">&#125;</span><br><span class="line">  return Auth::user();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong></p>
+<ul>
+<li>程序员知道调用者必须确保用户<strong>需要确保用户需要登录</strong>才能正确地调用**这个功能</li>
+</ul>
+<h1 id="Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys"><a href="#Retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys" class="headerlink" title="Retrieve array of items from indexed data object when already have indexed keys"></a>Retrieve array of items from indexed data object when already have indexed keys</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return _.filter(usersById, user =&gt;</span><br><span class="line">    targetUserIds.includes(</span><br><span class="line">      user.id</span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
+<ul>
+<li>low performance and readability</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getUsers(usersById,targetUserIds)&#123;</span><br><span class="line">  return targetUserIds.map(targetUserId=&gt;usersById[targetUserId])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>改进</strong></p>
+<ul>
+<li>better performance and readability</li>
+</ul>
+<h1 id="Unnecessary-extra-logic-layer-when-processing-overloading-function"><a href="#Unnecessary-extra-logic-layer-when-processing-overloading-function" class="headerlink" title="Unnecessary extra logic layer when processing overloading function"></a>Unnecessary extra logic layer when processing overloading function</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return  predefinedUsers.filter(user=&gt;user.id==idOrIds);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>错误</strong></p>
+<ul>
+<li>Should separation the type conversion and only have one process logic</li>
+</ul>
+<p><strong>改进</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function getUser(idOrIds)&#123;</span><br><span class="line">  let relatedUser;</span><br><span class="line">  let predefinedUsers = [</span><br><span class="line">    &#123;&quot;name&quot;:&quot;jeff&quot;,age:&quot;20&quot;,id:&quot;id1&quot;&#125;,</span><br><span class="line">    &#123;&quot;name&quot;:&quot;mandy&quot;,age:&quot;20&quot;,id:&quot;id2&quot;&#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  ];</span><br><span class="line">   if(!Array.isArray(idOrIds))&#123;</span><br><span class="line">     idOrIds = [idOrIds];</span><br><span class="line">   &#125;</span><br><span class="line">  //One processing logic only</span><br><span class="line">   let results =   predefinedUsers.filter(user=&gt;idOrIds.includes(user.id));</span><br><span class="line"></span><br><span class="line">   if(Array.isArray(idOrIds))&#123;</span><br><span class="line">    return results;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">     return results[0];</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
                                                         
                                 </div>
                                 <footer class="article-footer">
@@ -247,7 +284,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/helper.html" data-id="cjgmacubo003el9pvma0v4ib2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general.html" data-id="cjgmacubm003dl9pvf4woi20y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -315,20 +352,47 @@ ga('send', 'pageview');
 
                                         
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/helper.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/helper.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/general.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/general.html">评论</a>
     
 
                                 </footer>
     </div>
     
+        
+<nav id="article-nav">
+    
+        <a href="/2018/04/28/code-review/dummy-component.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Code Review - Dummy-component
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2018/04/28/code-review/action.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Code Review - Action</div>
+        </a>
+    
+</nav>
+
+
+            
 </article>
 
 
-
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 </section>
+    
+
+        </section>
             
                 
 <aside id="sidebar">
@@ -401,11 +465,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'http://jeff-chung.com/2018/04/28/code-review/general.html';
+        
+        this.page.identifier = 'code-review/general';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'jeffchung' + '.disqus.com/count.js';
+        s.src = '//' + 'jeffchung' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

@@ -3,15 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Jeff Chung</title>
+    <title>Code Review 做法和好处 | Jeff Chung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Jeff Chung">
-<meta property="og:url" content="http://jeff-chung.com/page/2/index.html">
+    <meta name="description" content="阅读前 阅读这篇文章后你能学到什么?  Code Review 做法和好处  你将用多少时间来阅读这篇文章?  25 分钟 好处 分享知识 提高代码的可读性  做法 在每次 Code Review 和 解决 bug 之后,我们都會发现新的有效做法并写在 CONTRIBUTION.md 上,共同维护最佳做法 定期地 - 每个星期五我们都會做 Code Review  Code review 做得好">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Review 做法和好处">
+<meta property="og:url" content="http://jeff-chung.com/2018/04/30/code-review/general-review.html">
 <meta property="og:site_name" content="Jeff Chung">
+<meta property="og:description" content="阅读前 阅读这篇文章后你能学到什么?  Code Review 做法和好处  你将用多少时间来阅读这篇文章?  25 分钟 好处 分享知识 提高代码的可读性  做法 在每次 Code Review 和 解决 bug 之后,我们都會发现新的有效做法并写在 CONTRIBUTION.md 上,共同维护最佳做法 定期地 - 每个星期五我们都會做 Code Review  Code review 做得好">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jeff-chung.com/2018/04/30/code-review/general-review/measure.jpg">
+<meta property="og:updated_time" content="2018-04-30T13:34:15.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jeff Chung">
+<meta name="twitter:title" content="Code Review 做法和好处">
+<meta name="twitter:description" content="阅读前 阅读这篇文章后你能学到什么?  Code Review 做法和好处  你将用多少时间来阅读这篇文章?  25 分钟 好处 分享知识 提高代码的可读性  做法 在每次 Code Review 和 解决 bug 之后,我们都會发现新的有效做法并写在 CONTRIBUTION.md 上,共同维护最佳做法 定期地 - 每个星期五我们都會做 Code Review  Code review 做得好">
+<meta name="twitter:image" content="http://jeff-chung.com/2018/04/30/code-review/general-review/measure.jpg">
     
 
     
@@ -197,8 +203,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main">
-    <article id="post-code-review/helper" class="article article-type-post"
+            <section id="main"><article id="post-code-review/general-review" class="article article-type-post"
     itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -206,8 +211,8 @@ ga('send', 'pageview');
                         <header class="article-header">
                             
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/helper.html">Code Review - Helper</a>
+        <h1 class="article-title" itemprop="name">
+            Code Review 做法和好处
         </h1>
     
 
@@ -216,8 +221,8 @@ ga('send', 'pageview');
                                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/helper.html">
-            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        <a href="/2018/04/30/code-review/general-review.html">
+            <time datetime="2018-04-30T03:43:00.000Z" itemprop="datePublished">2018-04-30</time>
         </a>
     </div>
 
@@ -237,7 +242,57 @@ ga('send', 'pageview');
                                 <div class="article-entry" itemprop="articleBody">
                                     
                                             
-                                                    
+                                                <div id="toc" class="toc-article">
+                                                    <strong class="toc-title">
+                                                        文章目录
+                                                    </strong>
+                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#阅读前"><span class="toc-number">1.</span> <span class="toc-text">阅读前</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#好处"><span class="toc-number">2.</span> <span class="toc-text">好处</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#做法"><span class="toc-number">3.</span> <span class="toc-text">做法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Code-review-做得好和做得不好的信号"><span class="toc-number">4.</span> <span class="toc-text">Code review 做得好和做得不好的信号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#好"><span class="toc-number">4.1.</span> <span class="toc-text">好</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不好"><span class="toc-number">4.2.</span> <span class="toc-text">不好</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-number">5.</span> <span class="toc-text">例子</span></a></li></ol>
+                                                </div>
+                                                
+                                                    <img src="/2018/04/30/code-review/general-review/measure.jpg">
+<h1 id="阅读前"><a href="#阅读前" class="headerlink" title="阅读前"></a>阅读前</h1><ol>
+<li>阅读这篇文章后你能学到什么?</li>
+</ol>
+<p>Code Review 做法和好处</p>
+<ol start="2">
+<li>你将用多少时间来阅读这篇文章?</li>
+</ol>
+<p>25 分钟</p>
+<h1 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h1><ul>
+<li><strong>分享知识</strong></li>
+<li><strong>提高代码的可读性</strong></li>
+</ul>
+<h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><ul>
+<li>在每次 Code Review 和 解决 bug 之后,我们都會发现新的有效做法并写在 CONTRIBUTION.md 上,共同维护最佳做法</li>
+<li>定期地 - 每个星期五我们都會做 Code Review</li>
+</ul>
+<h1 id="Code-review-做得好和做得不好的信号"><a href="#Code-review-做得好和做得不好的信号" class="headerlink" title="Code review 做得好和做得不好的信号"></a>Code review 做得好和做得不好的信号</h1><h2 id="好"><a href="#好" class="headerlink" title="好"></a>好</h2><ul>
+<li>团队成员知识增长 Team member knowledge increase</li>
+<li>团队成员接受培训而不是批评 Team member feel being trained instead of criticized</li>
+<li>团队成员知道代码评审何时发生并期待它 Team member know when the code review happen and look forward to it</li>
+<li>给定特定的代码块，您无法判断是谁编写的。Given specific block of code,you cannot tell who write it.</li>
+<li>相同/相似的 bug 不会重复两次 Same/similar bug don’t repeat twice</li>
+</ul>
+<h2 id="不好"><a href="#不好" class="headerlink" title="不好"></a>不好</h2><ul>
+<li>毫无理由地批评代码——当你指出一个代码写得很差时，你不能指出相关的代码 on CONTRIBUTION.md criticize code without reason - When you point an code written poorly,you cannot point that related implementation on CONTRIBUTION.md</li>
+</ul>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
+<li><a href="/2018/04/28/code-review/general.html" title="Code Review - General(Javascript)">Code Review - General(Javascript)</a>
+</li>
+</ul>
+<p>React &amp; Redux</p>
+<ul>
+<li><a href="/2018/04/28/code-review/action.html" title="Code Review - Action">Code Review - Action</a></li>
+<li><a href="/2018/04/28/code-review/reducer.html" title="Code Review - Reducer">Code Review - Reducer</a></li>
+<li><a href="/2018/04/28/code-review/helper.html" title="Code Review - Helper">Code Review - Helper</a></li>
+<li><a href="/2018/04/28/code-review/smart-component.html" title="Code Review - Smart Component">Code Review - Smart Component</a></li>
+<li><a href="/2018/04/28/code-review/dummy-component.html" title="Code Review - Dummy-component">Code Review - Dummy-component</a></li>
+<li><a href="/2018/04/28/code-review/middleware.html" title="Code Review - Middleware">Code Review - Middleware</a></li>
+<li><a href="/2018/04/28/code-review/network.html" title="Code Review - Network">Code Review - Network</a></li>
+<li><a href="/2018/04/28/code-review/asset.html" title="Code Review - Asset">Code Review - Asset</a>
+</li>
+</ul>
+
                                                         
                                 </div>
                                 <footer class="article-footer">
@@ -247,7 +302,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/helper.html" data-id="cjgmacubo003el9pvma0v4ib2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/30/code-review/general-review.html" data-id="cjgkh1glk00030ipvxgc6mp9w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -315,20 +370,38 @@ ga('send', 'pageview');
 
                                         
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/helper.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/helper.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/30/code-review/general-review.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/30/code-review/general-review.html">评论</a>
     
 
                                 </footer>
     </div>
     
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Different methodology and practice to achieve goal of different software we write</div>
+        </a>
+    
+</nav>
+
+
+            
 </article>
 
 
-
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 </section>
+    
+
+        </section>
             
                 
 <aside id="sidebar">
@@ -401,11 +474,13 @@ ga('send', 'pageview');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'http://jeff-chung.com/2018/04/30/code-review/general-review.html';
+        
+        this.page.identifier = 'code-review/general-review';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'jeffchung' + '.disqus.com/count.js';
+        s.src = '//' + 'jeffchung' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
