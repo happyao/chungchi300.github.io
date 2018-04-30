@@ -5,7 +5,6 @@ date: 2018-04-30 11:43:00
 tags:
 category: Code Review
 keywords: null
-toc: true
 ---
 
 {% asset_img measure.jpg %}

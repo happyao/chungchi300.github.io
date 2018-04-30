@@ -4,10 +4,9 @@ title: Code Review - General(Javascript)
 category: Code Review
 keywords: null
 date: 2018-04-28 16:09:02
-toc: true
 ---
 
-# 1. 不必要的额外的逻辑层
+# 不必要的额外的逻辑层
 
 ```
   function getUserAccount(){
@@ -36,7 +35,7 @@ toc: true
 
 * 程序员知道调用者必须确保用户**需要确保用户需要登录**才能正确地调用\*\*这个功能
 
-# 2. Retrieve array of items from indexed data object when already have indexed keys
+# Retrieve array of items from indexed data object when already have indexed keys
 
 ```
 function getUsers(usersById,targetUserIds){
@@ -62,7 +61,7 @@ function getUsers(usersById,targetUserIds){
 
 * better performance and readability
 
-# 3. Unnecessary extra logic layer when processing overloading function
+# Unnecessary extra logic layer when processing overloading function
 
 ```
   function getUser(idOrIds){
