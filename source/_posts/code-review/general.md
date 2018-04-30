@@ -4,15 +4,8 @@ title: Code Review - General(Javascript)
 category: Code Review
 keywords: null
 date: 2018-04-28 16:09:02
+toc: true
 ---
-
-<!-- TOC -->
-
-* [1. 不必要的额外的逻辑层](#1-不必要的额外的逻辑层)
-* [2. Retrieve array of items from indexed data object when already have indexed keys](#2-retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys)
-* [3. Unnecessary extra logic layer when processing overloading function](#3-unnecessary-extra-logic-layer-when-processing-overloading-function)
-
-<!-- /TOC -->
 
 # 1. 不必要的额外的逻辑层
 
