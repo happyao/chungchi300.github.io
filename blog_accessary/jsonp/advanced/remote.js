@@ -1,1 +1,0 @@
-console.log("cross domain javascript file loaded and evaluated");

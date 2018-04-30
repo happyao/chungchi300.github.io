@@ -290,7 +290,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/30/code-review/general-review.html" data-id="cjgkh1glk00030ipvxgc6mp9w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/30/code-review/general-review.html" data-id="cjgmajgc9003b05pvplf6fxjq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -368,7 +368,7 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software" class="article article-type-post"
+    <article id="post-code-review/helper" class="article article-type-post"
     itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -377,7 +377,7 @@ ga('send', 'pageview');
                             
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">Different methodology and practice to achieve goal of different software we write</a>
+            <a class="article-title" href="/2018/04/28/code-review/helper.html">Code Review - Helper</a>
         </h1>
     
 
@@ -386,153 +386,7 @@ ga('send', 'pageview');
                                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">
-            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
-        </a>
-    </div>
-
-
-                                            
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/管理和协作/">管理和协作</a>
-    </div>
-
-                                                
-                                    </div>
-                                    
-                        </header>
-                        
-                            
-                                <div class="article-entry" itemprop="articleBody">
-                                    
-                                            
-                                                    <h1 id="Technical-exploration"><a href="#Technical-exploration" class="headerlink" title="Technical exploration"></a>Technical exploration</h1><p>Objective<br>Short Feedback cycle<br>Fast</p>
-<h1 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h1><p>Fast<br>Feasible</p>
-<h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1><h2 id="General"><a href="#General" class="headerlink" title="General"></a>General</h2><ul>
-<li>KISS 原則</li>
-</ul>
-<h2 id="Component-Design"><a href="#Component-Design" class="headerlink" title="Component Design"></a>Component Design</h2><ul>
-<li>S.O.L.I.D 原則</li>
-<li>DRY 原則</li>
-</ul>
-<h2 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h2><p>Many object - OOP<br>Many function - FP</p>
-<h2 id="Main-Component-types-and-interconnected-method"><a href="#Main-Component-types-and-interconnected-method" class="headerlink" title="Main Component types and interconnected method"></a>Main Component types and interconnected method</h2><ul>
-<li>MVC</li>
-<li>Redux</li>
-</ul>
-<h2 id="Data-structure-Design-and-Implementation"><a href="#Data-structure-Design-and-Implementation" class="headerlink" title="Data structure Design and Implementation"></a>Data structure Design and Implementation</h2><ul>
-<li>Single Source of Truth for data component</li>
-</ul>
-<h2 id="TDD"><a href="#TDD" class="headerlink" title="TDD"></a>TDD</h2><p>100% unit test coverage on component that</p>
-<h1 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h1><p>Refactor 實踐<br>Tdd 實踐<br>Pure function 實踐<br>Curring 實踐<br>Naming clean code<br>訂立 coding 約定並每䢛决定 實踐</p>
-
-                                                        
-                                </div>
-                                <footer class="article-footer">
-                                    <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html" data-id="cjgmacubw003ol9pv98qtjma2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-                                        
-    
-        <a href="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/it-management/different-methodology-and-coding-structure-to-get-good-result-in-different-software.html">评论</a>
-    
-
-                                </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-code-review/asset" class="article article-type-post"
-    itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-                    
-                        <header class="article-header">
-                            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/asset.html">Code Review - Asset</a>
-        </h1>
-    
-
-                                
-                                    <div class="article-meta">
-                                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/asset.html">
+        <a href="/2018/04/28/code-review/helper.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -563,7 +417,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/asset.html" data-id="cjgmacubk0038l9pvr5l2km7g" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/helper.html" data-id="cjgmajgcb003f05pvm6fuxnq9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -631,7 +485,7 @@ ga('send', 'pageview');
 
                                         
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/asset.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/asset.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/helper.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/helper.html">评论</a>
     
 
                                 </footer>
@@ -690,7 +544,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html" data-id="cjgmacubl003bl9pvsfkwncbz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html" data-id="cjgmajgc8003a05pvubujsq5h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -759,6 +613,133 @@ ga('send', 'pageview');
                                         
     
         <a href="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/dummy-component.html">评论</a>
+    
+
+                                </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-code-review/action" class="article article-type-post"
+    itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+                    
+                        <header class="article-header">
+                            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/code-review/action.html">Code Review - Action</a>
+        </h1>
+    
+
+                                
+                                    <div class="article-meta">
+                                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/code-review/action.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                                            
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+    </div>
+
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/action.html" data-id="cjgmajgc6003605pvx7rchez0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                                        
+    
+        <a href="http://jeff-chung.com/2018/04/28/code-review/action.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/action.html">评论</a>
     
 
                                 </footer>
@@ -844,7 +825,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general.html" data-id="cjgmacubm003dl9pvf4woi20y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/general.html" data-id="cjgmajgca003e05pvlm85qa7v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -922,7 +903,7 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-code-review/action" class="article article-type-post"
+    <article id="post-code-review/asset" class="article article-type-post"
     itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -931,7 +912,7 @@ ga('send', 'pageview');
                             
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/action.html">Code Review - Action</a>
+            <a class="article-title" href="/2018/04/28/code-review/asset.html">Code Review - Asset</a>
         </h1>
     
 
@@ -940,7 +921,7 @@ ga('send', 'pageview');
                                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/action.html">
+        <a href="/2018/04/28/code-review/asset.html">
             <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
         </a>
     </div>
@@ -971,7 +952,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/action.html" data-id="cjgmacubj0036l9pvymntqa7y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/asset.html" data-id="cjgmajgc7003705pv1ba1mrjc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1039,7 +1020,7 @@ ga('send', 'pageview');
 
                                         
     
-        <a href="http://jeff-chung.com/2018/04/28/code-review/action.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/action.html">评论</a>
+        <a href="http://jeff-chung.com/2018/04/28/code-review/asset.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/asset.html">评论</a>
     
 
                                 </footer>
@@ -1098,7 +1079,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/middleware.html" data-id="cjgmacubr003gl9pv24hze5it" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/middleware.html" data-id="cjgmajgcc003i05pvjpaudas1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1225,7 +1206,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/network.html" data-id="cjgmacubs003hl9pvvibbi1pw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/network.html" data-id="cjgmajgce003j05pv2v6d9rdb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1303,133 +1284,6 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-code-review/reducer" class="article article-type-post"
-    itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-                    
-                        <header class="article-header">
-                            
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/04/28/code-review/reducer.html">Code Review - Reducer</a>
-        </h1>
-    
-
-                                
-                                    <div class="article-meta">
-                                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/04/28/code-review/reducer.html">
-            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
-        </a>
-    </div>
-
-
-                                            
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
-    </div>
-
-                                                
-                                    </div>
-                                    
-                        </header>
-                        
-                            
-                                <div class="article-entry" itemprop="articleBody">
-                                    
-                                            
-                                                    
-                                                        
-                                </div>
-                                <footer class="article-footer">
-                                    <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/reducer.html" data-id="cjgmacubu003kl9pv6otx0k7v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-                                        
-    
-        <a href="http://jeff-chung.com/2018/04/28/code-review/reducer.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/reducer.html">评论</a>
-    
-
-                                </footer>
-    </div>
-    
-</article>
-
-
-
     <article id="post-code-review/smart-component" class="article article-type-post"
     itemscope itemprop="blogPost">
     <div class="article-inner">
@@ -1479,7 +1333,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://jeff-chung.com/2018/04/28/code-review/smart-component.html" data-id="cjgmacubv003ml9pvj4yn0adp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/smart-component.html" data-id="cjgmajgcg003m05pv12jh8y5e" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1548,6 +1402,133 @@ ga('send', 'pageview');
                                         
     
         <a href="http://jeff-chung.com/2018/04/28/code-review/smart-component.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/smart-component.html">评论</a>
+    
+
+                                </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-code-review/reducer" class="article article-type-post"
+    itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+                    
+                        <header class="article-header">
+                            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/code-review/reducer.html">Code Review - Reducer</a>
+        </h1>
+    
+
+                                
+                                    <div class="article-meta">
+                                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/code-review/reducer.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                                            
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+    </div>
+
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/reducer.html" data-id="cjgmajgci003n05pv2pd0jjwm" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                                        
+    
+        <a href="http://jeff-chung.com/2018/04/28/code-review/reducer.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/reducer.html">评论</a>
     
 
                                 </footer>
