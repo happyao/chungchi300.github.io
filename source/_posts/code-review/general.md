@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Code Review 一般错误(Javascript)
+title: Code Review - General(Javascript)
 category: Code Review
 keywords: null
 date: 2018-04-28 16:09:02
@@ -8,16 +8,13 @@ date: 2018-04-28 16:09:02
 
 <!-- TOC -->
 
-* [1. 一般错误](#1-一般错误)
-  * [1.1. 不必要的额外的逻辑层](#11-不必要的额外的逻辑层)
-  * [1.2. Retrieve array of items from indexed data object when already have indexed keys](#12-retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys)
-  * [1.3. Unnecessary extra logic layer when processing overloading function](#13-unnecessary-extra-logic-layer-when-processing-overloading-function)
+* [1. 不必要的额外的逻辑层](#1-不必要的额外的逻辑层)
+* [2. Retrieve array of items from indexed data object when already have indexed keys](#2-retrieve-array-of-items-from-indexed-data-object-when-already-have-indexed-keys)
+* [3. Unnecessary extra logic layer when processing overloading function](#3-unnecessary-extra-logic-layer-when-processing-overloading-function)
 
 <!-- /TOC -->
 
-# 1. 一般错误
-
-## 1.1. 不必要的额外的逻辑层
+# 1. 不必要的额外的逻辑层
 
 ```
   function getUserAccount(){
@@ -46,7 +43,7 @@ date: 2018-04-28 16:09:02
 
 * 程序员知道调用者必须确保用户**需要确保用户需要登录**才能正确地调用\*\*这个功能
 
-## 1.2. Retrieve array of items from indexed data object when already have indexed keys
+# 2. Retrieve array of items from indexed data object when already have indexed keys
 
 ```
 function getUsers(usersById,targetUserIds){
@@ -72,7 +69,7 @@ function getUsers(usersById,targetUserIds){
 
 * better performance and readability
 
-## 1.3. Unnecessary extra logic layer when processing overloading function
+# 3. Unnecessary extra logic layer when processing overloading function
 
 ```
   function getUser(idOrIds){
