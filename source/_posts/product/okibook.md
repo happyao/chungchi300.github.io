@@ -64,4 +64,4 @@ I can provide detail consulting services on
 * business requirement 
 * technical 
 
-to duplicate same success on your business!My email [chungchi300@hotmail.com](mailto:chungchi300@hotmail.com)
+To help you build successful business!My email [chungchi300@hotmail.com](mailto:chungchi300@hotmail.com)
