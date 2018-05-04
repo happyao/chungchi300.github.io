@@ -9,9 +9,13 @@ toc: true
 
 # Technical exploration
 
-Objective
-Short Feedback cycle
-Fast
+**Prefer**
+
+* Purpose
+* Rapidly
+* Explore
+* Feedback
+* Record
 
 # MVP
 
@@ -46,6 +50,10 @@ Many function - FP
 ## TDD
 
 100% unit test coverage on component that
+
+## Maintain a basic principle
+https://github.com/shimohq/react-cookbook#%E5%AE%B9%E5%99%A8%E7%BB%84%E4%BB%B6
+https://github.com/airbnb/javascript/tree/master/react
 
 # Product
 
