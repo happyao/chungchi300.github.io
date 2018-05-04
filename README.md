@@ -1,10 +1,3 @@
-# Make your own blog
-
-1.  [Hexo 博客搭建指南](https://github.com/limedroid/HexoLearning)
-2.  Clone this repo
-3.  Configure `_config.yml`(especially the deploy part) and `themes/icarus/_config.yml`
-4.  Write blog on `source branch` and deploy generated content in `master branch`
-
 # Installation
 
 ```
@@ -23,7 +16,14 @@ hexo g -d
 
 * Integration with plantuml
 
-# Writing list
+# Make your own blog
+
+1.  [Hexo 博客搭建指南](https://github.com/limedroid/HexoLearning)
+2.  Clone this repo
+3.  Configure `_config.yml`(especially the deploy part) and `themes/icarus/_config.yml`
+4.  Write blog on `source branch` and deploy generated content in `master branch`
+
+# Writing plan
 
 * uml application(sequence diagram,class diagrammplantuml sequence diagram) -
   [Stop writing uml ! - Agile Program design process](/2018/04/13/general-agile-design-process.html)
