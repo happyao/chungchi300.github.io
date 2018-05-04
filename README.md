@@ -14,7 +14,7 @@ hexo g -d
 
 # Roadmap
 
-* Integration with plantuml
+* ~~Integration with plantuml~~
 
 # Make your own blog
 
