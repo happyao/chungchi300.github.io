@@ -47,11 +47,12 @@ Many function - FP
 
 * Single Source of Truth for data component
 
-## TDD
+## Unit Test
 
-100% unit test coverage on component that
+100% unit test coverage on component of reducer
 
-## Maintain a basic principle
+## Maintain code standard
+
 https://github.com/shimohq/react-cookbook#%E5%AE%B9%E5%99%A8%E7%BB%84%E4%BB%B6
 https://github.com/airbnb/javascript/tree/master/react
 
