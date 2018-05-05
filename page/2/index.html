@@ -157,7 +157,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                12
+                13
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -237,7 +237,14 @@ ga('send', 'pageview');
                                 <div class="article-entry" itemprop="articleBody">
                                     
                                             
-                                                    <h1 id="Technical-exploration"><a href="#Technical-exploration" class="headerlink" title="Technical exploration"></a>Technical exploration</h1><p>Objective<br>Short Feedback cycle<br>Fast</p>
+                                                    <h1 id="Technical-exploration"><a href="#Technical-exploration" class="headerlink" title="Technical exploration"></a>Technical exploration</h1><p><strong>Prefer</strong></p>
+<ul>
+<li>Purpose</li>
+<li>Rapidly</li>
+<li>Explore</li>
+<li>Feedback</li>
+<li>Record</li>
+</ul>
 <h1 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h1><p>Fast<br>Feasible</p>
 <h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1><h2 id="General"><a href="#General" class="headerlink" title="General"></a>General</h2><ul>
 <li>KISS 原則</li>
@@ -254,7 +261,8 @@ ga('send', 'pageview');
 <h2 id="Data-structure-Design-and-Implementation"><a href="#Data-structure-Design-and-Implementation" class="headerlink" title="Data structure Design and Implementation"></a>Data structure Design and Implementation</h2><ul>
 <li>Single Source of Truth for data component</li>
 </ul>
-<h2 id="TDD"><a href="#TDD" class="headerlink" title="TDD"></a>TDD</h2><p>100% unit test coverage on component that</p>
+<h2 id="Unit-Test"><a href="#Unit-Test" class="headerlink" title="Unit Test"></a>Unit Test</h2><p>100% unit test coverage on component of reducer</p>
+<h2 id="Maintain-code-standard"><a href="#Maintain-code-standard" class="headerlink" title="Maintain code standard"></a>Maintain code standard</h2><p><a href="https://github.com/shimohq/react-cookbook#%E5%AE%B9%E5%99%A8%E7%BB%84%E4%BB%B6" target="_blank" rel="noopener">https://github.com/shimohq/react-cookbook#%E5%AE%B9%E5%99%A8%E7%BB%84%E4%BB%B6</a><br><a href="https://github.com/airbnb/javascript/tree/master/react" target="_blank" rel="noopener">https://github.com/airbnb/javascript/tree/master/react</a></p>
 <h1 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h1><p>Refactor 實踐<br>Tdd 實踐<br>Pure function 實踐<br>Curring 實踐<br>Naming clean code<br>訂立 coding 約定並每䢛决定 實踐</p>
 
                                                         
@@ -502,6 +510,133 @@ ga('send', 'pageview');
 
 
 
+    <article id="post-code-review/middleware" class="article article-type-post"
+    itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+                    
+                        <header class="article-header">
+                            
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/04/28/code-review/middleware.html">Code Review - Middleware</a>
+        </h1>
+    
+
+                                
+                                    <div class="article-meta">
+                                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/04/28/code-review/middleware.html">
+            <time datetime="2018-04-28T08:09:02.000Z" itemprop="datePublished">2018-04-28</time>
+        </a>
+    </div>
+
+
+                                            
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+    </div>
+
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            
+                                <div class="article-entry" itemprop="articleBody">
+                                    
+                                            
+                                                    
+                                                        
+                                </div>
+                                <footer class="article-footer">
+                                    <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://jeff-chung.com/2018/04/28/code-review/middleware.html" data-id="cjgmajgcc003i05pvjpaudas1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+                                        
+    
+        <a href="http://jeff-chung.com/2018/04/28/code-review/middleware.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://jeff-chung.com/2018/04/28/code-review/middleware.html">评论</a>
+    
+
+                                </footer>
+    </div>
+    
+</article>
+
+
+
     <nav id="page-nav">
         <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
@@ -555,7 +690,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">12</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">12</span></li></ul>
         </div>
     </div>
 
