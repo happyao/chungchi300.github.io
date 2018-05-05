@@ -6,121 +6,122 @@ date: 2018-05-04 10:28:21
 tags:
 ---
 
-# Read and coding
+＃阅读和编码
 
-## Syntax Highlight
+##语法高亮
 
-Vscode has syntax highlight **JS,JSX,TS,TSX** by default.
+Vscode默认语法高亮** JS，JSX，TS，TSX **。
 
-## Show Definition when function call
+##函数调用时显示定义
 
-Need [project configuration](#Project-configuration) when absolute import is used
+使用绝对导入时需要[项目配置]（＃项目配置）
 
-## Find in one file
+##在一个文件中查找
 
-Vscode Command : actions.find  
-Vscode Keymap : Ctrl + F
+Vscode命令：actions.find
+Vscode快捷键：Ctrl + F
 
-## Replace in one file
+##替换
 
-Vscode Command : editor.action.startFindReplaceAction  
-Vscode Keymap : Ctrl + H  
-Suggested Rename Keymap : Ctrl + R
+Vscode命令：editor.action.startFindReplaceAction
+Vscode快捷键：Ctrl + H
+建议的重命名快捷键：Ctrl + R
 
-## Find in files(or a project)
+##查找文件（或项目）
 
-Vscode Command : workbench.action.findInFiles  
-Vscode Keymap : Ctrl + Shift + F
+Vscode命令：workbench.action.findInFiles
+Vscode快捷键：Ctrl + Shift + F
 
-## Replace in files
+##替换文件
 
-Vscode Command : workbench.action.replaceInFiles  
-Vscode Keymap : Ctrl + Shift + H  
-Suggested Rename Keymap : Ctrl + Shift + R
+Vscode命令：workbench.action.replaceInFiles
+Vscode快捷键：Ctrl + Shift + H
+建议的重命名快捷键：Ctrl + Shift + R
 
-## Quick Fix
+## 快速修复
 
-Vscode Command : editor.action.quickFix  
-Vscode Keymap : Ctrl + .
+Vscode命令：editor.action.quickFix
+Vscode快捷键：Ctrl +。
 
-## Move Line
+##移动行
 
-Alt + arrow up/down
+Alt +箭头向上/向下
 
-## Multi cursor editing
+##多光标编辑
 
-Alt + Shift + arrow up/down
+Alt + Shift +箭头向上/向下
 
-# File navigating
+＃文件导航
 
-Need [project configuration](#Project-configuration) when absolute import is used
+使用绝对导入时需要[项目配置]（＃项目配置）
 
-## Open File
+## 打开文件
 
-Vscode Command : workbench.action.files.openFile  
-Vscode Keymap : Ctrl + P
+Vscode命令：workbench.action.files.openFile
+Vscode快捷键：Ctrl + P
 
-## Go to symbol
+##转到Symbol
 
-Vscode Command : workbench.action.gotoSymbol  
-Vscode Keymap : Ctrl + Shift + O  
-Suggested Rename Keymap : Ctrl + O
+Vscode命令：workbench.action.gotoSymbol
+Vscode快捷键：Ctrl + Shift + O
+建议的重命名快捷键：Ctrl + O
 
-## Go to definition
+##定义
 
-Vscode Command : editor.action.goToDeclaration  
-Vscode Keymap : F12
+Vscode命令：editor.action.goToDeclaration
+Vscode快捷键：F12
 
-## Go to Line
+##查找行
 
-Vscode Command : workbench.action.gotoLine  
-Vscode Keymap : Ctrl + g
+Vscode命令：workbench.action.gotoLine
+Vscode快捷键：Ctrl + g
 
-## Close current editor
+##关闭当前编辑器
 
-Vscode Command : workbench.action.closeWindow  
-Vscode Keymap : Ctrl + w
+Vscode命令：workbench.action.closeWindow
+Vscode快捷键：Ctrl + w
 
-**Reference**
-[File Navigation](https://code.visualstudio.com/docs/editor/editingevolved)
+**参考**
+[文件导航]（https://code.visualstudio.com/docs/editor/editingevolved）
 
-# Refactor
+＃重构
 
-Need [project configuration](#Project-configuration) when absolute import is used
+使用绝对导入时需要[项目配置]（＃项目配置）
 
-## Rewrite function/variable name
+##重写函数/变量名称
 
-Vscode Command : workbench.action.closeWindow  
-Vscode Keymap : F2
+Vscode命令：workbench.action.closeWindow
+Vscode键映射：F2
 
-**Reference**
-[Refactoring](https://code.visualstudio.com/docs/editor/refactoring)
+**参考**
+[重构]（https://code.visualstudio.com/docs/editor/refactoring）
 
-# Project configuration
+＃项目配置
 
-You need `'jsconfig.json'` or `'tsconfig.json'`(when you use typescript) with following config for [**import absolute path**](https://medium.com/@ktruong008/absolute-imports-with-create-react-app-4338fbca7e3d)
+你需要添加以下配置于`'jsconfig.json'`或`'tsconfig.json'`中（当你使用typescript时），以使用[** import absolute path **]（https://medium.com/@ktruong008/absolute-imports-with-create-react-app-4338fbca7e3d）
 
 ```
 {
-  "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "src/*": ["*"]
-    },
-  }
+  “compilerOptions”：{
+    “baseUrl”：“src”，
+    “paths”：{
+      “src / *”：[“*”]
+    }，
+  }
 }
 ```
 
-# Extension
+＃ 插件
 
-## Grammar Checking
+##语法检查
 
-[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+[Code Spell Checker]（https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker）
 
-## Prettier
+##自动排版
 
-[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+[Prettier]（https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode）
 
-## Markdown
+##Markdown
 
-[Markdown all in one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+[Markdown all in one]（https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one）
+
